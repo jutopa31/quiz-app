@@ -2,6 +2,7 @@ import { useQuizzes } from '../hooks/useQuizzes'
 import { Container } from '../components/layout/Container'
 import { QuizCard } from '../components/quiz/QuizCard'
 import { PageLoader } from '../components/ui/Spinner'
+import { InstallAppBanner } from '../components/ui/InstallAppBanner'
 
 export function HomePage() {
   const { quizzes, loading, error } = useQuizzes()
@@ -26,6 +27,7 @@ export function HomePage() {
 
   return (
     <Container>
+      <InstallAppBanner />
       <h1 className="text-2xl font-bold text-gray-900 mb-6">Quizzes disponibles</h1>
 
       {quizzes.length === 0 ? (
