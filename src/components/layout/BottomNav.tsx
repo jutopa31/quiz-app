@@ -1,0 +1,45 @@
+import { NavLink } from 'react-router-dom'
+
+const navItems = [
+  {
+    to: '/',
+    label: 'Quizzes',
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+      </svg>
+    )
+  },
+  {
+    to: '/history',
+    label: 'Historial',
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    )
+  }
+]
+
+export function BottomNav() {
+  return (
+    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 pb-safe z-40">
+      <div className="max-w-lg mx-auto flex">
+        {navItems.map((item) => (
+          <NavLink
+            key={item.to}
+            to={item.to}
+            className={({ isActive }) =>
+              `flex-1 flex flex-col items-center py-2 ${
+                isActive ? 'text-emerald-600' : 'text-gray-400'
+              }`
+            }
+          >
+            {item.icon}
+            <span className="text-xs mt-1">{item.label}</span>
+          </NavLink>
+        ))}
+      </div>
+    </nav>
+  )
+}
