@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { usePWAInstall } from '../../hooks/usePWAInstall'
 
 export function InstallAppBanner() {
-  const { canInstall, install } = usePWAInstall()
+  const { canInstall, hasNativePrompt, platform, install } = usePWAInstall()
   const [dismissed, setDismissed] = useState(() => {
     return sessionStorage.getItem('install-banner-dismissed') === 'true'
   })
@@ -10,12 +10,62 @@ export function InstallAppBanner() {
   if (!canInstall || dismissed) return null
 
   const handleInstall = async () => {
-    await install()
+    if (hasNativePrompt) {
+      await install()
+    }
   }
 
   const handleDismiss = () => {
     setDismissed(true)
     sessionStorage.setItem('install-banner-dismissed', 'true')
+  }
+
+  const renderInstructions = () => {
+    if (platform === 'ios') {
+      return (
+        <div className="mt-3 bg-white rounded-lg p-3 text-sm text-gray-600">
+          <p className="font-medium text-gray-800 mb-2">Para instalar en iPhone:</p>
+          <ol className="space-y-1.5">
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-600 font-medium">1.</span>
+              Toca el icono compartir
+              <svg className="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+              </svg>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-600 font-medium">2.</span>
+              Selecciona "Agregar a inicio"
+            </li>
+          </ol>
+        </div>
+      )
+    }
+
+    if (platform === 'android' && !hasNativePrompt) {
+      return (
+        <div className="mt-3 bg-white rounded-lg p-3 text-sm text-gray-600">
+          <p className="font-medium text-gray-800 mb-2">Para instalar en Android:</p>
+          <ol className="space-y-1.5">
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-600 font-medium">1.</span>
+              Toca el menu
+              <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="5" r="2"/>
+                <circle cx="12" cy="12" r="2"/>
+                <circle cx="12" cy="19" r="2"/>
+              </svg>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-600 font-medium">2.</span>
+              Selecciona "Instalar app" o "Agregar a inicio"
+            </li>
+          </ol>
+        </div>
+      )
+    }
+
+    return null
   }
 
   return (
@@ -42,12 +92,17 @@ export function InstallAppBanner() {
           </svg>
         </button>
       </div>
-      <button
-        onClick={handleInstall}
-        className="w-full mt-3 bg-emerald-500 text-white font-medium py-2.5 px-4 rounded-lg active:bg-emerald-600 transition-colors"
-      >
-        Instalar app
-      </button>
+
+      {hasNativePrompt ? (
+        <button
+          onClick={handleInstall}
+          className="w-full mt-3 bg-emerald-500 text-white font-medium py-2.5 px-4 rounded-lg active:bg-emerald-600 transition-colors"
+        >
+          Instalar app
+        </button>
+      ) : (
+        renderInstructions()
+      )}
     </div>
   )
 }
