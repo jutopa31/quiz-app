@@ -42,6 +42,7 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            autoComplete="username"
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-shadow"
             placeholder="tu@email.com"
           />
@@ -57,6 +58,7 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            autoComplete="current-password"
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-shadow"
             placeholder="••••••••"
           />
