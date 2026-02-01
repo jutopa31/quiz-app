@@ -76,17 +76,18 @@ export function QuizPlayer({ quiz, questions }: QuizPlayerProps) {
   }
 
   return (
-    <div className="min-h-[calc(100vh-8rem)] flex flex-col">
-      {/* Quiz title */}
-      <div className="mb-6">
-        <h1 className="text-xl font-bold text-gray-900">{quiz.title}</h1>
-        <p className="text-sm text-gray-500 mt-1">
-          {answeredCount}/{questions.length} respondidas
-        </p>
-      </div>
+    <>
+      {/* Scrollable content area */}
+      <div className="pb-24">
+        {/* Quiz title */}
+        <div className="mb-6">
+          <h1 className="text-xl font-bold text-gray-900">{quiz.title}</h1>
+          <p className="text-sm text-gray-500 mt-1">
+            {answeredCount}/{questions.length} respondidas
+          </p>
+        </div>
 
-      {/* Question */}
-      <div className="flex-1">
+        {/* Question */}
         <QuestionView
           question={currentQuestion}
           questionNumber={currentIndex + 1}
@@ -96,37 +97,39 @@ export function QuizPlayer({ quiz, questions }: QuizPlayerProps) {
         />
       </div>
 
-      {/* Navigation */}
-      <div className="flex gap-3 mt-8 pt-4 border-t border-gray-100">
-        <Button
-          variant="secondary"
-          onClick={handlePrevious}
-          disabled={isFirstQuestion}
-          className="flex-1"
-        >
-          Anterior
-        </Button>
+      {/* Fixed navigation - above BottomNav */}
+      <div className="fixed bottom-[60px] left-0 right-0 bg-white border-t border-gray-100 px-4 py-3 z-30">
+        <div className="max-w-lg mx-auto flex gap-3">
+          <Button
+            variant="secondary"
+            onClick={handlePrevious}
+            disabled={isFirstQuestion}
+            className="flex-1"
+          >
+            Anterior
+          </Button>
 
-        {isLastQuestion ? (
-          <Button
-            variant="primary"
-            onClick={handleSubmit}
-            disabled={!allAnswered || submitting}
-            loading={submitting}
-            className="flex-1"
-          >
-            Enviar
-          </Button>
-        ) : (
-          <Button
-            variant="primary"
-            onClick={handleNext}
-            className="flex-1"
-          >
-            Siguiente
-          </Button>
-        )}
+          {isLastQuestion ? (
+            <Button
+              variant="primary"
+              onClick={handleSubmit}
+              disabled={!allAnswered || submitting}
+              loading={submitting}
+              className="flex-1"
+            >
+              Enviar
+            </Button>
+          ) : (
+            <Button
+              variant="primary"
+              onClick={handleNext}
+              className="flex-1"
+            >
+              Siguiente
+            </Button>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   )
 }
