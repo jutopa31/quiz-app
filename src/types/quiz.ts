@@ -28,6 +28,7 @@ export interface Question {
   options: QuestionOption[]
   correct_answer: string
   correct_option_index?: number
+  image_url?: string | null
   explanation: string | null
   points: number
   display_order: number
@@ -79,4 +80,18 @@ export interface QuizResult {
   totalPoints: number
   percentage: number
   passed: boolean
+}
+
+export interface UserRanking {
+  user_id: string
+  email: string
+  total_attempts: number
+  average_score: number
+  best_scores: { quiz_id: string; quiz_title: string; score: number }[]
+}
+
+export interface QuizLeaderboard {
+  quiz_id: string
+  quiz_title: string
+  entries: { user_id: string; email: string; best_score: number; attempts: number }[]
 }

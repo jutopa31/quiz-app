@@ -8,6 +8,11 @@ import { ResultsPage } from './pages/ResultsPage'
 import { HistoryPage } from './pages/HistoryPage'
 import { LoginPage } from './pages/LoginPage'
 import { PageLoader } from './components/ui/Spinner'
+import { AdminPage } from './pages/admin/AdminPage'
+import { QuizListPage } from './pages/admin/QuizListPage'
+import { QuizEditorPage } from './pages/admin/QuizEditorPage'
+import { RankingPage } from './pages/admin/RankingPage'
+import { AdminRoute } from './components/admin/AdminRoute'
 import type { ReactNode } from 'react'
 
 function ProtectedRoute({ children }: { children: ReactNode }) {
@@ -93,6 +98,56 @@ function AppRoutes() {
               <HistoryPage />
             </AppLayout>
           </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/admin"
+        element={
+          <ProtectedRoute>
+            <AppLayout>
+              <AdminPage />
+            </AppLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/admin/quizzes"
+        element={
+          <ProtectedRoute>
+            <AppLayout>
+              <QuizListPage />
+            </AppLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/admin/quiz/new"
+        element={
+          <ProtectedRoute>
+            <AppLayout>
+              <QuizEditorPage />
+            </AppLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/admin/quiz/:quizId"
+        element={
+          <ProtectedRoute>
+            <AppLayout>
+              <QuizEditorPage />
+            </AppLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/admin/ranking"
+        element={
+          <AdminRoute>
+            <AppLayout>
+              <RankingPage />
+            </AppLayout>
+          </AdminRoute>
         }
       />
       <Route path="*" element={<Navigate to="/" replace />} />

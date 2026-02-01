@@ -44,6 +44,7 @@ function normalizeQuestion(raw: any): Question {
     options,
     correct_answer: String(correctIndex),
     correct_option_index: correctIndex,
+    image_url: raw.image_url ?? null,
     explanation: raw.explanation ?? null,
     points: typeof raw.points === 'number' ? raw.points : 1,
     display_order: raw.display_order ?? 0,

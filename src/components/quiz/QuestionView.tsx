@@ -39,6 +39,14 @@ export function QuestionView({
         {question.question_text}
       </h2>
 
+      {question.image_url ? (
+        <img
+          src={question.image_url}
+          alt=""
+          className="w-full rounded-lg max-h-64 object-contain"
+        />
+      ) : null}
+
       {/* Options */}
       <div className="space-y-3">
         {question.options.map((option) => (
