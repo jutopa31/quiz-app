@@ -18,15 +18,24 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    // Helper to clear all auth state
+    const clearAuthState = () => {
+      setSession(null)
+      setUser(null)
+      Object.keys(localStorage).forEach(key => {
+        if (key.startsWith('sb-')) {
+          localStorage.removeItem(key)
+        }
+      })
+    }
+
     // Get initial session
     supabase.auth.getSession()
       .then(({ data: { session }, error }) => {
         if (error) {
           // Clear invalid session
           console.warn('Session error, clearing auth state:', error.message)
-          supabase.auth.signOut()
-          setSession(null)
-          setUser(null)
+          clearAuthState()
         } else {
           setSession(session)
           setUser(session?.user ?? null)
@@ -35,8 +44,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       })
       .catch((err) => {
         console.error('Failed to get session:', err)
-        setSession(null)
-        setUser(null)
+        clearAuthState()
         setLoading(false)
       })
 
@@ -67,20 +75,22 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   const signOut = async () => {
-    try {
-      await supabase.auth.signOut()
-    } catch (err) {
-      console.warn('SignOut error:', err)
-    }
-    // Always clear local state even if signOut fails
+    // Clear local state first
     setSession(null)
     setUser(null)
-    // Clear any stale Supabase tokens from localStorage
+    // Clear any stale Supabase tokens from localStorage BEFORE calling signOut
     Object.keys(localStorage).forEach(key => {
       if (key.startsWith('sb-')) {
         localStorage.removeItem(key)
       }
     })
+    // Try to sign out with local scope (doesn't require server validation)
+    try {
+      await supabase.auth.signOut({ scope: 'local' })
+    } catch (err) {
+      // Ignore errors - we already cleared local storage
+      console.warn('SignOut API error (ignored):', err)
+    }
   }
 
   return (
