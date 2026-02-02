@@ -36,7 +36,10 @@ export function AdminQuizCard({ quiz, onPublish, onDelete }: AdminQuizCardProps)
             Publicar
           </Button>
         ) : null}
-        <Button type="button" variant="ghost" size="sm" onClick={() => onDelete(quiz.id)}>
+        <Button type="button" variant="ghost" size="sm" onClick={() => {
+          console.log('🗑️ [AdminQuizCard] Delete button clicked for quiz:', quiz.id, quiz.title)
+          onDelete(quiz.id)
+        }}>
           Eliminar
         </Button>
       </div>
