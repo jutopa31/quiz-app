@@ -21,27 +21,41 @@ function scoreToPercentage(score: number | null, totalQuestions: number | null) 
 async function fetchUserEmails(userIds: string[]) {
   if (userIds.length === 0) return {} as Record<string, string>
 
-  const tables = [
+  const lookups = [
+    { table: 'profiles', idColumn: 'user_id', emailColumn: 'email' },
     { table: 'profiles', idColumn: 'id', emailColumn: 'email' },
+    { table: 'academy_users', idColumn: 'user_id', emailColumn: 'email' },
     { table: 'academy_users', idColumn: 'id', emailColumn: 'email' },
+    { table: 'academy_users', idColumn: 'auth_user_id', emailColumn: 'email' },
     { table: 'users', idColumn: 'id', emailColumn: 'email' }
   ]
 
-  for (const { table, idColumn, emailColumn } of tables) {
+  const resolved: Record<string, string> = {}
+  const remaining = new Set(userIds)
+
+  for (const { table, idColumn, emailColumn } of lookups) {
+    if (remaining.size === 0) break
+    const ids = Array.from(remaining)
     const { data, error } = await supabase
       .from(table)
       .select(`${idColumn}, ${emailColumn}`)
-      .in(idColumn, userIds)
+      .in(idColumn, ids)
 
-    if (!error && data && data.length > 0) {
-      return data.reduce((acc: Record<string, string>, row: any) => {
-        acc[row[idColumn]] = row[emailColumn]
-        return acc
-      }, {})
+    if (error || !data || data.length === 0) {
+      continue
     }
+
+    data.forEach((row: any) => {
+      const id = row[idColumn]
+      const email = row[emailColumn]
+      if (id && email && !resolved[id]) {
+        resolved[id] = email
+        remaining.delete(id)
+      }
+    })
   }
 
-  return {} as Record<string, string>
+  return resolved
 }
 
 export async function fetchRankings(): Promise<{

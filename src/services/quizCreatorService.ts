@@ -48,23 +48,22 @@ export async function createQuiz(payload: {
   title: string
   description?: string | null
   time_limit_minutes?: number | null
-  passing_score?: number | null
   shuffle_questions?: boolean
   show_correct_answers?: boolean
   created_by: string
 }): Promise<Quiz | null> {
   try {
+    const { passing_score: _passingScore, ...safePayload } = payload
     const { data, error } = await supabase
       .from('academy_quizzes')
       .insert({
-        title: payload.title,
-        description: payload.description ?? null,
-        time_limit_minutes: payload.time_limit_minutes ?? null,
-        passing_score: payload.passing_score ?? null,
-        shuffle_questions: payload.shuffle_questions ?? false,
-        show_correct_answers: payload.show_correct_answers ?? true,
+        title: safePayload.title,
+        description: safePayload.description ?? null,
+        time_limit_minutes: safePayload.time_limit_minutes ?? null,
+        shuffle_questions: safePayload.shuffle_questions ?? false,
+        show_correct_answers: safePayload.show_correct_answers ?? true,
         status: 'draft',
-        created_by: payload.created_by
+        created_by: safePayload.created_by
       })
       .select()
       .single()
@@ -83,7 +82,6 @@ export async function updateQuiz(
     title: string
     description: string | null
     time_limit_minutes: number | null
-    passing_score: number | null
     shuffle_questions: boolean
     show_correct_answers: boolean
     status: Quiz['status']
@@ -91,9 +89,10 @@ export async function updateQuiz(
   }>
 ): Promise<Quiz | null> {
   try {
+    const { passing_score: _passingScore, ...safeUpdates } = updates
     const { data, error } = await supabase
       .from('academy_quizzes')
-      .update(updates)
+      .update(safeUpdates)
       .eq('id', quizId)
       .select()
       .single()

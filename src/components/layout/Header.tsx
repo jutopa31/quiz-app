@@ -1,13 +1,16 @@
-import { useAuth } from '../auth/AuthProvider'
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../auth/AuthProvider'
 
 export function Header() {
-  const { user, signOut } = useAuth()
+  const { user } = useAuth()
   const navigate = useNavigate()
 
-  const handleSignOut = async () => {
-    await signOut()
-    navigate('/login')
+  const handleBack = () => {
+    if (window.history.length > 1) {
+      navigate(-1)
+    } else {
+      navigate('/')
+    }
   }
 
   return (
@@ -24,10 +27,10 @@ export function Header() {
 
         {user && (
           <button
-            onClick={handleSignOut}
+            onClick={handleBack}
             className="text-sm text-gray-500 hover:text-gray-700"
           >
-            Salir
+            Volver
           </button>
         )}
       </div>
