@@ -6,7 +6,7 @@ type AttemptRow = {
   quiz_id: string
   score: number | null
   total_questions: number | null
-  academy_quizzes?: { title: string } | null
+  academy_quizzes?: { title: string }[] | null
 }
 
 function scoreToPercentage(score: number | null, totalQuestions: number | null) {
@@ -68,8 +68,9 @@ export async function fetchRankings(): Promise<{
 
     attempts.forEach(attempt => {
       userIds.add(attempt.user_id)
-      if (attempt.academy_quizzes?.title) {
-        quizTitleMap.set(attempt.quiz_id, attempt.academy_quizzes.title)
+      const quizTitle = attempt.academy_quizzes?.[0]?.title
+      if (quizTitle) {
+        quizTitleMap.set(attempt.quiz_id, quizTitle)
       }
     })
 
@@ -95,7 +96,7 @@ export async function fetchRankings(): Promise<{
       userMap.set(attempt.user_id, userEntry)
 
       const quizEntry = quizMap.get(attempt.quiz_id) ?? {
-        title: attempt.academy_quizzes?.title ?? 'Quiz',
+        title: attempt.academy_quizzes?.[0]?.title ?? 'Quiz',
         entries: new Map()
       }
       const userQuizEntry = quizEntry.entries.get(attempt.user_id) ?? { bestScore: 0, attempts: 0 }
