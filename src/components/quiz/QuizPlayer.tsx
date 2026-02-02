@@ -30,7 +30,7 @@ export function QuizPlayer({ quiz, questions }: QuizPlayerProps) {
   const handleSelectOption = async (optionId: string) => {
     // Create attempt if not exists
     if (!attemptId && user) {
-      const attempt = await createAttempt(quiz.id, user.id)
+      const attempt = await createAttempt(quiz.id, user.id, user.email ?? undefined)
       if (attempt) {
         setAttemptId(attempt.id)
       }

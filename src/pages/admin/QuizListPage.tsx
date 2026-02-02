@@ -19,10 +19,15 @@ export function QuizListPage() {
   }
 
   const handleDelete = async (quizId: string) => {
+    console.log('🗑️ [QuizListPage] handleDelete called with quizId:', quizId)
     setActionLoading(true)
-    await deleteQuiz(quizId)
+    const success = await deleteQuiz(quizId)
+    console.log('🗑️ [QuizListPage] deleteQuiz returned:', success)
     await refresh()
     setActionLoading(false)
+    if (!success) {
+      alert('Error al eliminar el quiz. Revisa la consola para más detalles.')
+    }
   }
 
   if (loading) {
