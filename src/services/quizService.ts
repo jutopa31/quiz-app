@@ -41,26 +41,29 @@ export async function fetchPublishedQuizzes(userId?: string): Promise<Quiz[]> {
     if (error) throw error
 
     // Get user's attempts if logged in
-    let attemptsMap: Record<string, { best_score: number; count: number }> = {}
+    let attemptsMap: Record<string, { best_score: number; total_questions: number; count: number }> = {}
 
     if (userId) {
       const { data: attempts } = await supabase
         .from('academy_quiz_attempts')
-        .select('quiz_id, score')
+        .select('quiz_id, score, total_questions')
         .eq('user_id', userId)
         .not('score', 'is', null)
 
       if (attempts) {
         attemptsMap = attempts.reduce((acc, attempt) => {
+          const totalQ = attempt.total_questions || 1
+          const percentage = Math.round((attempt.score / totalQ) * 100)
+
           if (!acc[attempt.quiz_id]) {
-            acc[attempt.quiz_id] = { best_score: attempt.score, count: 0 }
+            acc[attempt.quiz_id] = { best_score: percentage, total_questions: totalQ, count: 0 }
           }
           acc[attempt.quiz_id].count++
-          if (attempt.score > acc[attempt.quiz_id].best_score) {
-            acc[attempt.quiz_id].best_score = attempt.score
+          if (percentage > acc[attempt.quiz_id].best_score) {
+            acc[attempt.quiz_id].best_score = percentage
           }
           return acc
-        }, {} as Record<string, { best_score: number; count: number }>)
+        }, {} as Record<string, { best_score: number; total_questions: number; count: number }>)
       }
     }
 
