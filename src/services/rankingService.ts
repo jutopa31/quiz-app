@@ -4,6 +4,7 @@ import type { QuizLeaderboard, UserRanking } from '../types/quiz'
 type AttemptRow = {
   user_id: string
   user_email?: string | null
+  resolved_email?: string | null
   quiz_id: string
   score: number | null
   total_questions: number | null
@@ -30,10 +31,11 @@ export async function fetchRankings(): Promise<{
 }> {
   try {
     const { data, error } = await supabase
-      .from('academy_quiz_attempts')
+      .from('academy_quiz_attempts_with_email')
       .select(`
         user_id,
         user_email,
+        resolved_email,
         quiz_id,
         score,
         total_questions,
@@ -50,9 +52,10 @@ export async function fetchRankings(): Promise<{
 
     attempts.forEach(attempt => {
       userIds.add(attempt.user_id)
-      // Collect emails from attempts that have them stored
-      if (attempt.user_email && !prefilledEmails[attempt.user_id]) {
-        prefilledEmails[attempt.user_id] = attempt.user_email
+      // Use resolved_email from the view (joins with auth.users)
+      const email = attempt.resolved_email || attempt.user_email
+      if (email && !prefilledEmails[attempt.user_id]) {
+        prefilledEmails[attempt.user_id] = email
       }
       const quizTitle = attempt.academy_quizzes?.[0]?.title
       if (quizTitle) {
