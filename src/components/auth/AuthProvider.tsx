@@ -19,17 +19,38 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     // Get initial session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session)
-      setUser(session?.user ?? null)
-      setLoading(false)
-    })
+    supabase.auth.getSession()
+      .then(({ data: { session }, error }) => {
+        if (error) {
+          // Clear invalid session
+          console.warn('Session error, clearing auth state:', error.message)
+          supabase.auth.signOut()
+          setSession(null)
+          setUser(null)
+        } else {
+          setSession(session)
+          setUser(session?.user ?? null)
+        }
+        setLoading(false)
+      })
+      .catch((err) => {
+        console.error('Failed to get session:', err)
+        setSession(null)
+        setUser(null)
+        setLoading(false)
+      })
 
     // Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (_event, session) => {
-        setSession(session)
-        setUser(session?.user ?? null)
+      (event, session) => {
+        if (event === 'TOKEN_REFRESHED' && !session) {
+          // Token refresh failed, clear state
+          setSession(null)
+          setUser(null)
+        } else {
+          setSession(session)
+          setUser(session?.user ?? null)
+        }
         setLoading(false)
       }
     )
@@ -46,7 +67,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   const signOut = async () => {
-    await supabase.auth.signOut()
+    try {
+      await supabase.auth.signOut()
+    } catch (err) {
+      console.warn('SignOut error:', err)
+    }
+    // Always clear local state even if signOut fails
+    setSession(null)
+    setUser(null)
+    // Clear any stale Supabase tokens from localStorage
+    Object.keys(localStorage).forEach(key => {
+      if (key.startsWith('sb-')) {
+        localStorage.removeItem(key)
+      }
+    })
   }
 
   return (
