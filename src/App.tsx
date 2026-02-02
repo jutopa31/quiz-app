@@ -13,6 +13,7 @@ import { QuizListPage } from './pages/admin/QuizListPage'
 import { QuizEditorPage } from './pages/admin/QuizEditorPage'
 import { RankingPage } from './pages/admin/RankingPage'
 import { AdminRoute } from './components/admin/AdminRoute'
+import { PWAUpdatePrompt } from './components/ui/PWAUpdatePrompt'
 import type { ReactNode } from 'react'
 
 function ProtectedRoute({ children }: { children: ReactNode }) {
@@ -159,6 +160,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
+        <PWAUpdatePrompt />
         <AppRoutes />
       </AuthProvider>
     </BrowserRouter>
