@@ -3,6 +3,7 @@ import type { QuizLeaderboard, UserRanking } from '../types/quiz'
 
 type AttemptRow = {
   user_id: string
+  user_email?: string | null
   quiz_id: string
   score: number | null
   total_questions: number | null
@@ -18,44 +19,9 @@ function scoreToPercentage(score: number | null, totalQuestions: number | null) 
   return Math.round(score)
 }
 
-async function fetchUserEmails(userIds: string[]) {
-  if (userIds.length === 0) return {} as Record<string, string>
-
-  const lookups = [
-    { table: 'profiles', idColumn: 'user_id', emailColumn: 'email' },
-    { table: 'profiles', idColumn: 'id', emailColumn: 'email' },
-    { table: 'academy_users', idColumn: 'user_id', emailColumn: 'email' },
-    { table: 'academy_users', idColumn: 'id', emailColumn: 'email' },
-    { table: 'academy_users', idColumn: 'auth_user_id', emailColumn: 'email' },
-    { table: 'users', idColumn: 'id', emailColumn: 'email' }
-  ]
-
-  const resolved: Record<string, string> = {}
-  const remaining = new Set(userIds)
-
-  for (const { table, idColumn, emailColumn } of lookups) {
-    if (remaining.size === 0) break
-    const ids = Array.from(remaining)
-    const { data, error } = await supabase
-      .from(table)
-      .select(`${idColumn}, ${emailColumn}`)
-      .in(idColumn, ids)
-
-    if (error || !data || data.length === 0) {
-      continue
-    }
-
-    data.forEach((row: any) => {
-      const id = row[idColumn]
-      const email = row[emailColumn]
-      if (id && email && !resolved[id]) {
-        resolved[id] = email
-        remaining.delete(id)
-      }
-    })
-  }
-
-  return resolved
+function buildEmailMap(prefilled: Record<string, string> = {}) {
+  // Use emails stored directly in attempts - no external table lookups needed
+  return { ...prefilled }
 }
 
 export async function fetchRankings(): Promise<{
@@ -67,6 +33,7 @@ export async function fetchRankings(): Promise<{
       .from('academy_quiz_attempts')
       .select(`
         user_id,
+        user_email,
         quiz_id,
         score,
         total_questions,
@@ -79,16 +46,21 @@ export async function fetchRankings(): Promise<{
     const attempts = (data || []) as AttemptRow[]
     const quizTitleMap = new Map<string, string>()
     const userIds = new Set<string>()
+    const prefilledEmails: Record<string, string> = {}
 
     attempts.forEach(attempt => {
       userIds.add(attempt.user_id)
+      // Collect emails from attempts that have them stored
+      if (attempt.user_email && !prefilledEmails[attempt.user_id]) {
+        prefilledEmails[attempt.user_id] = attempt.user_email
+      }
       const quizTitle = attempt.academy_quizzes?.[0]?.title
       if (quizTitle) {
         quizTitleMap.set(attempt.quiz_id, quizTitle)
       }
     })
 
-    const emails = await fetchUserEmails(Array.from(userIds))
+    const emails = buildEmailMap(prefilledEmails)
 
     const userMap = new Map<string, { totalAttempts: number; totalScore: number; bestByQuiz: Map<string, { score: number; attempts: number }> }>()
     const quizMap = new Map<string, { title: string; entries: Map<string, { bestScore: number; attempts: number }> }>()

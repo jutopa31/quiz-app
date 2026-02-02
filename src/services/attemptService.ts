@@ -52,17 +52,23 @@ function normalizeQuestion(raw: any): Question {
   }
 }
 
-export async function createAttempt(quizId: string, userId: string): Promise<QuizAttempt | null> {
+export async function createAttempt(quizId: string, userId: string, userEmail?: string): Promise<QuizAttempt | null> {
   try {
+    const insertData: Record<string, unknown> = {
+      quiz_id: quizId,
+      user_id: userId,
+      score: 0,
+      total_questions: 0,
+      answers: JSON.stringify([])
+    }
+    // Store user email for ranking display if provided
+    if (userEmail) {
+      insertData.user_email = userEmail
+    }
+
     const { data, error } = await supabase
       .from('academy_quiz_attempts')
-      .insert({
-        quiz_id: quizId,
-        user_id: userId,
-        score: 0,
-        total_questions: 0,
-        answers: JSON.stringify([])
-      })
+      .insert(insertData)
       .select()
       .single()
 

@@ -53,17 +53,16 @@ export async function createQuiz(payload: {
   created_by: string
 }): Promise<Quiz | null> {
   try {
-    const { passing_score: _passingScore, ...safePayload } = payload
     const { data, error } = await supabase
       .from('academy_quizzes')
       .insert({
-        title: safePayload.title,
-        description: safePayload.description ?? null,
-        time_limit_minutes: safePayload.time_limit_minutes ?? null,
-        shuffle_questions: safePayload.shuffle_questions ?? false,
-        show_correct_answers: safePayload.show_correct_answers ?? true,
+        title: payload.title,
+        description: payload.description ?? null,
+        time_limit_minutes: payload.time_limit_minutes ?? null,
+        shuffle_questions: payload.shuffle_questions ?? false,
+        show_correct_answers: payload.show_correct_answers ?? true,
         status: 'draft',
-        created_by: safePayload.created_by
+        created_by: payload.created_by
       })
       .select()
       .single()
@@ -89,10 +88,9 @@ export async function updateQuiz(
   }>
 ): Promise<Quiz | null> {
   try {
-    const { passing_score: _passingScore, ...safeUpdates } = updates
     const { data, error } = await supabase
       .from('academy_quizzes')
-      .update(safeUpdates)
+      .update(updates)
       .eq('id', quizId)
       .select()
       .single()
