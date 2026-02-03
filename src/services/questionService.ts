@@ -1,6 +1,31 @@
 import { supabase } from './supabase'
 import type { Question } from '../types/quiz'
 
+const missingColumnsByTable = new Map<string, Set<string>>()
+
+function stripMissingColumns<T extends Record<string, unknown>>(table: string, payload: T) {
+  const missing = missingColumnsByTable.get(table)
+  if (!missing || missing.size === 0) return payload
+  const cleaned: Record<string, unknown> = { ...payload }
+  missing.forEach(column => {
+    if (column in cleaned) delete cleaned[column]
+  })
+  return cleaned as T
+}
+
+function handleMissingColumnError<T extends Record<string, unknown>>(table: string, payload: T, error: any) {
+  if (error?.code !== 'PGRST204' || typeof error?.message !== 'string') return null
+  const match = error.message.match(/'([^']+)' column/)
+  if (!match) return null
+  const column = match[1]
+  const missing = missingColumnsByTable.get(table) ?? new Set<string>()
+  missing.add(column)
+  missingColumnsByTable.set(table, missing)
+  const cleaned: Record<string, unknown> = { ...payload }
+  if (column in cleaned) delete cleaned[column]
+  return cleaned as T
+}
+
 function normalizeQuestion(raw: any): Question {
   const options = Array.isArray(raw.options)
     ? raw.options.map((text: string, index: number) => ({
@@ -54,21 +79,27 @@ export async function createQuestion(payload: {
   image_url?: string | null
 }): Promise<Question | null> {
   try {
-    const { data, error } = await supabase
-      .from('academy_quiz_questions')
-      .insert({
-        quiz_id: payload.quiz_id,
-        question_text: payload.question_text,
-        question_type: payload.question_type ?? 'multiple_choice',
-        options: payload.options,
-        correct_option_index: payload.correct_option_index,
-        explanation: payload.explanation ?? null,
-        points: payload.points ?? 1,
-        display_order: payload.display_order ?? 0,
-        image_url: payload.image_url ?? null
-      })
-      .select()
-      .single()
+    const table = 'academy_quiz_questions'
+    let insertPayload = stripMissingColumns(table, {
+      quiz_id: payload.quiz_id,
+      question_text: payload.question_text,
+      question_type: payload.question_type ?? 'multiple_choice',
+      options: payload.options,
+      correct_option_index: payload.correct_option_index,
+      explanation: payload.explanation ?? null,
+      points: payload.points ?? 1,
+      display_order: payload.display_order ?? 0,
+      image_url: payload.image_url ?? null
+    })
+
+    let { data, error } = await supabase.from(table).insert(insertPayload).select().single()
+    if (error?.code === 'PGRST204') {
+      const retried = handleMissingColumnError(table, insertPayload, error)
+      if (retried) {
+        insertPayload = retried
+        ;({ data, error } = await supabase.from(table).insert(insertPayload).select().single())
+      }
+    }
 
     if (error || !data) throw error
     return normalizeQuestion(data)
@@ -92,12 +123,26 @@ export async function updateQuestion(
   }>
 ): Promise<Question | null> {
   try {
-    const { data, error } = await supabase
-      .from('academy_quiz_questions')
-      .update(updates)
+    const table = 'academy_quiz_questions'
+    let updatePayload = stripMissingColumns(table, updates)
+    let { data, error } = await supabase
+      .from(table)
+      .update(updatePayload)
       .eq('id', questionId)
       .select()
       .single()
+    if (error?.code === 'PGRST204') {
+      const retried = handleMissingColumnError(table, updatePayload as Record<string, unknown>, error)
+      if (retried) {
+        updatePayload = retried as typeof updates
+        ;({ data, error } = await supabase
+          .from(table)
+          .update(updatePayload)
+          .eq('id', questionId)
+          .select()
+          .single())
+      }
+    }
 
     if (error || !data) throw error
     return normalizeQuestion(data)
