@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider, useAuth } from './components/auth/AuthProvider'
+import { SettingsProvider } from './hooks/useSettings'
 import { Header } from './components/layout/Header'
 import { BottomNav } from './components/layout/BottomNav'
 import { HomePage } from './pages/HomePage'
@@ -160,8 +161,10 @@ export default function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <PWAUpdatePrompt />
-        <AppRoutes />
+        <SettingsProvider>
+          <PWAUpdatePrompt />
+          <AppRoutes />
+        </SettingsProvider>
       </AuthProvider>
     </BrowserRouter>
   )

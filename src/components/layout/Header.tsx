@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../auth/AuthProvider'
+import { useSettings } from '../../hooks/useSettings'
 
 export function Header() {
   const { user, signOut } = useAuth()
   const navigate = useNavigate()
   const [showMenu, setShowMenu] = useState(false)
+  const { settings, updateSetting } = useSettings()
 
   const handleBack = () => {
     if (window.history.length > 1) {
@@ -50,13 +52,38 @@ export function Header() {
                   className="fixed inset-0 z-40"
                   onClick={() => setShowMenu(false)}
                 />
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-1 z-50">
+                <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-1 z-50">
                   <button
                     onClick={handleBack}
                     className="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-50"
                   >
                     ← Volver
                   </button>
+
+                  {/* Settings section */}
+                  <div className="border-t border-gray-100 my-1" />
+                  <div className="px-4 py-1.5">
+                    <span className="text-xs font-medium text-gray-400 uppercase tracking-wide">Configuración</span>
+                  </div>
+                  <button
+                    onClick={() => updateSetting('sequentialOptions', !settings.sequentialOptions)}
+                    className="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-50 flex items-center justify-between"
+                  >
+                    <span>Opciones secuenciales</span>
+                    <div
+                      className={`w-9 h-5 rounded-full transition-colors flex items-center ${
+                        settings.sequentialOptions ? 'bg-emerald-500' : 'bg-gray-300'
+                      }`}
+                    >
+                      <div
+                        className={`w-4 h-4 bg-white rounded-full shadow transition-transform mx-0.5 ${
+                          settings.sequentialOptions ? 'translate-x-4' : 'translate-x-0'
+                        }`}
+                      />
+                    </div>
+                  </button>
+
+                  <div className="border-t border-gray-100 my-1" />
                   <button
                     onClick={handleSignOut}
                     className="w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-red-50"
