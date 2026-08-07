@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
-import { supabase } from '../../services/supabase'
+import { supabase, isSupabaseConfigured } from '../../services/supabase'
 import type { User, Session } from '@supabase/supabase-js'
 
 interface AuthContextType {
@@ -12,12 +12,31 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
+const LOCAL_USER_KEY = 'quiz-app:local-user-id'
+
+function localAnonymousUser(): User {
+  let id = localStorage.getItem(LOCAL_USER_KEY)
+  if (!id) {
+    id = `local-user-${Math.random().toString(36).slice(2, 12)}`
+    localStorage.setItem(LOCAL_USER_KEY, id)
+  }
+  return { id, email: 'local@quiz-app', app_metadata: {}, user_metadata: {}, aud: 'local', created_at: new Date().toISOString() } as User
+}
+
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
   const [session, setSession] = useState<Session | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    // No backend configured: static mode runs on a local anonymous identity so
+    // the quizzes stay playable and attempts land in localStorage.
+    if (!isSupabaseConfigured) {
+      setUser(localAnonymousUser())
+      setLoading(false)
+      return
+    }
+
     // Helper to clear all auth state
     const clearAuthState = () => {
       setSession(null)
@@ -67,6 +86,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [])
 
   const signIn = async (email: string, password: string) => {
+    if (!isSupabaseConfigured) {
+      setUser(localAnonymousUser())
+      return { error: null }
+    }
     const { error } = await supabase.auth.signInWithPassword({
       email,
       password
@@ -78,6 +101,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // Clear local state first
     setSession(null)
     setUser(null)
+    if (!isSupabaseConfigured) return
     // Clear any stale Supabase tokens from localStorage BEFORE calling signOut
     Object.keys(localStorage).forEach(key => {
       if (key.startsWith('sb-')) {

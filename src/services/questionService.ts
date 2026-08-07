@@ -1,4 +1,5 @@
 import { supabase } from './supabase'
+import { normalizeQuestion } from '../lib/questions'
 import type { Question } from '../types/quiz'
 
 const missingColumnsByTable = new Map<string, Set<string>>()
@@ -24,31 +25,6 @@ function handleMissingColumnError<T extends Record<string, unknown>>(table: stri
   const cleaned: Record<string, unknown> = { ...payload }
   if (column in cleaned) delete cleaned[column]
   return cleaned as T
-}
-
-function normalizeQuestion(raw: any): Question {
-  const options = Array.isArray(raw.options)
-    ? raw.options.map((text: string, index: number) => ({
-        id: String(index),
-        text
-      }))
-    : []
-  const correctIndex = typeof raw.correct_option_index === 'number' ? raw.correct_option_index : 0
-
-  return {
-    id: raw.id,
-    quiz_id: raw.quiz_id,
-    question_text: raw.question_text,
-    question_type: raw.question_type || 'multiple_choice',
-    options,
-    correct_answer: String(correctIndex),
-    correct_option_index: correctIndex,
-    image_url: raw.image_url ?? null,
-    explanation: raw.explanation ?? null,
-    points: typeof raw.points === 'number' ? raw.points : 1,
-    display_order: raw.display_order ?? 0,
-    created_at: raw.created_at
-  }
 }
 
 export async function fetchQuestionsForQuiz(quizId: string): Promise<Question[]> {

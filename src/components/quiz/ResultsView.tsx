@@ -5,6 +5,7 @@ import { Button } from '../ui/Button'
 import { ScoreBadge } from './ScoreBadge'
 import { QuestionView } from './QuestionView'
 import { formatPercentage, formatDuration } from '../../utils/formatters'
+import { resolveSelectedOptionId } from '../../lib/questions'
 
 interface ResultsViewProps {
   attempt: QuizAttempt
@@ -64,9 +65,11 @@ export function ResultsView({ attempt, quiz, questions }: ResultsViewProps) {
 
           {questions.map((question, index) => {
             const answer = answersMap[question.id]
-            const selectedOption = answer?.selected_option ?? (answer?.selected_index !== undefined
-              ? String(answer.selected_index)
-              : undefined)
+            const selectedOption = resolveSelectedOptionId(
+              question,
+              answer?.selected_option,
+              answer?.selected_index
+            )
             return (
               <Card key={question.id}>
                 <QuestionView

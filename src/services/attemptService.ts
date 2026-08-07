@@ -1,4 +1,13 @@
-import { supabase } from './supabase'
+import { supabase, isSupabaseConfigured } from './supabase'
+import { normalizeQuestion } from '../lib/questions'
+import { isStaticQuizId, getStaticQuiz } from '../data/staticQuizzes'
+import {
+  createLocalAttempt,
+  submitLocalAttempt,
+  listLocalAttempts,
+  getLocalAttempt,
+  isLocalAttemptId
+} from './localAttempts'
 import type { QuizAttempt, AttemptAnswer, Question } from '../types/quiz'
 
 function parseAnswers(raw: unknown): AttemptAnswer[] {
@@ -27,32 +36,11 @@ function normalizeAttempt(raw: any): QuizAttempt {
   }
 }
 
-function normalizeQuestion(raw: any): Question {
-  const options = Array.isArray(raw.options)
-    ? raw.options.map((text: string, index: number) => ({
-        id: String(index),
-        text
-      }))
-    : []
-  const correctIndex = typeof raw.correct_option_index === 'number' ? raw.correct_option_index : 0
-
-  return {
-    id: raw.id,
-    quiz_id: raw.quiz_id,
-    question_text: raw.question_text,
-    question_type: raw.question_type || 'multiple_choice',
-    options,
-    correct_answer: String(correctIndex),
-    correct_option_index: correctIndex,
-    image_url: raw.image_url ?? null,
-    explanation: raw.explanation ?? null,
-    points: typeof raw.points === 'number' ? raw.points : 1,
-    display_order: raw.display_order ?? 0,
-    created_at: raw.created_at
-  }
-}
-
 export async function createAttempt(quizId: string, userId: string, userEmail?: string): Promise<QuizAttempt | null> {
+  if (isStaticQuizId(quizId) || !isSupabaseConfigured) {
+    return createLocalAttempt(quizId, userId)
+  }
+
   try {
     const insertData: Record<string, unknown> = {
       quiz_id: quizId,
@@ -90,26 +78,35 @@ export async function submitAttempt(
   questions: Question[],
   startedAt: Date
 ): Promise<QuizAttempt | null> {
+  // Grade against the option's stable id, and record the index only as a hint.
+  let score = 0
+  const totalQuestions = questions.length
+  const attemptAnswers: AttemptAnswer[] = []
+
+  for (const question of questions) {
+    const selectedOption = answers[question.id]
+    const isCorrect = !!selectedOption && selectedOption === question.correct_answer
+    score += isCorrect ? 1 : 0
+
+    const selectedIndex = question.options.findIndex(o => o.id === selectedOption)
+    attemptAnswers.push({
+      question_id: question.id,
+      selected_option: selectedOption || '',
+      selected_index: selectedIndex >= 0 ? selectedIndex : undefined,
+      is_correct: isCorrect
+    })
+  }
+
+  const timeSpentSeconds = Math.max(
+    0,
+    Math.round((Date.now() - startedAt.getTime()) / 1000)
+  )
+
+  if (isLocalAttemptId(attemptId)) {
+    return submitLocalAttempt(attemptId, score, totalQuestions, attemptAnswers, timeSpentSeconds)
+  }
+
   try {
-    void startedAt
-    // Calculate score
-    let score = 0
-    const totalQuestions = questions.length
-    const attemptAnswers: AttemptAnswer[] = []
-
-    for (const question of questions) {
-      const selectedOption = answers[question.id]
-      const isCorrect = selectedOption === question.correct_answer
-      score += isCorrect ? 1 : 0
-
-      attemptAnswers.push({
-        question_id: question.id,
-        selected_option: selectedOption || '',
-        selected_index: selectedOption ? Number(selectedOption) : undefined,
-        is_correct: isCorrect
-      })
-    }
-
     const { error } = await supabase
       .from('academy_quiz_attempts')
       .update({
@@ -137,6 +134,9 @@ export async function submitAttempt(
 }
 
 export async function fetchUserAttempts(userId: string): Promise<QuizAttempt[]> {
+  const local = listLocalAttempts(userId)
+  if (!isSupabaseConfigured) return local
+
   try {
     const { data, error } = await supabase
       .from('academy_quiz_attempts')
@@ -149,10 +149,12 @@ export async function fetchUserAttempts(userId: string): Promise<QuizAttempt[]> 
       .order('created_at', { ascending: false })
 
     if (error) throw error
-    return (data || []).map(normalizeAttempt)
+    return [...local, ...(data || []).map(normalizeAttempt)].sort((a, b) =>
+      (b.created_at ?? '').localeCompare(a.created_at ?? '')
+    )
   } catch (error) {
     console.error('🔴 Error fetching attempts:', error)
-    return []
+    return local
   }
 }
 
@@ -161,6 +163,26 @@ export async function fetchAttemptDetail(attemptId: string, userId: string): Pro
   quiz: { id: string; title: string; show_correct_answers: boolean }
   questions: Question[]
 } | null> {
+  if (isLocalAttemptId(attemptId)) {
+    const attempt = getLocalAttempt(attemptId, userId)
+    if (!attempt) return null
+
+    const staticQuiz = getStaticQuiz(attempt.quiz_id)
+    if (!staticQuiz) return null
+
+    return {
+      attempt: normalizeAttempt(attempt),
+      quiz: {
+        id: staticQuiz.quiz.id,
+        title: staticQuiz.quiz.title,
+        show_correct_answers: staticQuiz.quiz.show_correct_answers ?? true
+      },
+      questions: staticQuiz.questions
+    }
+  }
+
+  if (!isSupabaseConfigured) return null
+
   try {
     const { data: attempt, error: attemptError } = await supabase
       .from('academy_quiz_attempts')

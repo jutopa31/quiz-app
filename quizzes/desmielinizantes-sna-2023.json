@@ -1,0 +1,339 @@
+{
+  "quiz": {
+    "title": "Enfermedades desmielinizantes SNA 2023",
+    "description": "Examen de 25 preguntas sobre esclerosis múltiple, NMOSD, MOGAD, diagnóstico, tratamiento y manejo sintomático.",
+    "time_limit_minutes": 40,
+    "shuffle_questions": false,
+    "show_correct_answers": true,
+    "status": "published"
+  },
+  "questions": [
+    {
+      "question_text": "Respecto a los anticuerpos anti-acuaporina-4 (AQP4-IgG), ¿cuál de las siguientes afirmaciones es correcta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Reconocen un epítopo intracelular de la acuaporina-4.",
+        "Los ensayos ELISA son el método de mayor sensibilidad diagnóstica.",
+        "El método de elección para su detección es el Cell-Based Assay (CBA).",
+        "Su positividad confirma esclerosis múltiple."
+      ],
+      "correct_option_index": 2,
+      "explanation": "AQP4-IgG debe buscarse en suero mediante un ensayo basado en células (CBA), que conserva los epítopos extracelulares y conformacionales de la acuaporina-4. Los ensayos ELISA tienen menor sensibilidad y pueden dar falsos positivos, sobre todo con títulos bajos.\n\nLa positividad, en un cuadro clínico compatible, identifica NMOSD AQP4 positivo, no esclerosis múltiple. El anticuerpo suele ser una IgG1 que se une a la acuaporina-4 de los pies astrocitarios, activa el complemento y produce una astrocitopatía; el daño de oligodendrocitos y la desmielinización son secundarios.\n\nReferencia: Wingerchuk DM et al. International consensus diagnostic criteria for neuromyelitis optica spectrum disorders. Neurology. 2015;85:177-189.",
+      "points": 1
+    },
+    {
+      "question_text": "¿Cuál de las siguientes características de la mielitis es más sugestiva de NMOSD que de esclerosis múltiple?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Lesión medular periférica menor de un segmento.",
+        "Mielitis longitudinalmente extensa (≥3 segmentos vertebrales).",
+        "Recuperación clínica completa en la mayoría de los pacientes.",
+        "Predominio de lesiones dorsolaterales cervicales."
+      ],
+      "correct_option_index": 1,
+      "explanation": "La mielitis longitudinalmente extensa, definida por una lesión que abarca al menos tres segmentos vertebrales, es un patrón característico de NMOSD. Suele ser central, comprometer gran parte del área transversal de la médula y dejar secuelas importantes.\n\nLas lesiones medulares de esclerosis múltiple suelen ser cortas, periféricas, laterales y ocupar menos de la mitad del área axial. MOGAD también puede producir mielitis longitudinalmente extensa, en especial con afectación del cono o signo de la H. Una lesión corta no excluye NMOSD: puede verse al comienzo del ataque o después de que una lesión extensa se fragmente con el tratamiento.",
+      "points": 1
+    },
+    {
+      "question_text": "Una mujer de 35 años consulta por neuritis óptica grave unilateral y mielitis longitudinalmente extensa. El Cell-Based Assay resulta positivo para AQP4-IgG. ¿Cuál de las siguientes terapias cuenta con evidencia de un ensayo clínico pivotal específico para reducir el riesgo de recaídas en esta enfermedad?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Interferón beta.",
+        "Fingolimod.",
+        "Inebilizumab.",
+        "Acetato de glatiramer."
+      ],
+      "correct_option_index": 2,
+      "explanation": "Inebilizumab es un anticuerpo monoclonal anti-CD19 que depleciona una franja amplia de la línea B, incluidas células implicadas en la producción de AQP4-IgG. En N-MOmentum redujo de manera marcada el riesgo de nuevos ataques frente a placebo, con mayor claridad en pacientes AQP4-IgG positivos.\n\nInterferón beta, fingolimod y acetato de glatiramer son tratamientos de esclerosis múltiple; no previenen adecuadamente las recaídas de NMOSD y algunos pueden agravarla. Otros tratamientos con ensayos específicos en NMOSD AQP4 positivo son eculizumab, que inhibe el complemento, y satralizumab, que bloquea la señalización de IL-6.\n\nN-MOmentum fue publicado formalmente como un ensayo fase 2/3, no como fase III pura. Referencia: Cree BAC et al. Lancet. 2019;394:1352-1363.",
+      "points": 1
+    },
+    {
+      "question_text": "Un paciente de 28 años consulta por una neuritis óptica típica. La RM demuestra diseminación en el espacio, pero no diseminación en el tiempo. El LCR presenta bandas oligoclonales patrón tipo 2. ¿Cuál es la interpretación correcta según la revisión de los criterios de McDonald 2024?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Las bandas oligoclonales sólo aportan valor pronóstico.",
+        "Es necesario esperar una segunda recaída para confirmar EM.",
+        "Las bandas oligoclonales pueden sustituir la demostración de diseminación en el tiempo.",
+        "Debe repetirse la RM a los 6 meses antes de establecer el diagnóstico."
+      ],
+      "correct_option_index": 2,
+      "explanation": "Las bandas oligoclonales restringidas al LCR, patrón tipo 2, demuestran síntesis intratecal de IgG. En un síndrome clínico típico que ya cumple diseminación en el espacio, permiten establecer el diagnóstico sin esperar una segunda recaída o una nueva lesión en la RM.\n\nLa revisión 2024 incorporó el nervio óptico como quinta topografía, aceptó el índice de cadenas livianas kappa como alternativa a las bandas y sumó marcadores de especificidad como el signo de la vena central y las lesiones con anillo paramagnético. Ningún biomarcador reemplaza la necesidad de un cuadro compatible y de excluir una explicación mejor.\n\nReferencia: Montalban X et al. Diagnosis of multiple sclerosis: 2024 revisions of the McDonald criteria. Lancet Neurol. 2025.",
+      "points": 1
+    },
+    {
+      "question_text": "¿Cuál de las siguientes situaciones representa una bandera roja que debería hacer reconsiderar el diagnóstico de esclerosis múltiple antes de aplicar los criterios de McDonald?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Neuritis óptica unilateral con buena recuperación.",
+        "Síndrome de tronco encefálico típico.",
+        "Síndrome de área postrema con náuseas, vómitos e hipo persistentes.",
+        "Mielitis parcial con predominio sensitivo."
+      ],
+      "correct_option_index": 2,
+      "explanation": "El síndrome de área postrema se presenta con hipo, náuseas o vómitos persistentes sin otra explicación. Es una manifestación central de NMOSD, relacionada con la elevada expresión de acuaporina-4 en el bulbo dorsal.\n\nUna neuritis óptica unilateral dolorosa, una mielitis parcial sensitiva y determinados síndromes focales de tronco son presentaciones típicas de esclerosis múltiple. Los criterios de McDonald no diferencian EM de sus imitadores: se aplican después de comprobar que el síndrome es compatible. Ante un síndrome de área postrema corresponde solicitar AQP4-IgG en suero mediante CBA y revisar la RM del bulbo antes de indicar una terapia para EM.",
+      "points": 1
+    },
+    {
+      "question_text": "¿Cuál de las siguientes afirmaciones define correctamente una recaída de esclerosis múltiple?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Los síntomas deben durar al menos 12 horas.",
+        "Puede diagnosticarse durante una infección sistémica si la RM es compatible.",
+        "Debe corresponder a un episodio inflamatorio desmielinizante del SNC de al menos 24 horas de duración y sin fiebre ni infección.",
+        "Siempre requiere recuperación clínica completa."
+      ],
+      "correct_option_index": 2,
+      "explanation": "Una recaída es un episodio neurológico nuevo o un empeoramiento atribuible a inflamación desmielinizante del SNC, de al menos 24 horas, sin fiebre, infección ni otra causa metabólica. La recuperación puede ser completa o dejar secuelas.\n\nLos síntomas paroxísticos duran segundos o minutos, pero pueden contar como recaída si se repiten durante un período total de al menos 24 horas. Para considerar dos brotes separados suele exigirse un intervalo aproximado de 30 días. La reaparición de déficits antiguos durante una infección o con aumento de temperatura es una pseudorrecaída y no implica necesariamente actividad inflamatoria nueva.",
+      "points": 1
+    },
+    {
+      "question_text": "¿Cuál de las siguientes afirmaciones respecto a la neuritis óptica típica de esclerosis múltiple es correcta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Habitualmente es bilateral y presenta edema de papila marcado.",
+        "Generalmente es unilateral, dolorosa con los movimientos oculares y presenta buena recuperación funcional.",
+        "Se caracteriza por pérdida visual severa menor de 20/200 y mala recuperación.",
+        "Se acompaña frecuentemente de exudados retinianos."
+      ],
+      "correct_option_index": 1,
+      "explanation": "La neuritis óptica típica de esclerosis múltiple es unilateral, subaguda, dolorosa con los movimientos oculares y suele causar un escotoma central con discromatopsia. El fondo de ojo puede ser normal porque la inflamación suele ser retrobulbar, y la recuperación funcional habitualmente es buena.\n\nEl patrón ayuda al diagnóstico diferencial. NMOSD AQP4 positivo suele comprometer el segmento posterior y el quiasma, con pérdida grave y recuperación pobre. MOGAD afecta con mayor frecuencia el segmento anterior, puede ser bilateral y produce edema papilar marcado, exudados y realce de la grasa perineural. Una neuritis bilateral simultánea es atípica para EM.",
+      "points": 1
+    },
+    {
+      "question_text": "Respecto a la mielitis asociada a MOGAD, ¿cuál de las siguientes afirmaciones es correcta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "La afectación del cono medular es una característica sugestiva de MOGAD.",
+        "La recuperación funcional suele ser peor que en NMOSD.",
+        "Las lesiones medulares son habitualmente menores de un segmento vertebral.",
+        "Los síntomas esfinterianos son excepcionales."
+      ],
+      "correct_option_index": 0,
+      "explanation": "La afectación del cono medular es un rasgo sugestivo de MOGAD y explica la frecuencia de disfunción vesical, intestinal y sexual. Otros patrones de apoyo son la mielitis longitudinalmente extensa y el signo de la H en el corte axial, producido por el compromiso predominante de la sustancia gris.\n\nMOGAD también puede causar lesiones cortas, por lo que la longitud aislada no establece el diagnóstico. La recuperación motora suele ser mejor que en NMOSD AQP4 positivo, aunque pueden persistir secuelas esfinterianas o sexuales. El diagnóstico requiere un evento compatible, MOG-IgG en suero mediante CBA y ausencia de una explicación alternativa.\n\nReferencia: Banwell B et al. Diagnosis of MOG antibody-associated disease: International MOGAD Panel proposed criteria. Lancet Neurol. 2023;22:268-282.",
+      "points": 1
+    },
+    {
+      "question_text": "Un paciente presenta un primer episodio de ADEM con anticuerpos anti-MOG positivos. ¿Cuál de las siguientes afirmaciones es la más adecuada?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Todos los pacientes evolucionarán a una enfermedad recurrente.",
+        "La persistencia de anticuerpos anti-MOG predice con certeza una evolución recurrente.",
+        "Debe iniciarse indefinidamente inmunoterapia de mantenimiento en todos los casos.",
+        "MOGAD puede ser monofásica o recurrente, por lo que el seguimiento clínico es fundamental."
+      ],
+      "correct_option_index": 3,
+      "explanation": "MOGAD puede seguir un curso monofásico o recurrente. En la infancia, ADEM es una forma frecuente de presentación, pero un primer episodio anti-MOG positivo no permite anticipar con certeza la evolución. La persistencia de títulos altos aumenta la sospecha de recurrencia, sin determinarla por sí sola.\n\nEl ataque agudo se trata con corticoides y un descenso cuidadoso. La inmunoterapia prolongada se individualiza y tiene mayor fundamento después de una segunda recaída, ante un ataque muy grave con mala recuperación o cuando aparecen recaídas al reducir los corticoides. El seguimiento debe incluir evolución clínica, función cognitiva, RM seriada e interpretación contextual de MOG-IgG.",
+      "points": 1
+    },
+    {
+      "question_text": "Respecto al estudio del líquido cefalorraquídeo, ¿cuál de los siguientes hallazgos constituye una bandera roja para esclerosis múltiple?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Bandas oligoclonales aisladas en LCR.",
+        "Pleocitosis marcada, mayor de 50 células/mm³.",
+        "Índice IgG elevado.",
+        "Síntesis intratecal de IgG."
+      ],
+      "correct_option_index": 1,
+      "explanation": "En esclerosis múltiple puede haber una pleocitosis linfocitaria leve, pero un recuento mayor de 50 células/mm³ es una bandera roja. Obliga a investigar infecciones, neurosarcoidosis, vasculitis, neoplasias hematológicas y otras enfermedades inflamatorias. También son atípicos el predominio de neutrófilos, la hiperproteinorraquia o hipoglucorraquia marcadas y las bandas en espejo entre suero y LCR.\n\nLas bandas oligoclonales restringidas al LCR y la síntesis intratecal de IgG apoyan el diagnóstico, aunque no son patognomónicas. El índice IgG puede elevarse, pero es menos sensible y específico que las bandas. Los criterios de McDonald 2024 también aceptan el índice de cadenas livianas kappa como alternativa para demostrar inflamación intratecal.",
+      "points": 1
+    },
+    {
+      "question_text": "¿La infección previa por cuál de los siguientes virus ha mostrado una asociación significativa con un riesgo aumentado de esclerosis múltiple?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Enterovirus D68.",
+        "Citomegalovirus (CMV).",
+        "Herpes simplex virus (HSV).",
+        "Parvovirus B19.",
+        "Epstein-Barr virus (EBV)."
+      ],
+      "correct_option_index": 4,
+      "explanation": "La infección por Epstein-Barr virus es el factor infeccioso con la asociación más sólida con esclerosis múltiple. En una cohorte de más de diez millones de militares estadounidenses, el riesgo aumentó 32 veces después de la seroconversión para EBV, sin un aumento comparable tras la infección por CMV.\n\nEBV no es suficiente para causar EM: infecta a la gran mayoría de la población y sólo una pequeña proporción desarrolla la enfermedad. Los mecanismos propuestos incluyen mimetismo molecular, alteración de la barrera hematoencefálica y persistencia del virus en células B autorreactivas.\n\nReferencia: Bjornevik K et al. Longitudinal analysis reveals high prevalence of Epstein-Barr virus associated with multiple sclerosis. Science. 2022;375:296-301. doi:10.1126/science.abj8222.",
+      "points": 1
+    },
+    {
+      "question_text": "Una mujer de 42 años con EMRR consulta por infección urinaria y fiebre de 39,5 °C. La debilidad y la espasticidad ya conocidas en ambos miembros inferiores empeoraron durante las últimas 36 horas. ¿Cuál es la interpretación más probable?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Debe solicitarse un EMG.",
+        "Presenta EM progresiva y debe retirarse el interferón.",
+        "Presenta una recaída y debe recibir antibióticos y corticoides.",
+        "Probablemente presenta una pseudorrecaída."
+      ],
+      "correct_option_index": 3,
+      "explanation": "La reaparición o intensificación de déficits conocidos durante una infección febril corresponde probablemente a una pseudorrecaída. El aumento de temperatura empeora transitoriamente la conducción en axones desmielinizados, sin implicar una nueva lesión inflamatoria.\n\nLa conducta inicial es tratar la infección, controlar la fiebre y reevaluar. No corresponde diagnosticar progresión, retirar la terapia modificadora ni indicar corticoides de manera automática. Una infección y una recaída verdadera pueden coexistir; si aparecen síntomas completamente nuevos o el deterioro persiste después de resolver la intercurrencia, debe reconsiderarse un brote.",
+      "points": 1
+    },
+    {
+      "question_text": "Un paciente con EM secundaria progresiva camina con andador y aumenta su espasticidad de leve a moderada o grave en 48 horas, hasta impedirle la deambulación. ¿Cuál es la primera conducta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Aumentar la dosis de antiespásticos orales.",
+        "Incrementar las sesiones de kinesiología.",
+        "Descartar una intercurrencia clínica.",
+        "Aplicar toxina botulínica."
+      ],
+      "correct_option_index": 2,
+      "explanation": "Un aumento abrupto de la espasticidad obliga a buscar una causa desencadenante antes de modificar el tratamiento. Las causas frecuentes incluyen infección urinaria, fiebre, retención vesical, constipación, dolor, lesiones cutáneas, mala postura y exposición al calor.\n\nAumentar antiespásticos sin evaluar la causa puede producir debilidad, sedación y caídas. La toxina botulínica se reserva para patrones focales persistentes; no es la respuesta inicial a un deterioro generalizado en 48 horas. Resuelta la intercurrencia, la espasticidad basal se reevalúa y se define un plan funcional con rehabilitación, tratamiento oral o intervenciones focales.",
+      "points": 1
+    },
+    {
+      "question_text": "Todas las siguientes drogas se utilizan como tratamiento preventivo en pacientes con MOGAD, excepto:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Micofenolato.",
+        "Azatioprina.",
+        "Inmunoglobulina intravenosa.",
+        "Interferón beta."
+      ],
+      "correct_option_index": 3,
+      "explanation": "Interferón beta es una terapia para esclerosis múltiple que no previene adecuadamente las recaídas de MOGAD y puede ser perjudicial. También deben evitarse otras extrapolaciones automáticas desde EM, como acetato de glatiramer, teriflunomida, dimetilfumarato y natalizumab.\n\nMicofenolato, azatioprina e inmunoglobulina intravenosa se utilizan como tratamientos de mantenimiento en MOGAD recurrente. La evidencia no es equivalente entre ellos y proviene en gran parte de cohortes observacionales. La decisión de iniciar tratamiento prolongado depende del número y gravedad de los ataques, la recuperación, la dependencia de corticoides, la edad y las comorbilidades.",
+      "points": 1
+    },
+    {
+      "question_text": "Respecto al curso del embarazo en la esclerosis múltiple, ¿cuál de las siguientes afirmaciones es correcta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Es siempre un embarazo de alto riesgo.",
+        "Existe un aumento definido del riesgo de aborto espontáneo y parto pretérmino por la enfermedad en sí misma.",
+        "La esclerosis múltiple per se no condiciona un embarazo de alto riesgo.",
+        "La esclerosis múltiple aumenta por sí misma el riesgo de malformaciones congénitas."
+      ],
+      "correct_option_index": 2,
+      "explanation": "La esclerosis múltiple por sí sola no obliga a clasificar el embarazo como de alto riesgo y no es una enfermedad teratogénica. El riesgo individual depende de la discapacidad, la actividad inflamatoria, las comorbilidades y la exposición a tratamientos.\n\nLa actividad de la EM suele disminuir durante la gestación, con un mínimo en el tercer trimestre, y aumentar durante los primeros meses posparto. La planificación debe incluir estabilidad previa, selección de una terapia compatible y prevención del rebote al suspender fármacos de alta eficacia. Algunos estudios observacionales recientes describen asociaciones modestas con resultados obstétricos adversos, pero no demuestran que la EM aislada sea la causa; la evaluación sigue siendo individual.",
+      "points": 1
+    },
+    {
+      "question_text": "¿Cuánto tiempo de enfermedad estable y bajo tratamiento se recomienda, como mínimo, antes de planificar el embarazo en una paciente con EM de baja actividad?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Al menos 1 año.",
+        "Al menos 5 años.",
+        "Al menos 6 meses.",
+        "No se hace ninguna recomendación."
+      ],
+      "correct_option_index": 0,
+      "explanation": "En una paciente con baja actividad y factores pronósticos favorables se recomienda al menos un año de estabilidad clínica y radiológica bajo tratamiento antes de intentar el embarazo. Si la enfermedad es activa, el período recomendado aumenta a dos años.\n\nLa estabilidad no se define sólo por el paso del tiempo: deben revisarse las recaídas, la recuperación, la RM, el tratamiento utilizado y su eventual período de lavado o riesgo de rebote. La edad materna y la reserva ovárica también condicionan la decisión, por lo que no debe postergarse el tratamiento ni la planificación sin una evaluación individual.",
+      "points": 1
+    },
+    {
+      "question_text": "¿Cuál de los siguientes parámetros no forma parte del NEDA-3?",
+      "question_type": "multiple_choice",
+      "options": [
+        "La actividad en la RM convencional.",
+        "Las recaídas clínicas.",
+        "La progresión de la discapacidad.",
+        "La atrofia cerebral en RM."
+      ],
+      "correct_option_index": 3,
+      "explanation": "NEDA-3 exige ausencia de recaídas, ausencia de progresión confirmada de la discapacidad y ausencia de actividad en RM, definida por lesiones T2 nuevas o aumentadas y lesiones captantes de gadolinio. La atrofia cerebral no forma parte de esos tres dominios; se agrega en NEDA-4.\n\nNEDA-3 está orientado sobre todo a la inflamación focal y puede no detectar PIRA, deterioro cognitivo, lesiones corticales o inflamación compartimentalizada. La medición individual de volumen cerebral también tiene limitaciones por variabilidad técnica, hidratación, envejecimiento y pseudoatrofia después de iniciar un tratamiento eficaz.\n\nReferencia: Kappos L et al. Inclusion of brain volume loss in a revised measure of no evidence of disease activity (NEDA-4). Mult Scler. 2016;22:1297-1305.",
+      "points": 1
+    },
+    {
+      "question_text": "¿Qué significa el refuerzo con gadolinio de una placa desmielinizante?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Es un signo de actividad inflamatoria de la enfermedad.",
+        "Está directamente relacionado con la discapacidad.",
+        "Es un signo específico de EM secundaria progresiva.",
+        "Siempre se transforma en un agujero negro.",
+        "Todas son correctas."
+      ],
+      "correct_option_index": 0,
+      "explanation": "El realce con gadolinio indica alteración activa de la barrera hematoencefálica y permite reconocer la fase inflamatoria reciente de una lesión. No es específico de esclerosis múltiple y debe interpretarse junto con la morfología, la localización y el contexto clínico.\n\nEl realce suele ser transitorio. Si persiste durante más de tres meses, debe reconsiderarse el diagnóstico y buscar vasculitis, neoplasia, sarcoidosis u otra causa. No toda lesión captante evoluciona a un agujero negro. Los agujeros negros son lesiones hipointensas en T1 que reflejan daño tisular más permanente, gliosis y pérdida axonal, y tienen una relación más estrecha con discapacidad que el realce transitorio.",
+      "points": 1
+    },
+    {
+      "question_text": "¿Cuál de las siguientes drogas modificadoras de la enfermedad es considerada una terapia de reconstitución inmune?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Alemtuzumab.",
+        "Fingolimod.",
+        "Dimetilfumarato.",
+        "Ninguna de ellas."
+      ],
+      "correct_option_index": 0,
+      "explanation": "Alemtuzumab produce una depleción profunda de linfocitos T y B seguida de repoblación inmunitaria. Se administra en cursos breves con un efecto que puede persistir sin tratamiento continuo. Cladribina comparte este concepto de reconstitución inmune pulsada.\n\nFingolimod y dimetilfumarato son terapias de mantenimiento: requieren administración diaria para sostener su efecto. La clasificación no es completamente uniforme; algunas revisiones utilizan una definición más amplia para otras terapias depletoras. En el uso clínico habitual, alemtuzumab y cladribina son los ejemplos farmacológicos prototípicos de reconstitución inmune.",
+      "points": 1
+    },
+    {
+      "question_text": "¿Cuál afirmación es correcta respecto a la fisiopatología de NMOSD AQP4 positivo?",
+      "question_type": "multiple_choice",
+      "options": [
+        "La neurona permanece siempre indemne.",
+        "La desmielinización es un fenómeno secundario al daño astrocitario.",
+        "La barrera hematoencefálica permanece intacta.",
+        "Nunca se activa el sistema del complemento."
+      ],
+      "correct_option_index": 1,
+      "explanation": "NMOSD AQP4 positivo es una astrocitopatía primaria. AQP4-IgG entra al SNC a través de una barrera hematoencefálica alterada, se une a los pies astrocitarios y activa el complemento. La lesión atrae neutrófilos y eosinófilos y produce muerte del astrocito; la desmielinización, el daño axonal y la pérdida neuronal aparecen de forma secundaria.\n\nLa destrucción astrocitaria también reduce el transportador EAAT2, favoreciendo acumulación de glutamato y excitotoxicidad. Esta secuencia explica la eficacia de tratamientos dirigidos a la línea B, IL-6 o complemento y diferencia a NMOSD de la esclerosis múltiple, donde el blanco inicial no es el astrocito.",
+      "points": 1
+    },
+    {
+      "question_text": "Respecto a la fatiga en esclerosis múltiple, ¿cuál debe ser el primer paso antes de indicar un tratamiento farmacológico?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Iniciar amantadina.",
+        "Solicitar polisomnografía en todos los pacientes.",
+        "Identificar y tratar causas secundarias de fatiga.",
+        "Indicar modafinilo."
+      ],
+      "correct_option_index": 2,
+      "explanation": "La evaluación comienza por buscar causas secundarias: depresión, trastornos del sueño, nocturia, espasmos nocturnos, dolor, anemia, hipotiroidismo, infecciones y efectos adversos de medicamentos. La polisomnografía se reserva para una sospecha concreta, como apnea o movimientos periódicos de las piernas.\n\nEl tratamiento inicial combina ejercicio aeróbico adaptado, conservación de energía, descansos breves programados, terapia ocupacional y, cuando corresponde, intervenciones cognitivo-conductuales. Amantadina y modafinilo pueden probarse en casos seleccionados, pero la evidencia es limitada e inconsistente; no sustituyen la corrección de una causa reversible.",
+      "points": 1
+    },
+    {
+      "question_text": "En un paciente con vejiga hipoactiva secundaria a esclerosis múltiple, ¿cuál es la indicación clásica para iniciar cateterismo intermitente limpio?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Residuo posmiccional persistentemente elevado, aproximadamente mayor de 100 ml.",
+        "Cualquier urgencia miccional.",
+        "Incontinencia de esfuerzo.",
+        "Nicturia aislada."
+      ],
+      "correct_option_index": 0,
+      "explanation": "La vejiga hipoactiva produce vaciamiento incompleto, retención e incontinencia por rebosamiento. Un residuo posmiccional persistentemente mayor de 100 ml es el umbral clásico para considerar cateterismo intermitente limpio. La urgencia corresponde con mayor frecuencia a vejiga hiperactiva; la nicturia o la incontinencia de esfuerzo aisladas no demuestran retención.\n\nLa evaluación incluye orina completa, urocultivo, ecografía con residuo posmiccional y urodinamia cuando está indicada. El umbral no es absoluto: también se consideran capacidad vesical, síntomas, infecciones recurrentes, presiones urodinámicas y función renal. Una medición aislada no basta para indicar cateterismo permanente.",
+      "points": 1
+    },
+    {
+      "question_text": "¿Cuál de las siguientes medidas forma parte del manejo integral de la espasticidad?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Únicamente tratamiento farmacológico.",
+        "Sólo fisioterapia.",
+        "Abordaje multidisciplinario con rehabilitación y tratamiento farmacológico cuando esté indicado.",
+        "Reposo prolongado."
+      ],
+      "correct_option_index": 2,
+      "explanation": "La espasticidad se trata según su distribución, gravedad, dolor e impacto funcional. El plan combina identificación de desencadenantes, ejercicio, estiramientos, postura, fisioterapia, terapia ocupacional, ortesis y medicación cuando aporta un beneficio concreto.\n\nLa espasticidad focal puede tratarse con toxina botulínica y rehabilitación; la generalizada puede requerir baclofeno, tizanidina o gabapentina. El reposo prolongado favorece debilidad y contracturas. Tampoco debe eliminarse el tono de manera indiscriminada: algunos pacientes lo utilizan para mantenerse de pie o realizar transferencias, y una relajación excesiva puede empeorar la función.",
+      "points": 1
+    },
+    {
+      "question_text": "¿Cuál de los siguientes fármacos se encuentra entre las opciones iniciales para el tratamiento del dolor neuropático persistente en esclerosis múltiple?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Ibuprofeno.",
+        "Duloxetina.",
+        "Prednisona.",
+        "Tramadol como tratamiento inicial."
+      ],
+      "correct_option_index": 1,
+      "explanation": "Duloxetina es una opción para disestesias urentes y dolor neuropático persistente. Otras alternativas son venlafaxina, amitriptilina, gabapentina y pregabalina, elegidas según comorbilidades, tolerancia y tipo de dolor.\n\nIbuprofeno es más apropiado para dolor musculoesquelético que para dolor neuropático. Prednisona no es un analgésico crónico y se reserva para recaídas inflamatorias que requieren tratamiento. Tramadol y otros opioides no son opciones iniciales por su beneficio limitado y por los riesgos de sedación, tolerancia y dependencia. El dolor paroxístico, como Lhermitte o neuralgia del trigémino, suele responder mejor a fármacos como carbamazepina.",
+      "points": 1
+    },
+    {
+      "question_text": "Respecto al Symbol Digit Modalities Test (SDMT) en pacientes con esclerosis múltiple, ¿cuál de las siguientes afirmaciones es correcta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Evalúa principalmente memoria episódica verbal.",
+        "Es una prueba de screening de la velocidad de procesamiento y una de las herramientas más sensibles para detectar deterioro cognitivo en EM.",
+        "Requiere aproximadamente 45 minutos para su administración.",
+        "Ha sido reemplazado por el PASAT como herramienta de screening."
+      ],
+      "correct_option_index": 1,
+      "explanation": "El SDMT evalúa principalmente velocidad de procesamiento, atención y eficiencia visomotora. La tarea cronometrada dura 90 segundos y puede completarse, con instrucciones, en pocos minutos. Es una de las pruebas más sensibles para detectar y seguir deterioro cognitivo en esclerosis múltiple.\n\nEl PASAT fue desplazado en la práctica por ser más complejo, estresante y dependiente de una presentación auditiva estandarizada. Un SDMT alterado es una señal para ampliar la evaluación neuropsicológica, no un diagnóstico aislado. El resultado puede verse afectado por déficit visual o motor, fatiga, depresión, recaídas y efecto de aprendizaje.\n\nReferencia: Kalb R et al. Recommendations for cognitive screening and management in multiple sclerosis care. Mult Scler. 2018;24:1665-1680.",
+      "points": 1
+    }
+  ]
+}

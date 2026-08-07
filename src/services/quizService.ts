@@ -1,32 +1,20 @@
-import { supabase } from './supabase'
+import { supabase, isSupabaseConfigured } from './supabase'
+import { normalizeQuestion } from '../lib/questions'
+import { getStaticQuizzes, getStaticQuiz } from '../data/staticQuizzes'
+import { localAttemptStats } from './localAttempts'
 import type { Quiz, Question } from '../types/quiz'
 
-function normalizeQuestion(raw: any): Question {
-  const options = Array.isArray(raw.options)
-    ? raw.options.map((text: string, index: number) => ({
-        id: String(index),
-        text
-      }))
-    : []
-  const correctIndex = typeof raw.correct_option_index === 'number' ? raw.correct_option_index : 0
-
-  return {
-    id: raw.id,
-    quiz_id: raw.quiz_id,
-    question_text: raw.question_text,
-    question_type: raw.question_type || 'multiple_choice',
-    options,
-    correct_answer: String(correctIndex),
-    correct_option_index: correctIndex,
-    image_url: raw.image_url ?? null,
-    explanation: raw.explanation ?? null,
-    points: typeof raw.points === 'number' ? raw.points : 1,
-    display_order: raw.display_order ?? 0,
-    created_at: raw.created_at
-  }
-}
-
 export async function fetchPublishedQuizzes(userId?: string): Promise<Quiz[]> {
+  // Quizzes shipped as JSON in /quizzes are always available, no backend needed.
+  const localStats = userId ? localAttemptStats(userId) : {}
+  const staticQuizzes = getStaticQuizzes().map(quiz => ({
+    ...quiz,
+    user_best_score: localStats[quiz.id]?.best_score ?? null,
+    user_attempts_count: localStats[quiz.id]?.count ?? 0
+  }))
+
+  if (!isSupabaseConfigured) return staticQuizzes
+
   try {
     // Get published quizzes with question count
     const { data: quizzes, error } = await supabase
@@ -67,7 +55,7 @@ export async function fetchPublishedQuizzes(userId?: string): Promise<Quiz[]> {
       }
     }
 
-    return (quizzes || []).map(quiz => ({
+    const remoteQuizzes = (quizzes || []).map(quiz => ({
       ...quiz,
       shuffle_questions: quiz.shuffle_questions ?? false,
       show_correct_answers: quiz.show_correct_answers ?? true,
@@ -75,13 +63,25 @@ export async function fetchPublishedQuizzes(userId?: string): Promise<Quiz[]> {
       user_best_score: attemptsMap[quiz.id]?.best_score ?? null,
       user_attempts_count: attemptsMap[quiz.id]?.count || 0
     }))
+
+    return [...staticQuizzes, ...remoteQuizzes]
   } catch (error) {
     console.error('🔴 Error fetching quizzes:', error)
-    return []
+    return staticQuizzes
   }
 }
 
 export async function fetchQuizWithQuestions(quizId: string): Promise<{ quiz: Quiz; questions: Question[] } | null> {
+  const staticQuiz = getStaticQuiz(quizId)
+  if (staticQuiz) {
+    const questions = staticQuiz.quiz.shuffle_questions
+      ? [...staticQuiz.questions].sort(() => Math.random() - 0.5)
+      : staticQuiz.questions
+    return { quiz: staticQuiz.quiz, questions }
+  }
+
+  if (!isSupabaseConfigured) return null
+
   try {
     // Fetch quiz
     const { data: quiz, error: quizError } = await supabase
