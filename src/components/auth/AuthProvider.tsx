@@ -6,6 +6,8 @@ interface AuthContextType {
   user: User | null
   session: Session | null
   loading: boolean
+  /** True when the user never signed in: a device-local identity, not a Supabase account. */
+  isAnonymous: boolean
   signIn: (email: string, password: string) => Promise<{ error: Error | null }>
   signOut: () => Promise<void>
 }
@@ -20,7 +22,7 @@ function localAnonymousUser(): User {
     id = `local-user-${Math.random().toString(36).slice(2, 12)}`
     localStorage.setItem(LOCAL_USER_KEY, id)
   }
-  return { id, email: 'local@quiz-app', app_metadata: {}, user_metadata: {}, aud: 'local', created_at: new Date().toISOString() } as User
+  return { id, email: 'Invitado', app_metadata: {}, user_metadata: {}, aud: 'local', created_at: new Date().toISOString() } as User
 }
 
 export function AuthProvider({ children }: { children: ReactNode }) {
@@ -29,8 +31,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // No backend configured: static mode runs on a local anonymous identity so
-    // the quizzes stay playable and attempts land in localStorage.
+    // Quizzes are playable without an account: with no session we fall back to a
+    // device-local identity and attempts land in localStorage.
     if (!isSupabaseConfigured) {
       setUser(localAnonymousUser())
       setLoading(false)
@@ -46,6 +48,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           localStorage.removeItem(key)
         }
       })
+      setUser(localAnonymousUser())
     }
 
     // Get initial session
@@ -57,7 +60,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           clearAuthState()
         } else {
           setSession(session)
-          setUser(session?.user ?? null)
+          setUser(session?.user ?? localAnonymousUser())
         }
         setLoading(false)
       })
@@ -71,12 +74,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
         if (event === 'TOKEN_REFRESHED' && !session) {
-          // Token refresh failed, clear state
+          // Token refresh failed, drop back to the guest identity
           setSession(null)
-          setUser(null)
+          setUser(localAnonymousUser())
         } else {
           setSession(session)
-          setUser(session?.user ?? null)
+          setUser(session?.user ?? localAnonymousUser())
         }
         setLoading(false)
       }
@@ -98,9 +101,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   const signOut = async () => {
-    // Clear local state first
+    // Signing out returns to the guest identity, not to a locked app
     setSession(null)
-    setUser(null)
+    setUser(localAnonymousUser())
     if (!isSupabaseConfigured) return
     // Clear any stale Supabase tokens from localStorage BEFORE calling signOut
     Object.keys(localStorage).forEach(key => {
@@ -118,7 +121,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <AuthContext.Provider value={{ user, session, loading, signIn, signOut }}>
+    <AuthContext.Provider value={{ user, session, loading, isAnonymous: !session, signIn, signOut }}>
       {children}
     </AuthContext.Provider>
   )

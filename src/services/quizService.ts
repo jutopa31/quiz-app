@@ -1,7 +1,7 @@
 import { supabase, isSupabaseConfigured } from './supabase'
 import { normalizeQuestion } from '../lib/questions'
 import { getStaticQuizzes, getStaticQuiz } from '../data/staticQuizzes'
-import { localAttemptStats } from './localAttempts'
+import { localAttemptStats, isLocalUserId } from './localAttempts'
 import type { Quiz, Question } from '../types/quiz'
 
 export async function fetchPublishedQuizzes(userId?: string): Promise<Quiz[]> {
@@ -15,28 +15,44 @@ export async function fetchPublishedQuizzes(userId?: string): Promise<Quiz[]> {
 
   if (!isSupabaseConfigured) return staticQuizzes
 
+  // Static content must never wait on the network: if Supabase is slow or down,
+  // return the JSON quizzes rather than leaving the user on a spinner.
+  const withTimeout = <T,>(promise: PromiseLike<T>, ms: number): Promise<T> =>
+    Promise.race([
+      Promise.resolve(promise),
+      new Promise<T>((_, reject) =>
+        setTimeout(() => reject(new Error('Supabase timeout')), ms)
+      )
+    ])
+
   try {
     // Get published quizzes with question count
-    const { data: quizzes, error } = await supabase
-      .from('academy_quizzes')
-      .select(`
-        *,
-        academy_quiz_questions(count)
-      `)
-      .eq('status', 'published')
-      .order('updated_at', { ascending: false })
+    const { data: quizzes, error } = await withTimeout(
+      supabase
+        .from('academy_quizzes')
+        .select(`
+          *,
+          academy_quiz_questions(count)
+        `)
+        .eq('status', 'published')
+        .order('updated_at', { ascending: false }),
+      4000
+    )
 
     if (error) throw error
 
     // Get user's attempts if logged in
     let attemptsMap: Record<string, { best_score: number; total_questions: number; count: number }> = {}
 
-    if (userId) {
-      const { data: attempts } = await supabase
-        .from('academy_quiz_attempts')
-        .select('quiz_id, score, total_questions')
-        .eq('user_id', userId)
-        .not('score', 'is', null)
+    if (userId && !isLocalUserId(userId)) {
+      const { data: attempts } = await withTimeout(
+        supabase
+          .from('academy_quiz_attempts')
+          .select('quiz_id, score, total_questions')
+          .eq('user_id', userId)
+          .not('score', 'is', null),
+        4000
+      )
 
       if (attempts) {
         attemptsMap = attempts.reduce((acc, attempt) => {

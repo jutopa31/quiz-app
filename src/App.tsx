@@ -46,7 +46,7 @@ function AppLayout({ children }: { children: ReactNode }) {
 }
 
 function AppRoutes() {
-  const { user, loading } = useAuth()
+  const { user, loading, isAnonymous } = useAuth()
 
   if (loading) {
     return (
@@ -60,7 +60,7 @@ function AppRoutes() {
     <Routes>
       <Route
         path="/login"
-        element={user ? <Navigate to="/" replace /> : <LoginPage />}
+        element={user && !isAnonymous ? <Navigate to="/" replace /> : <LoginPage />}
       />
       <Route
         path="/"

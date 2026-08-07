@@ -11,6 +11,11 @@ export type StoredAttempt = QuizAttempt & {
   academy_quizzes?: { id: string; title: string }
 }
 
+/** Guest identities created by AuthProvider; they have no row in Supabase. */
+export function isLocalUserId(userId: string | undefined): boolean {
+  return !!userId && userId.startsWith('local-user-')
+}
+
 export function isLocalAttemptId(attemptId: string | undefined): boolean {
   return !!attemptId && attemptId.startsWith('local-')
 }

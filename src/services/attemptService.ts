@@ -6,7 +6,8 @@ import {
   submitLocalAttempt,
   listLocalAttempts,
   getLocalAttempt,
-  isLocalAttemptId
+  isLocalAttemptId,
+  isLocalUserId
 } from './localAttempts'
 import type { QuizAttempt, AttemptAnswer, Question } from '../types/quiz'
 
@@ -37,7 +38,7 @@ function normalizeAttempt(raw: any): QuizAttempt {
 }
 
 export async function createAttempt(quizId: string, userId: string, userEmail?: string): Promise<QuizAttempt | null> {
-  if (isStaticQuizId(quizId) || !isSupabaseConfigured) {
+  if (isStaticQuizId(quizId) || isLocalUserId(userId) || !isSupabaseConfigured) {
     return createLocalAttempt(quizId, userId)
   }
 
@@ -135,7 +136,7 @@ export async function submitAttempt(
 
 export async function fetchUserAttempts(userId: string): Promise<QuizAttempt[]> {
   const local = listLocalAttempts(userId)
-  if (!isSupabaseConfigured) return local
+  if (!isSupabaseConfigured || isLocalUserId(userId)) return local
 
   try {
     const { data, error } = await supabase
@@ -181,7 +182,7 @@ export async function fetchAttemptDetail(attemptId: string, userId: string): Pro
     }
   }
 
-  if (!isSupabaseConfigured) return null
+  if (!isSupabaseConfigured || isLocalUserId(userId)) return null
 
   try {
     const { data: attempt, error: attemptError } = await supabase

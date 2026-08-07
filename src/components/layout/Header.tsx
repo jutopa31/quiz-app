@@ -4,7 +4,7 @@ import { useAuth } from '../auth/AuthProvider'
 import { useSettings } from '../../hooks/useSettings'
 
 export function Header() {
-  const { user, signOut } = useAuth()
+  const { user, isAnonymous, signOut } = useAuth()
   const navigate = useNavigate()
   const [showMenu, setShowMenu] = useState(false)
   const { settings, updateSetting } = useSettings()
@@ -19,7 +19,7 @@ export function Header() {
 
   const handleSignOut = async () => {
     await signOut()
-    navigate('/login')
+    navigate('/')
   }
 
   return (
@@ -84,12 +84,21 @@ export function Header() {
                   </button>
 
                   <div className="border-t border-gray-100 my-1" />
-                  <button
-                    onClick={handleSignOut}
-                    className="w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-red-50"
-                  >
-                    Cerrar sesión
-                  </button>
+                  {isAnonymous ? (
+                    <button
+                      onClick={() => navigate('/login')}
+                      className="w-full px-4 py-2 text-left text-sm text-emerald-700 hover:bg-emerald-50"
+                    >
+                      Iniciar sesión
+                    </button>
+                  ) : (
+                    <button
+                      onClick={handleSignOut}
+                      className="w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-red-50"
+                    >
+                      Cerrar sesión
+                    </button>
+                  )}
                 </div>
               </>
             )}
