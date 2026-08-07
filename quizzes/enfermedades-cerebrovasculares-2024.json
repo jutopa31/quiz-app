@@ -1,0 +1,416 @@
+{
+  "quiz": {
+    "id": "0f106ce4-05f2-4976-9cf5-0c8930eedea3",
+    "title": "Enfermedades Cerebrovasculares 2024",
+    "description": "Examen del módulo de Enfermedades Cerebrovasculares - Certificación SNA 2024",
+    "time_limit_minutes": 35,
+    "passing_score": null,
+    "shuffle_questions": false,
+    "show_correct_answers": true,
+    "status": "published",
+    "created_at": "2026-02-03T12:30:08.212164+00:00",
+    "updated_at": "2026-02-03T12:30:08.212164+00:00"
+  },
+  "questions": [
+    {
+      "id": "e32e39ac-476d-4771-b57d-0f1d13d7b5f8",
+      "question_text": "¿Cuáles son los factores de riesgo modificables del ACV isquémico?",
+      "question_type": "multiple_choice",
+      "options": [
+        "HTA, tabaquismo, cardiopatías, dislipidemia, obesidad, DBT, sedentarismo, alcoholismo, ACO, FA, estenosis carotídea",
+        "Edad, sexo y etnicidad",
+        "Genéticos",
+        "Todas son correctas"
+      ],
+      "correct_option_index": 0,
+      "explanation": "Los factores de riesgo modificables incluyen hipertensión, tabaquismo, cardiopatías, dislipidemia, obesidad, diabetes, sedentarismo, alcoholismo, anticonceptivos orales, FA y estenosis carotídea.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 0
+    },
+    {
+      "id": "31794e03-ac77-4853-881c-780113d6722a",
+      "question_text": "¿Cuál es la ventana temporal recomendada para el tratamiento con alteplase EV?",
+      "question_type": "multiple_choice",
+      "options": [
+        "3 horas",
+        "4.5 horas",
+        "6 horas",
+        "Ninguna de las anteriores"
+      ],
+      "correct_option_index": 1,
+      "explanation": "La ventana para alteplase EV es de 4.5 horas desde el inicio de los síntomas, con mayor beneficio cuanto más temprano se administre.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 1
+    },
+    {
+      "id": "3dae3222-3aa7-4bed-a1e3-f235097e2638",
+      "question_text": "Ante un paciente con ACV isquémico que recibió fibrinólisis y presenta deterioro del sensorio y midriasis, ¿cuál es la conducta inicial?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Suspender fibrinólisis y realizar TC de encéfalo",
+        "Administrar plasma fresco congelado",
+        "Continuar monitoreo clínico",
+        "Administrar vitamina K"
+      ],
+      "correct_option_index": 0,
+      "explanation": "Ante sospecha de hemorragia post-fibrinolisis, se debe suspender el tratamiento inmediatamente y realizar TC de encéfalo urgente para confirmar.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 2
+    },
+    {
+      "id": "b71f8c3d-5088-4b86-a3aa-9cd428089b75",
+      "question_text": "¿Cuáles son las principales arterias que irrigan el polígono de Willis?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Carótidas internas y sistema vertebrobasilar",
+        "Solo carótidas internas",
+        "Solo sistema vertebrobasilar",
+        "Carótidas externas"
+      ],
+      "correct_option_index": 0,
+      "explanation": "El polígono de Willis recibe irrigación de las carótidas internas (circulación anterior) y del sistema vertebrobasilar (circulación posterior).",
+      "image_url": null,
+      "points": 1,
+      "display_order": 3
+    },
+    {
+      "id": "2ca0fb26-63ce-4401-8122-fba8dee95d2b",
+      "question_text": "Indique la escala utilizada para evaluación de severidad del ACV:",
+      "question_type": "multiple_choice",
+      "options": [
+        "NIHSS",
+        "Escala de Glasgow",
+        "Escala de Rankin modificada",
+        "ASPECTS"
+      ],
+      "correct_option_index": 0,
+      "explanation": "La escala NIHSS (National Institutes of Health Stroke Scale) es el estándar para evaluar la severidad del ACV isquémico agudo.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 4
+    },
+    {
+      "id": "8448ac9d-23b8-4e24-8942-06804387bcc8",
+      "question_text": "¿Cuál es el tiempo puerta-aguja recomendado para la fibrinólisis en ACV isquémico?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Menor a 60 minutos",
+        "Menor a 45 minutos",
+        "Menor a 30 minutos",
+        "Menor a 90 minutos"
+      ],
+      "correct_option_index": 0,
+      "explanation": "El tiempo puerta-aguja recomendado es menor a 60 minutos para maximizar el beneficio de la fibrinólisis.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 5
+    },
+    {
+      "id": "7449fbcb-3e3c-4906-961a-3621f18c2b59",
+      "question_text": "En el contexto de ACV isquémico agudo, ¿cuál es la presión arterial objetivo antes de la fibrinólisis?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Mayor a 185/110 mmHg",
+        "Menor a 185/110 mmHg",
+        "Menor a 140/90 mmHg",
+        "Mayor a 220/120 mmHg"
+      ],
+      "correct_option_index": 1,
+      "explanation": "La PA debe ser menor a 185/110 mmHg antes de iniciar fibrinólisis y mantenerse menor a 180/105 durante las primeras 24 horas post-tratamiento.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 6
+    },
+    {
+      "id": "c11db088-c3f3-450b-8814-92838ad9a15d",
+      "question_text": "¿Cuál es la principal contraindicación absoluta para fibrinólisis EV?",
+      "question_type": "multiple_choice",
+      "options": [
+        "ACV isquémico previo hace 4 meses",
+        "Hemorragia intracraneal previa",
+        "Cirugía menor hace 2 semanas",
+        "Punción lumbar hace 10 días"
+      ],
+      "correct_option_index": 1,
+      "explanation": "La hemorragia intracraneal previa es una contraindicación absoluta para fibrinólisis debido al alto riesgo de sangrado recurrente.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 7
+    },
+    {
+      "id": "3fed8074-7472-4644-aa18-3fc0f8b36d0b",
+      "question_text": "El síndrome de Wallenberg se produce por oclusión de:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Arteria cerebral media",
+        "Arteria cerebelosa posteroinferior",
+        "Arteria cerebral anterior",
+        "Arteria basilar"
+      ],
+      "correct_option_index": 1,
+      "explanation": "El síndrome de Wallenberg o síndrome bulbar lateral se produce por oclusión de la arteria cerebelosa posteroinferior (PICA) o arteria vertebral.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 8
+    },
+    {
+      "id": "9bf0a0bd-b73d-4380-8254-4297ed418fc2",
+      "question_text": "¿Cuál es el mecanismo más frecuente de ACV isquémico?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Cardioembólico",
+        "Aterotrombótico de grandes vasos",
+        "Enfermedad de pequeño vaso (lacunar)",
+        "Disección arterial"
+      ],
+      "correct_option_index": 1,
+      "explanation": "El mecanismo aterotrombótico de grandes vasos es el más frecuente, seguido por cardioembolia y enfermedad de pequeño vaso.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 9
+    },
+    {
+      "id": "01239f2c-c45b-4299-99ba-d4d14b9edfff",
+      "question_text": "¿Qué estudio de imagen se recomienda como primera línea en sospecha de ACV agudo?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Resonancia magnética de encéfalo",
+        "Tomografía computada de encéfalo sin contraste",
+        "Angiografía cerebral",
+        "Doppler carotídeo"
+      ],
+      "correct_option_index": 1,
+      "explanation": "La TC de encéfalo sin contraste es el estudio de primera línea porque descarta hemorragia rápidamente y está ampliamente disponible.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 10
+    },
+    {
+      "id": "8ff2232d-ae8b-4e02-bb22-283b2f84d988",
+      "question_text": "En el ACV isquémico de circulación posterior, ¿cuál de los siguientes síntomas NO es característico?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Vértigo",
+        "Diplopía",
+        "Ataxia",
+        "Afasia de Broca"
+      ],
+      "correct_option_index": 3,
+      "explanation": "La afasia de Broca es característica de lesiones de circulación anterior (arteria cerebral media izquierda), no de circulación posterior.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 11
+    },
+    {
+      "id": "58da767c-5067-444c-b429-46029e00ee0f",
+      "question_text": "¿Cuál es el score ASPECTS mínimo recomendado para considerar trombectomía mecánica?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Mayor o igual a 6",
+        "Mayor o igual a 4",
+        "Mayor o igual a 8",
+        "No existe límite inferior"
+      ],
+      "correct_option_index": 0,
+      "explanation": "Un ASPECTS de 6 o mayor se considera favorable para trombectomía mecánica, indicando menor extensión del infarto establecido.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 12
+    },
+    {
+      "id": "68f47ca0-9350-47fb-89b8-9c959a048efe",
+      "question_text": "¿Cuál es la ventana temporal actual para trombectomía mecánica según los ensayos DAWN y DEFUSE 3?",
+      "question_type": "multiple_choice",
+      "options": [
+        "6 horas",
+        "12 horas",
+        "24 horas",
+        "48 horas"
+      ],
+      "correct_option_index": 2,
+      "explanation": "Los ensayos DAWN y DEFUSE 3 demostraron beneficio de trombectomía hasta 24 horas en pacientes seleccionados por imagen de perfusión.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 13
+    },
+    {
+      "id": "2c4b9360-0c60-498a-a3a2-bc1d54ec44b1",
+      "question_text": "La anticoagulación está indicada en prevención secundaria de ACV isquémico en caso de:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Fibrilación auricular",
+        "Estenosis carotídea sintomática",
+        "Enfermedad de pequeño vaso",
+        "Todas las anteriores"
+      ],
+      "correct_option_index": 0,
+      "explanation": "La anticoagulación está indicada en FA para prevención secundaria de ACV cardioembólico. Las otras causas se manejan con antiagregación.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 14
+    },
+    {
+      "id": "a478e1a1-2df8-4e6b-b66a-c0df192c7da9",
+      "question_text": "¿Cuál es el antídoto específico para revertir el efecto del dabigatrán?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Vitamina K",
+        "Idarucizumab",
+        "Concentrado de complejo protrombínico",
+        "Plasma fresco congelado"
+      ],
+      "correct_option_index": 1,
+      "explanation": "El idarucizumab es el antídoto específico del dabigatrán, un anticuerpo monoclonal que revierte su efecto anticoagulante.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 15
+    },
+    {
+      "id": "ae961917-cf7c-43b4-a9ec-554ac5d9ec6f",
+      "question_text": "En el contexto de hemorragia intracerebral, ¿cuál es la localización más frecuente?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Lobar",
+        "Putaminal",
+        "Talámica",
+        "Cerebelosa"
+      ],
+      "correct_option_index": 1,
+      "explanation": "La localización putaminal (ganglios basales) es la más frecuente en HIC hipertensiva, seguida por la talámica.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 16
+    },
+    {
+      "id": "662e33e0-a410-45ea-b77d-1882ae0830f9",
+      "question_text": "¿Cuál es la meta de presión arterial en las primeras horas de una hemorragia intracerebral según las guías actuales?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Menor a 180/110 mmHg",
+        "Menor a 140 mmHg de sistólica",
+        "Menor a 160/100 mmHg",
+        "Mayor a 140 mmHg de sistólica"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Las guías actuales recomiendan mantener la PAS menor a 140 mmHg en las primeras horas de HIC para reducir la expansión del hematoma.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 17
+    },
+    {
+      "id": "df09626c-6c8b-4ff9-9292-0a4273bb8938",
+      "question_text": "¿Cuál de los siguientes factores predice expansión del hematoma intracerebral?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Signo del punto en angioTC",
+        "Volumen inicial pequeño",
+        "Presión arterial controlada",
+        "Tiempo de evolución mayor a 6 horas"
+      ],
+      "correct_option_index": 0,
+      "explanation": "El signo del punto (spot sign) en angioTC indica extravasación activa de contraste y predice expansión del hematoma.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 18
+    },
+    {
+      "id": "acc13fb4-5e66-4ca2-981d-4c610ce2a1ed",
+      "question_text": "En la hemorragia subaracnoidea aneurismática, ¿cuál es el período de mayor riesgo de vasoespasmo?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Primeras 24 horas",
+        "Días 3-14",
+        "Después del día 21",
+        "No existe período definido"
+      ],
+      "correct_option_index": 1,
+      "explanation": "El vasoespasmo cerebral ocurre típicamente entre los días 3-14 post-HSA, con pico entre los días 7-10.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 19
+    },
+    {
+      "id": "0ac1a0b2-967a-4f97-9b78-c2ea238d1d96",
+      "question_text": "¿Cuál es el tratamiento de elección para prevenir vasoespasmo en HSA?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Nimodipina",
+        "Clazosentán",
+        "Estatinas",
+        "Magnesio"
+      ],
+      "correct_option_index": 0,
+      "explanation": "La nimodipina es el único tratamiento con evidencia demostrada para mejorar los outcomes neurológicos en HSA por vasoespasmo.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 20
+    },
+    {
+      "id": "b902d4b2-2b0c-45b8-9974-93636f7ba9c9",
+      "question_text": "¿Qué escala se utiliza para clasificar la severidad clínica de la hemorragia subaracnoidea?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Escala de Hunt y Hess",
+        "Escala de Glasgow",
+        "NIHSS",
+        "Escala de Fisher"
+      ],
+      "correct_option_index": 0,
+      "explanation": "La escala de Hunt y Hess clasifica la severidad clínica de la HSA, mientras que la escala de Fisher clasifica la cantidad de sangre en TC.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 21
+    },
+    {
+      "id": "4fdb6920-28a3-4481-93d0-d62e7983813d",
+      "question_text": "¿Cuál es la causa más frecuente de hemorragia subaracnoidea no traumática?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Malformación arteriovenosa",
+        "Ruptura de aneurisma cerebral",
+        "Angiopatía amiloide",
+        "Coagulopatía"
+      ],
+      "correct_option_index": 1,
+      "explanation": "La ruptura de aneurisma cerebral es la causa de aproximadamente 85% de las HSA no traumáticas.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 22
+    },
+    {
+      "id": "fd971819-07f1-464b-b0d3-526a2fe911a5",
+      "question_text": "¿Cuál de los siguientes NO es un factor de riesgo para formación o ruptura de aneurismas cerebrales?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Hipertensión arterial",
+        "Tabaquismo",
+        "Diabetes mellitus",
+        "Antecedentes familiares de aneurismas"
+      ],
+      "correct_option_index": 2,
+      "explanation": "La diabetes mellitus no es un factor de riesgo establecido para aneurismas cerebrales, a diferencia de HTA, tabaquismo y factores genéticos.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 23
+    },
+    {
+      "id": "a0a7ff87-0a44-411e-8c2c-5cd70d63407f",
+      "question_text": "¿En cuál de estos casos NO es necesario realizar una angiografía digital cerebral para descartar causa secundaria de HIC?",
+      "question_type": "multiple_choice",
+      "options": [
+        "HIC lobar en mayores de 70 años",
+        "HIV (hemorragia interventricular) sin hemorragia intraparenquimatosa",
+        "HIC profunda o posterior en menores de 45 años",
+        "Edema o efecto de masa desproporcionado al tiempo de evolución y calcificaciones anormales"
+      ],
+      "correct_option_index": 0,
+      "explanation": "HIC lobar en mayores de 70 años generalmente se debe a angiopatía amiloide o HTA, no requiriendo angiografía rutinaria. Los otros casos tienen mayor sospecha de causa vascular estructural.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 24
+    }
+  ]
+}

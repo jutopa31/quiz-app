@@ -8,6 +8,8 @@ import type { Quiz, Question } from '../types/quiz'
  */
 interface StaticQuizFile {
   quiz: {
+    /** Supabase UUID when the quiz was exported from the DB; absent for repo-only quizzes. */
+    id?: string
     title: string
     description?: string | null
     time_limit_minutes?: number | null
@@ -32,14 +34,16 @@ function slugFromPath(path: string): string {
 }
 
 function build(path: string, file: StaticQuizFile): { quiz: Quiz; questions: Question[] } {
-  const id = slugFromPath(path)
+  // Keeping the Supabase id means attempts and ranking recorded against this
+  // quiz stay valid; repo-only quizzes fall back to the filename slug.
+  const id = file.quiz.id ?? slugFromPath(path)
   const timestamp = file.quiz.updated_at ?? file.quiz.created_at ?? '2026-01-01T00:00:00Z'
 
   const questions = file.questions.map((raw, index) =>
     normalizeQuestion({
       ...raw,
       // Question ids are derived from the text so they survive reordering.
-      id: `${id}::${contentHash(String(raw.question_text))}`,
+      id: raw.id ?? `${id}::${contentHash(String(raw.question_text))}`,
       quiz_id: id,
       display_order: typeof raw.display_order === 'number' ? raw.display_order : index,
       created_at: timestamp

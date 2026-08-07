@@ -1,6 +1,6 @@
 import { supabase, isSupabaseConfigured } from './supabase'
 import { normalizeQuestion } from '../lib/questions'
-import { isStaticQuizId, getStaticQuiz } from '../data/staticQuizzes'
+import { getStaticQuiz } from '../data/staticQuizzes'
 import {
   createLocalAttempt,
   submitLocalAttempt,
@@ -10,6 +10,13 @@ import {
   isLocalUserId
 } from './localAttempts'
 import type { QuizAttempt, AttemptAnswer, Question } from '../types/quiz'
+
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
+
+/** Quizzes exported from Supabase keep their UUID; repo-only ones use a slug. */
+function isDatabaseQuizId(quizId: string): boolean {
+  return UUID_RE.test(quizId)
+}
 
 function parseAnswers(raw: unknown): AttemptAnswer[] {
   if (Array.isArray(raw)) {
@@ -38,7 +45,9 @@ function normalizeAttempt(raw: any): QuizAttempt {
 }
 
 export async function createAttempt(quizId: string, userId: string, userEmail?: string): Promise<QuizAttempt | null> {
-  if (isStaticQuizId(quizId) || isLocalUserId(userId) || !isSupabaseConfigured) {
+  // Signed-in users keep recording to Supabase, but only for quizzes that exist
+  // there: a repo-only quiz has a slug id with no matching row.
+  if (isLocalUserId(userId) || !isSupabaseConfigured || !isDatabaseQuizId(quizId)) {
     return createLocalAttempt(quizId, userId)
   }
 

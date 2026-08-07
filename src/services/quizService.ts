@@ -80,7 +80,9 @@ export async function fetchPublishedQuizzes(userId?: string): Promise<Quiz[]> {
       user_attempts_count: attemptsMap[quiz.id]?.count || 0
     }))
 
-    return [...staticQuizzes, ...remoteQuizzes]
+    // The repo mirrors most of the DB; show each quiz once, repo copy winning.
+    const staticIds = new Set(staticQuizzes.map(quiz => quiz.id))
+    return [...staticQuizzes, ...remoteQuizzes.filter(quiz => !staticIds.has(quiz.id))]
   } catch (error) {
     console.error('🔴 Error fetching quizzes:', error)
     return staticQuizzes

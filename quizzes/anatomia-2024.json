@@ -1,0 +1,416 @@
+{
+  "quiz": {
+    "id": "da26431d-29be-4552-989e-60e323c27f67",
+    "title": "Anatomia 2024",
+    "description": "Cuestionario basado en \"anatomia 2024\"",
+    "time_limit_minutes": 45,
+    "passing_score": null,
+    "shuffle_questions": false,
+    "show_correct_answers": true,
+    "status": "published",
+    "created_at": "2026-02-03T15:24:47.756735+00:00",
+    "updated_at": "2026-02-03T15:24:47.756735+00:00"
+  },
+  "questions": [
+    {
+      "id": "82a668b2-86da-4a1f-a700-25e795b63437",
+      "question_text": "Acerca de la sensibilidad profunda consciente",
+      "question_type": "multiple_choice",
+      "options": [
+        "se decusa dos veces, por lo que la clínica es ipsilateral",
+        "tiene su segunda neurona a nivel del asta posterior medular ipsilateral",
+        "la segunda neurona se encuentra en bulbo raquídeo",
+        "transcurre por el tercio anterior del tronco encefálico en su camino hacia el tálamo"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 0
+    },
+    {
+      "id": "745c23c6-a05e-4428-8408-581a49d1e1e0",
+      "question_text": "Completar frase. Por el pedúnculo cerebeloso superior van fibras que comunican",
+      "question_type": "multiple_choice",
+      "options": [
+        "...el núcleo fastigio con la sustancia nigra",
+        "...el núcleo fastigio con el fascículo longitudinal medial",
+        "... el núcleo dentado con la protuberancia",
+        "los núcleos globoso e interpósito con el núcleo rojo y el tálamo"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 1
+    },
+    {
+      "id": "0d912358-8c38-429b-ba98-1ccee7bb8a35",
+      "question_text": "El cuerpo del hipocampo se encuentra a la altura de",
+      "question_type": "multiple_choice",
+      "options": [
+        "los pedúnculos cerebelosos superiores",
+        "los tubérculos cuadrigéminos",
+        "el núcleo rojo",
+        "la arteria basilar"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 2
+    },
+    {
+      "id": "bb66b7bc-dc9e-4b1a-985d-1efc792bba9c",
+      "question_text": "En el cordón posterior (funículo dorsal) medular hay",
+      "question_type": "multiple_choice",
+      "options": [
+        "haces que llevan termoalgesia del mismo lado del cuerpo",
+        "haces que llevan tacto fino y propiocepción del mismo lado del cuerpo",
+        "haces que llevan tacto fino y propiocepción del lado opuesto del cuerpo",
+        "haces que llevan termoalgesia del lado opuesto del cuerpo"
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 3
+    },
+    {
+      "id": "96401a95-a891-4bb0-8c69-36a4e2b5002a",
+      "question_text": "La cisura calcarina está irrigada por",
+      "question_type": "multiple_choice",
+      "options": [
+        "ramas del tronco basilar",
+        "ramas de las coroideas posteriores",
+        "ramas de la cerebral media",
+        "ramas de la cerebral posterior"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 4
+    },
+    {
+      "id": "0161c59c-99cb-4531-b6d7-a0422c43ea2a",
+      "question_text": "La siguiente imagen muestra una vista lateral del hemisferio cerebral, donde “R” es rostral, “C” caudal, “D” dorsal y “V” ventral. La flecha señala",
+      "question_type": "multiple_choice",
+      "options": [
+        "El surco colateral",
+        "El surco por donde discurre la Arteria Cerebral Anterior",
+        "El surco central",
+        "El surco en el cual en la profundidad se encuentra el lóbulo de la ínsula"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 5
+    },
+    {
+      "id": "a0eca50c-0fb3-4cb1-9d62-8259c5174480",
+      "question_text": "La siguiente imagen muestra una vista ventral de los hemisferios cerebrales y del tronco del encéfalo, donde “R” es rostral, “C” caudal y “L” lateral La flecha señala",
+      "question_type": "multiple_choice",
+      "options": [
+        "Nervio Vestibulococlear",
+        "Nervio Vago",
+        "Nervio Hipogloso",
+        "Nervio Abducens"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 6
+    },
+    {
+      "id": "83245c0c-aa04-44fa-b677-880d42818e56",
+      "question_text": "Marque la correcta con respecto a los núcleos de la base",
+      "question_type": "multiple_choice",
+      "options": [
+        "El núcleo lenticular o lentiforme está formado por el putamen y el globo pálido",
+        "El antemuro forma parte del estriado ventral",
+        "El núcleo lenticular o lentiforme tiene una cabeza, cuerpo y cola",
+        "El cuerpo estriado está formado por el núcleo lenticular o lentiforme y el complejo nuclearamigdalino"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 7
+    },
+    {
+      "id": "6fca4021-bb3c-4f15-ac83-1c7196f96dac",
+      "question_text": "Señale cuál de los siguientes es un ramo colateral intrapetroso del nervio facial",
+      "question_type": "multiple_choice",
+      "options": [
+        "Cuerda del tímpano",
+        "Ramo temporofacial",
+        "Ramos de los músculos estilohioideo y vientre posterior del digástrico",
+        "Nervio auricular posterior"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 8
+    },
+    {
+      "id": "0849b6e0-ad52-4a55-af25-9430f39a716e",
+      "question_text": "Señale los músculos de la órbita que se encuentran inervados por el nervio oculomotor",
+      "question_type": "multiple_choice",
+      "options": [
+        "Recto superior, recto inferior y oblicuo superior",
+        "Recto superior, recto medial y oblicuo superior",
+        "Recto superior, recto inferior y recto medial",
+        "Recto superior, recto inferior y recto lateral"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 9
+    },
+    {
+      "id": "d4554e50-7ee7-4eda-b070-157385a93725",
+      "question_text": "Un paciente que tiene una lesión en las radiaciones ópticas a derecha tendrá",
+      "question_type": "multiple_choice",
+      "options": [
+        "amaurosis derecha",
+        "hemianopsia bitemporal",
+        "hemianopsia homónima izquierda",
+        "hemianopsia homónima derecha"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 10
+    },
+    {
+      "id": "5ab59f5b-062a-4199-86d5-4cec1d77323b",
+      "question_text": "Un paciente se presenta con hemianopsia bitemporal (ver dibujo), ¿en qué parte de la vía óptica está la lesión?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Quiasma óptico",
+        "Cintilla óptica",
+        "Nervio óptico",
+        "Radiaciones ópticas"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 11
+    },
+    {
+      "id": "2cf64d46-4fcc-4abc-b32c-b710ec8f9f01",
+      "question_text": "¿a qué nivel del tronco está este corte axial de RM?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Mesencéfalo",
+        "Bulbo",
+        "Protuberancia",
+        "Unión pontomesencefálica"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 12
+    },
+    {
+      "id": "a8ac7090-895a-4235-ba56-a92e0dd0856f",
+      "question_text": "¿Cómo se llama el giro coloreado en esta imagen coronal de RM?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Fusiforme",
+        "Occipitotemporal lateral",
+        "Occipitotemporal medial",
+        "Parahipocampal"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 13
+    },
+    {
+      "id": "727e37ff-9015-4d95-8c86-a71163c71de6",
+      "question_text": "¿Cómo se llama esta estructura? (corte coronal de RM)",
+      "question_type": "multiple_choice",
+      "options": [
+        "Núcleo accumbens",
+        "Cuerpos mamilares",
+        "Núcleo de Meynert",
+        "Cabeza del caudado"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 14
+    },
+    {
+      "id": "c2ce8cae-4724-4645-b807-0e2ebafa25b4",
+      "question_text": "¿cómo se llama la parte coloreada del giro frontal inferior?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Plano polar",
+        "Pars opercularis",
+        "Pars orbitaria",
+        "Pars triangularis"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 15
+    },
+    {
+      "id": "6e62a3ea-870b-4715-bdca-1fef96fa7921",
+      "question_text": "¿Cuál de estos paquetes neurovasculares NO es correcto?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Arteria cerebelosa posteroinferior, pares IX, X, XI, XII",
+        "Arteria cerebelosa anteroinferior, pares VI, VII, VIII",
+        "Arteria cerebelosa superior, pares III, IV, V",
+        "Arteria cerebelosa anteroinferior, pares V, VI, VII"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 16
+    },
+    {
+      "id": "70ebc2e9-1b64-4104-9b5d-7bcd72de4292",
+      "question_text": "¿Cuál de las siguientes afirmaciones es correcta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "el giro dentado forma parte del hipocampo propiamente dicho (Barr-Kiernan, 8° edición, págs. 299-301 + teórico sistema límbico)",
+        "El subiculum se diferencia de la corteza parahipocampal en la porción posterior del giro",
+        "El giro parahipocámpico, hacia adelante se continúa con el giro fusiforme",
+        "gran parte del trígono o fórnix termina en los tubérculos mamilares"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 17
+    },
+    {
+      "id": "330e779d-02d6-4aec-b16d-3f6c0f8a4d8e",
+      "question_text": "¿Cuál de las siguientes afirmaciones referidas al cerebelo es correcta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "el vermis coordina los movimientos del hemicuerpo ipsilateral",
+        "El neocerebelo es el lóbulo posterior",
+        "el arquicerebelo comprende el flóculo y el nódulo",
+        "el paleocerebelo se encarga de los movimientos de los miembros superiores"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 18
+    },
+    {
+      "id": "0271dd57-ec07-41d8-86c8-8b7c76f599d9",
+      "question_text": "¿Cuál de las siguientes estructuras NO se encuentra en las paredes de la prolongación occipital del ventrículo lateral?",
+      "question_type": "multiple_choice",
+      "options": [
+        "surco colateral",
+        "hipocampo",
+        "cisura calcarina",
+        "radiaciones ópticas"
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 19
+    },
+    {
+      "id": "e61bee45-c214-47b3-8e4a-e5d682a99ac3",
+      "question_text": "¿cuál de las siguientes parejas \"nervio craneal-función\" NO es correcta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "V - masticación y sensibilidad facial",
+        "VII - mímica, gusto, parasimpático salival y lagrimal",
+        "VII - mímica y masticación",
+        "IX par - deglución, gusto, seno carotídeo"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 20
+    },
+    {
+      "id": "308a012f-842b-4659-bdbb-bd4816649d87",
+      "question_text": "¿cuál es el origen aparente del III par?",
+      "question_type": "multiple_choice",
+      "options": [
+        "por debajo del tubérculo cuadrigémino superior",
+        "retroolivar",
+        "en la fosa interpeduncular",
+        "a los lados del agujero ciego"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 21
+    },
+    {
+      "id": "2d7fc198-cee4-4409-911b-0c7b7fba6158",
+      "question_text": "¿Dónde se encuentra el área motora del lenguaje, o área de Broca?",
+      "question_type": "multiple_choice",
+      "options": [
+        "en el giro frontal superior",
+        "en el giro de Heschl",
+        "en la pars triangularis",
+        "en el giro paraorbitario de Broca"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 22
+    },
+    {
+      "id": "dcf14e7c-07c5-40ac-9752-35cbf22bd647",
+      "question_text": "¿qué función tiene este giro?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Área motora primaria",
+        "Área del lenguaje",
+        "Área sensitiva primaria",
+        "Movimientos conjugados de los ojos y la cabeza"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 23
+    },
+    {
+      "id": "4365735b-0069-4994-bbc6-498a8a092b28",
+      "question_text": "¿Qué marca la flecha en esta imagen axial de RM?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Ángulo ponto-cerebeloso",
+        "Pedúnculo cerebeloso superior",
+        "Cisterna magna",
+        "Bulbo raquídeo"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 24
+    }
+  ]
+}

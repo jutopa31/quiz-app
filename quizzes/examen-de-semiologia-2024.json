@@ -1,0 +1,416 @@
+{
+  "quiz": {
+    "id": "b1e0c8a4-eae0-473a-82cd-ac1f0c071b7a",
+    "title": "Examen de Semiologia 2024",
+    "description": "Cuestionario basado en \"examen de semiologia 2024\"",
+    "time_limit_minutes": 45,
+    "passing_score": null,
+    "shuffle_questions": false,
+    "show_correct_answers": true,
+    "status": "published",
+    "created_at": "2026-02-03T15:24:57.404229+00:00",
+    "updated_at": "2026-02-03T15:24:57.404229+00:00"
+  },
+  "questions": [
+    {
+      "id": "9c250818-0799-49f1-b1fc-ab126a1e4479",
+      "question_text": "Que vías evalua el reflejo corneal?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Trigemino trigeminal.",
+        "trigémino facial.",
+        "Trigémino oculo motora ( IIi).",
+        "Ninguna."
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 0
+    },
+    {
+      "id": "9a3a9347-7489-408f-9cdc-0a3e54f5b70d",
+      "question_text": "Un paciente que no presenta respuesta a estimulos externos ni internos , que tiene preservada la función respiratorio y cardiaca. Que presenta periodos de aparente vigilia con ojos abiertos que se intercalan con otros de aparente sueño con ojos cerrados, que síndrome neurológico presenta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Coma.",
+        "Enclaustramiento",
+        "Estado de minima conciencia",
+        "Estado vegetativo"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 1
+    },
+    {
+      "id": "cda1bae7-ab27-4dee-8c24-99833ca4e3b7",
+      "question_text": "Si tengo un paciente que presenta trastornos de conducta, con cuadro de confusión, bulimia, e hipersexualidad, donde podría estar ubicada la lesión?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Ambas regiones temporales a nivel de las amígdalas",
+        "Ambas regiones parietales.",
+        "Ambas regiones retrorolandicas.",
+        "Lobulillo paracentral derecho."
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 2
+    },
+    {
+      "id": "e6919b05-12d5-4da0-810e-7a9581e192b3",
+      "question_text": "Defina que funciones podemos encontrar en la región frontal orbitaria.",
+      "question_type": "multiple_choice",
+      "options": [
+        "Control efinteriano y motilidad de miembros inferiores.",
+        "Memoria , gnosias musicales.",
+        "Regulacion de los dominios afectivos, cognitivos y conductuales, y rasgos que nos definen como personas.",
+        "Todas son correctas"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 3
+    },
+    {
+      "id": "c5ea2f60-9016-45b3-a069-0a6ad190dc73",
+      "question_text": "Rn una lesión cervical medular a nivel de C3 que vamos a encontrar en el examen neurológico?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Cuadriparesia fláccida anestesia, alteración efinteriana.",
+        "Cuadriparesia  con piramidalismo de cuatro miembros e hiperrreflexia. Anestesia desde la zona de la lesión, alteración efinteriana y compromiso frénico.",
+        "Paraplejia con espasticidad compromiso efinteriano y anestesia desde la zona de lesión.",
+        "Cuadriparesia fláccida  con amiotrofia y arreflexia de MMSS y hiperrreflexia y plejia  con espasticidad de MMII. Alteracion efinteriana ."
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 4
+    },
+    {
+      "id": "cd73e5d2-6f5f-43d0-a432-913e50a9c516",
+      "question_text": "Que significa asomatognosia?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Falta de reconocimiento de partes del cuerpo.",
+        "Falta de reconocimiento de enfermedad.",
+        "Falta de reconocimiento de un tipo de sensibilidad.",
+        "Ninguna es correcta."
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 5
+    },
+    {
+      "id": "3e664c94-883f-4a58-99ec-6c41b4983e3f",
+      "question_text": "Que es el signo de tinel y que significa?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Ausencia de reflejos en las zonas de compromiso del nervio periférico motor.",
+        "Sensacion de hormigueo o dolor a la presión del nervio lesionado si la regeneración ha llegado hasta el área presionada.",
+        "Ausencia de dolor en el nervio presionado cuando esta lesionado.",
+        "Todas son correctas."
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 6
+    },
+    {
+      "id": "d7c007d3-e0df-475a-86e5-270a9a0f90b4",
+      "question_text": "Que clínica tenemos en el síndrome de Weber?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Hemiparesia contralateral a la lesión con compromiso completo de III par ipsilateral con dilatación de la pupila",
+        "Hemiolejia homolateral a la lesión y compromiso del III par ipsilateral con dilatación de pupila.",
+        "Hemiolejia homolateral a la lesión y compromiso del III par ipsilateral con dilatación de pupila. Y hemianestesia contralateral.",
+        "Hemiparesia contralateral a la lesión con compromiso completo de III par contralateral con dilatación de la pupila."
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 7
+    },
+    {
+      "id": "7759ac01-a161-43df-bc11-6cd9945b07bc",
+      "question_text": "Cómo encontraría el tono muscular en un paciente con un síndrome parkinsoniano",
+      "question_type": "multiple_choice",
+      "options": [
+        "Hipertonía espástica",
+        "Rigidez en rueda dentada",
+        "Tono normal",
+        "Hipotonía"
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 8
+    },
+    {
+      "id": "737d2847-a45c-49ed-a1ce-6c304da59aaf",
+      "question_text": "Durante el examen neurológico, se observa una desviación de la lengua hacia el lado derecho cuando se le pide al paciente que la saque. ¿Cuál de los siguientes pares craneales está más probablemente afectado?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Par craneal XII: Vago izquierdo",
+        "Par craneal XI: Accesorio derecho",
+        "Par craneal IX: Glosofaríngeo izquierdo",
+        "Par craneal XII: Hipogloso derecho"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 9
+    },
+    {
+      "id": "2be9fcc8-a803-4c0c-89bb-c851ff0a1e87",
+      "question_text": "Durante el examen neurológico, un paciente presenta inestabilidad al caminar, marcha amplia y desviación hacia un lado. ¿Cuál de los siguientes hallazgos es el más probable?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Debilidad muscular",
+        "Ataxia cerebelosa",
+        "Rigidez muscular",
+        "Temblor esencial"
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 10
+    },
+    {
+      "id": "66154eaf-1ce5-48b4-b9c9-ba57657c9d70",
+      "question_text": "El temblor de tipo parkinsoniano se caracteriza principalmente por",
+      "question_type": "multiple_choice",
+      "options": [
+        "Ser asimétrico y predominar en reposo",
+        "Ser simétrico y predominar en la acción",
+        "Ser simétrico y predominar en reposo",
+        "Ser asimétrico y predominar en la acción."
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 11
+    },
+    {
+      "id": "73b8f99e-0847-4136-afb4-db31b299fbd8",
+      "question_text": "La presencia de una paresia facio-braquio-crural izquierda asociada a una desviación de la mirada conjugada hacia la derecha localiza la lesión a nivel de",
+      "question_type": "multiple_choice",
+      "options": [
+        "Corteza frontal izquierda",
+        "Mesencéfalo derecho",
+        "Corteza frontal derecha",
+        "Mesencéfalo izquierdo"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 12
+    },
+    {
+      "id": "8ce9b45f-59ca-45cd-b4f8-320bca6425d9",
+      "question_text": "Respecto al paciente en coma, ¿cuál es la correcta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "La postura de flexión significa descerebración.",
+        "La lesión en protuberancia da pupilas puntiformes y reactivas.",
+        "En el reflejo oculo-vestibular, la respuesta normal es el desvío de la mirada hacia el otro lado.",
+        "La midriasis es una respuesta del sistema parasimpático."
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 13
+    },
+    {
+      "id": "077a604f-d0e5-4fc3-8e3c-8afc9d030c6d",
+      "question_text": "Sobre el reflejo plantar, ¿cual es la opción correcta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "La respuesta anormal es flexora.",
+        "La respuesta normal es extensora.",
+        "La respuesta flexora se llama Babinski.",
+        "Es la respuesta efectora dada por S1-S2."
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 14
+    },
+    {
+      "id": "a0232a71-8fb1-47ff-b36d-e2688865d2db",
+      "question_text": "Un paciente presenta dolor punzante y quemante en el área de la cara. El dolor se desencadena al hablar, comer o tocar la cara. ¿Cuál de las siguientes opciones describe mejor este tipo de dolor?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Neuralgia del trigémino",
+        "Neuralgia occipital",
+        "Cefalea en racimos",
+        "Migraña"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 15
+    },
+    {
+      "id": "a5dc70b4-540e-496b-96a3-9e8efd686b26",
+      "question_text": "Un paciente presenta parestesias y sensación de hormigueo en la palma y los dedos indice, anular y mayor de la izquierda, principalmente durante la noche. ¿Cuál de las siguientes opciones describe mejor estos síntomas?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Esclerosis múltiple",
+        "Polineuropatía periférica",
+        "Síndrome del túnel carpiano",
+        "Neuralgia occipital"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 16
+    },
+    {
+      "id": "20842f62-e35c-4856-8289-1ce98813c113",
+      "question_text": "Un paciente presenta temblores en reposo, rigidez muscular y bradicinesia. ¿Cuál de los siguientes trastornos neurológicos es la causa más probable?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Mioclonías",
+        "Enfermedad de Parkinson",
+        "Corea de Huntington",
+        "Ataxia cerebelosa"
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 17
+    },
+    {
+      "id": "478b93ed-2c5c-471f-adf3-596c5f21edef",
+      "question_text": "¿A que denominamos síndrome del uno y medio?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Paralisis de la mirada vertical bilateral unilateral.",
+        "Nistagmus horizontal bilateral.",
+        "Oftalmoplejia del ojo homolateral a la lesión.",
+        "Parálisis completa de la mirada horizontal del ojo ipsilateral a la lesión, asociada a la parálisis de la aducción del ojo contralateral, exotropia y nistagmo de abducción de este ojo de características similares a las descritas en la oftalmoplejia internuclear."
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 18
+    },
+    {
+      "id": "1a40162a-8a29-45f2-ad3e-2ad7f9076b4f",
+      "question_text": "¿Cuál de estas opciones no corresponde a la sensibilidad superficial consciente?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Tacto protopatico",
+        "Temperatura",
+        "Palestesia",
+        "Tacto epicritico"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 19
+    },
+    {
+      "id": "9a4e8363-058a-4df8-ac59-8cb14ace2af5",
+      "question_text": "¿Cuál de las siguientes definiciones no corresponde?",
+      "question_type": "multiple_choice",
+      "options": [
+        "El coma es la total ausencia de contenido y reactividad y es permanente.",
+        "El síndrome de vigilia sin respuesta es la ausencia de contenido y puede ser transitorio o permanente.",
+        "El estado de conciencia mínimo no cumple criterios de coma o síndrome de vigilia sin respuesta.",
+        "El mutismo acinético es reactivo, pero no se puede demostrar objetivamente el contenido."
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 20
+    },
+    {
+      "id": "523eaca7-363c-4a8b-8c77-aba3f38cda97",
+      "question_text": "¿Cuál de las siguientes interpretaciones es incorrecta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Diagnóstico sindromático: síndrome de pares craneales; diagnóstico topográfico: tronco.",
+        "Diagnóstico sindromático: síndrome convulsivo generalizado; diagnóstico topográfico: cortical difuso.",
+        "Diagnóstico sindromático: síndrome extrapiramidal; diagnóstico topográfico: ganglios de la base.",
+        "Diagnóstico sindromático: síndrome cerebeloso izquierdo; diagnóstico topográfico: hemisferio cerebeloso derecho."
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 21
+    },
+    {
+      "id": "65536e9b-6028-43dd-a458-986ec5980dad",
+      "question_text": "¿Cuál de las siguientes manifestaciones clínicas establecería con mayor certeza la localización de una lesión cerebral en un hemisferio específico?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Disartria",
+        "Diplopia",
+        "Hemiparesia",
+        "Afasia"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 22
+    },
+    {
+      "id": "e631c3c4-bd73-4f35-ac5a-b0ed28e9920b",
+      "question_text": "A que llamamos dismetris?",
+      "question_type": "multiple_choice",
+      "options": [
+        "A la imposibilidad de deterner oportunamente el movimiento propuesto.",
+        "A la presencia de temblor al final del acto motor.",
+        "A la incordinacion en los movimientos alternantes.",
+        "Ninguna es correcta."
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 23
+    },
+    {
+      "id": "999853ff-941a-4103-ad7d-baa7ed002989",
+      "question_text": "Como se realiza la prueba del tino de Barany?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Se ordena al paciente que toque la yema de su dedo índice  con la del explorador , luego se le pide que cierre los ojos y que baje el brazo y que vuelva a tocar el dedo del explorador que quedo inmovil.",
+        "Se le ordena al paciente que toque con su dedo índice el dedo del explorador siempre en el mismo lugar",
+        "Se le ordena al paciente que toque con la yema de su índice el del explorador que va cambiando de lugar.",
+        "Ninguna de ella."
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 24
+    }
+  ]
+}

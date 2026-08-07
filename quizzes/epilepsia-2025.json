@@ -1,0 +1,416 @@
+{
+  "quiz": {
+    "id": "5ea31eab-8a81-4f6a-8d2f-7bcf3701c48e",
+    "title": "Epilepsia 2025",
+    "description": "Examen final del módulo de Epilepsia - Certificación SNA 2025",
+    "time_limit_minutes": 35,
+    "passing_score": null,
+    "shuffle_questions": false,
+    "show_correct_answers": true,
+    "status": "published",
+    "created_at": "2026-02-03T12:30:08.212164+00:00",
+    "updated_at": "2026-02-03T12:30:08.212164+00:00"
+  },
+  "questions": [
+    {
+      "id": "1108cf41-6b2b-4d91-8bbf-b4ee66dc2336",
+      "question_text": "Considerando la definición clínico-operativa de epilepsia, ¿en cuál de los siguientes casos NO se consideraría la presencia de epilepsia?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Paciente que ha presentado 2 crisis epilépticas no provocadas, con un intervalo entre crisis de 20 años",
+        "Mujer de 56 años con antecedentes de encefalitis herpética hace 1 año, que ha sufrido su primera crisis no provocada",
+        "Niño de 8 años que presentó una crisis epiléptica mientras jugaba con videojuegos. La misma situación se repitió 48Hs después (EEG: respuesta foto-paroxística anormal)",
+        "Hombre diabético insulino-dependiente, que presentó una primera crisis en contexto de hipoglucemia, y una segunda crisis a la semana, sin causa ni detonante aparente (EEG: normal, RMN de encéfalo: lesiones vasculares puntiformes)"
+      ],
+      "correct_option_index": 3,
+      "explanation": "La primera crisis fue provocada (hipoglucemia). Para considerar epilepsia, se requieren crisis no provocadas. Una única crisis no provocada posterior no cumple los criterios de epilepsia.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 0
+    },
+    {
+      "id": "7ae851ac-9bf8-4aa1-99bc-88a12da86a68",
+      "question_text": "¿Cuál es el riesgo de recaída después de dos crisis no provocadas a los 2 años de seguimiento?",
+      "question_type": "multiple_choice",
+      "options": [
+        "20%",
+        "40%",
+        "60%",
+        "10%"
+      ],
+      "correct_option_index": 2,
+      "explanation": "El riesgo de recaída tras dos crisis no provocadas es aproximadamente del 60% a los 2 años, justificando el inicio de tratamiento antiepiléptico.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 1
+    },
+    {
+      "id": "a7a6e193-099e-4da7-bc8e-e38cffe58cf9",
+      "question_text": "El protocolo de RM en epilepsia focal comprende:",
+      "question_type": "multiple_choice",
+      "options": [
+        "T1 axial",
+        "FLAIR Sagital",
+        "T2 Axial",
+        "IR Axial"
+      ],
+      "correct_option_index": 2,
+      "explanation": "El protocolo de RM en epilepsia focal incluye secuencias T2 axiales, entre otras, para detectar lesiones estructurales epileptogénicas.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 2
+    },
+    {
+      "id": "6501783e-5502-4d8e-9231-a283c9dc68db",
+      "question_text": "Concurre a su consultorio una paciente de 64 años que refiere luces de colores intermitentes en el hemicampo izquierdo de 1 minuto de duración estereotipadas semanales. Usted sospecha epilepsia, ¿cuál es el área de inicio ictal más probable?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Lóbulo frontal",
+        "Lóbulo temporal",
+        "Lóbulo parietal",
+        "Lóbulo occipital"
+      ],
+      "correct_option_index": 3,
+      "explanation": "Las alucinaciones visuales simples (luces de colores) sugieren un origen en el lóbulo occipital, donde se procesa la información visual primaria.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 3
+    },
+    {
+      "id": "2ca2e5d5-ec78-4016-bd2d-f4817a1982f7",
+      "question_text": "¿Cuál de los siguientes medicamentos antiepilépticos tiene como efecto adverso grave un riesgo elevado de acidosis metabólica debido a la inhibición de la anhidrasa carbónica y riesgo de provocar litiasis renal en algunos pacientes?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Valproato",
+        "Topiramato",
+        "Fenobarbital",
+        "Oxcarbazepina"
+      ],
+      "correct_option_index": 1,
+      "explanation": "El topiramato inhibe la anhidrasa carbónica, lo que puede causar acidosis metabólica y aumentar el riesgo de litiasis renal por alteración del pH urinario.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 4
+    },
+    {
+      "id": "5148026d-c700-4c61-9fb9-a54ca470899a",
+      "question_text": "Ante el antecedente de una primera crisis no provocada, el riesgo de recaída a los 2 años de seguimiento es:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Mayor al 60%",
+        "Entre 21-45%",
+        "Menor al 20%",
+        "Depende del tipo de crisis epiléptica sufrida"
+      ],
+      "correct_option_index": 1,
+      "explanation": "El riesgo de recurrencia tras una primera crisis no provocada es del 21-45% a los 2 años, lo que generalmente no justifica inicio de tratamiento antiepiléptico.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 5
+    },
+    {
+      "id": "fe4fd31f-de78-4390-9029-778b41f897da",
+      "question_text": "Indique la opción INCORRECTA respecto de la crisis focal con alteración del estado de conciencia:",
+      "question_type": "multiple_choice",
+      "options": [
+        "No es pérdida de conciencia sino una alteración más cualitativa de la misma",
+        "Generalmente se acompaña de automatismos",
+        "Forma parte de las epilepsias focales con síntomas cognitivos",
+        "Frecuentemente son difíciles de diferenciar de las epilepsias generalizadas de tipo ausencias"
+      ],
+      "correct_option_index": 2,
+      "explanation": "Las crisis focales con alteración de conciencia no se clasifican como epilepsias con síntomas cognitivos, sino que representan un tipo específico de crisis focal.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 6
+    },
+    {
+      "id": "f002e162-3e8a-44ef-80a2-07222aa48b2d",
+      "question_text": "¿Cuál de las siguientes opciones describe mejor los síntomas en una crisis con focalidad parietal?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Parestesias, vértigo",
+        "Fenómeno de déja vu",
+        "Síntomas gustativos",
+        "Síntomas auditivos"
+      ],
+      "correct_option_index": 0,
+      "explanation": "El lóbulo parietal procesa información sensorial, por lo que las crisis parietales típicamente producen parestesias y pueden asociarse a vértigo.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 7
+    },
+    {
+      "id": "26e26797-c667-463c-9411-df47754138f8",
+      "question_text": "¿Cuál es el objetivo de la evaluación prequirúrgica en epilepsia focal?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Establecer localización de área epileptogénica",
+        "Determinar el riesgo de déficit postoperatorio",
+        "Pronosticar resultados posquirúrgicos",
+        "Todas son correctas"
+      ],
+      "correct_option_index": 3,
+      "explanation": "La evaluación prequirúrgica tiene múltiples objetivos: localizar el área epileptogénica, evaluar riesgos y establecer pronóstico quirúrgico.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 8
+    },
+    {
+      "id": "14795221-72b6-42bc-9436-611bc95a1ffd",
+      "question_text": "El electroencefalograma estándar tiene un tiempo de duración de:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Mayor a 60 minutos",
+        "20-30 minutos",
+        "30-40 minutos",
+        "Menor a 20 minutos"
+      ],
+      "correct_option_index": 1,
+      "explanation": "El EEG estándar tiene una duración típica de 20-30 minutos, suficiente para registrar actividad basal y realizar maniobras de activación.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 9
+    },
+    {
+      "id": "fcc22ac5-171c-4075-987f-0ab1854386f3",
+      "question_text": "En el Status Epiléptico (SE), ¿a los cuántos minutos se produce el daño neuronal irreversible?",
+      "question_type": "multiple_choice",
+      "options": [
+        "30 minutos",
+        "5 minutos",
+        "20 minutos",
+        "60 minutos"
+      ],
+      "correct_option_index": 0,
+      "explanation": "El daño neuronal irreversible comienza aproximadamente a los 30 minutos de status epiléptico, por lo que es crucial el tratamiento rápido.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 10
+    },
+    {
+      "id": "166e31f0-b964-4c67-9c95-c0308e155bc9",
+      "question_text": "Respecto a la epilepsia generalizada genética, ¿cuál de las siguientes opciones NO corresponde a esta categoría?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Epilepsia mioclónica juvenil",
+        "Epilepsia de ausencias infantil",
+        "Epilepsia con crisis tónico-clónicas generalizadas",
+        "Epilepsia focal de la infancia"
+      ],
+      "correct_option_index": 3,
+      "explanation": "La epilepsia focal de la infancia no es una epilepsia generalizada genética, sino una epilepsia focal con características específicas.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 11
+    },
+    {
+      "id": "4d2291e1-bcad-4e55-9e6b-ee1ecf7ccddd",
+      "question_text": "¿Cuál de los siguientes fármacos podría exacerbar las ausencias típicas?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Etosuccimida",
+        "Lamotrigina",
+        "Carbamazepina",
+        "Valproato"
+      ],
+      "correct_option_index": 2,
+      "explanation": "La carbamazepina puede empeorar las crisis de ausencias y no debe usarse en epilepsias generalizadas con este tipo de crisis.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 12
+    },
+    {
+      "id": "d4db380a-5774-46f0-88ec-65ba4633cda0",
+      "question_text": "Respecto a la Muerte Súbita Inesperada en Epilepsia (SUDEP), ¿cuál es la afirmación correcta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Es más frecuente en epilepsias generalizadas que en focales",
+        "Solo ocurre durante las crisis epilépticas",
+        "Su principal factor de riesgo es el mal control de crisis tónico-clónicas generalizadas",
+        "No existe relación con las crisis nocturnas"
+      ],
+      "correct_option_index": 2,
+      "explanation": "El principal factor de riesgo de SUDEP es el mal control de las crisis tónico-clónicas generalizadas, especialmente las nocturnas.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 13
+    },
+    {
+      "id": "923e88e9-ff42-47a3-a2f4-0f720420b385",
+      "question_text": "El pronóstico de las epilepsias se basa en:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Etiología, respuesta al tratamiento",
+        "Tipo de crisis epilépticas",
+        "Síndrome epiléptico",
+        "Todas son correctas"
+      ],
+      "correct_option_index": 3,
+      "explanation": "El pronóstico epiléptico depende de múltiples factores: etiología, tipo de crisis, respuesta terapéutica y síndrome epiléptico identificado.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 14
+    },
+    {
+      "id": "f9d279df-53a6-4f53-9a10-5d64840e07e1",
+      "question_text": "¿Cuál es el fármaco de elección en una paciente femenina con epilepsia de ausencias juvenil que planifica un embarazo?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Levetiracetam",
+        "Lamotrigina",
+        "Valproato",
+        "Carbamazepina"
+      ],
+      "correct_option_index": 1,
+      "explanation": "La lamotrigina es el fármaco de elección en mujeres con epilepsia generalizada que planifican embarazo, por su mejor perfil de seguridad fetal.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 15
+    },
+    {
+      "id": "f0451ee4-1da9-472d-80db-bf0bd47ca581",
+      "question_text": "¿Qué síndrome epiléptico presenta como característica electroencefalográfica polipunta onda generalizada a 4-6 Hz y tiene un buen pronóstico?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Síndrome de West",
+        "Epilepsia mioclónica juvenil",
+        "Síndrome de Lennox-Gastaut",
+        "Epilepsia de ausencias infantil"
+      ],
+      "correct_option_index": 1,
+      "explanation": "La epilepsia mioclónica juvenil presenta polipunta-onda a 4-6 Hz y tiene buen pronóstico con tratamiento adecuado, aunque requiere medicación de por vida.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 16
+    },
+    {
+      "id": "f3accb94-48e6-4603-ab67-ef4144415bdc",
+      "question_text": "Respecto al tratamiento del Status Epiléptico Convulsivo, ¿cuál es la secuencia correcta de tratamiento?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Benzodiacepinas - Fenitoína/Levetiracetam - Anestésicos",
+        "Fenitoína - Benzodiacepinas - Valproato",
+        "Anestésicos - Benzodiacepinas - Levetiracetam",
+        "Valproato - Fenitoína - Benzodiacepinas"
+      ],
+      "correct_option_index": 0,
+      "explanation": "La secuencia correcta es: benzodiacepinas como primera línea, seguidas de fenitoína o levetiracetam, y anestésicos si hay refractariedad.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 17
+    },
+    {
+      "id": "a2dd0517-17e1-4f5e-bba5-f931e217006f",
+      "question_text": "¿Cuál de los siguientes NO es un criterio diagnóstico de epilepsia según la ILAE 2014?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Al menos 2 crisis no provocadas separadas por más de 24 horas",
+        "Una crisis no provocada con alto riesgo de recurrencia (mayor al 60%)",
+        "Diagnóstico de un síndrome epiléptico",
+        "Crisis provocadas recurrentes en contexto de enfermedad aguda"
+      ],
+      "correct_option_index": 3,
+      "explanation": "Las crisis provocadas recurrentes no definen epilepsia, ya que esta requiere crisis no provocadas o alto riesgo de recurrencia.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 18
+    },
+    {
+      "id": "4246c79e-ae71-4d26-8c0d-8a6d5f9f9de9",
+      "question_text": "¿Cuál es la principal indicación de monitoreo video-EEG prolongado?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Caracterización de eventos paroxísticos de naturaleza indeterminada",
+        "Control de rutina de pacientes con epilepsia",
+        "Ajuste de medicación antiepiléptica",
+        "Seguimiento de pacientes post-quirúrgicos"
+      ],
+      "correct_option_index": 0,
+      "explanation": "El video-EEG prolongado está principalmente indicado para caracterizar eventos paroxísticos cuando hay dudas diagnósticas o para evaluación prequirúrgica.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 19
+    },
+    {
+      "id": "875a6b6f-8b37-446b-8f6a-1f3e1966abe9",
+      "question_text": "En relación con el Síndrome de West, ¿cuál de las siguientes afirmaciones es correcta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "La edad de inicio es típicamente después de los 2 años",
+        "El EEG característico muestra hipsarritmia",
+        "Las crisis características son las ausencias atípicas",
+        "El pronóstico a largo plazo es generalmente bueno"
+      ],
+      "correct_option_index": 1,
+      "explanation": "El Síndrome de West se caracteriza por la triada: espasmos infantiles, hipsarritmia en EEG y regresión del desarrollo, con inicio típico en el primer año.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 20
+    },
+    {
+      "id": "bca0a6c8-d17c-4eb8-bd32-12ba8ac7e6d8",
+      "question_text": "¿Cuál de los siguientes antiepilépticos tiene menor interacción con anticonceptivos orales?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Carbamazepina",
+        "Fenitoína",
+        "Levetiracetam",
+        "Fenobarbital"
+      ],
+      "correct_option_index": 2,
+      "explanation": "El levetiracetam no tiene interacciones significativas con anticonceptivos orales, a diferencia de los inductores enzimáticos como carbamazepina o fenitoína.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 21
+    },
+    {
+      "id": "56e42b9f-eca5-4b5a-827d-6b5eb6aa3be9",
+      "question_text": "El electroencefalograma de sueño tiene como objetivo:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Evaluar trastornos del sueño",
+        "Aumentar la sensibilidad para detectar actividad epileptiforme",
+        "Confirmar el diagnóstico de epilepsia",
+        "Todas son correctas"
+      ],
+      "correct_option_index": 1,
+      "explanation": "El EEG de sueño aumenta la sensibilidad para detectar actividad epileptiforme, especialmente en epilepsias focales y generalizadas.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 22
+    },
+    {
+      "id": "b5881254-058e-4b2b-a924-5c270ead264b",
+      "question_text": "En el contexto de epilepsia y embarazo, ¿cuál de las siguientes afirmaciones es correcta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "El valproato es el fármaco de elección",
+        "Se debe suspender la medicación antiepiléptica durante el embarazo",
+        "La suplementación con ácido fólico debe iniciarse antes de la concepción",
+        "Las crisis epilépticas no representan riesgo para el feto"
+      ],
+      "correct_option_index": 2,
+      "explanation": "El ácido fólico debe suplementarse idealmente desde antes de la concepción para reducir el riesgo de defectos del tubo neural, especialmente con valproato.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 23
+    },
+    {
+      "id": "12659815-37e7-4d76-bd8f-b721d832f6b5",
+      "question_text": "Respecto a las crisis febriles, ¿cuál es la afirmación correcta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Ocurren típicamente entre los 6 meses y 5 años de edad",
+        "Siempre requieren tratamiento antiepiléptico de mantenimiento",
+        "El riesgo de desarrollar epilepsia es superior al 50%",
+        "Son un tipo de epilepsia generalizada genética"
+      ],
+      "correct_option_index": 0,
+      "explanation": "Las crisis febriles típicas ocurren entre 6 meses y 5 años, son generalmente benignas y no requieren tratamiento antiepiléptico de mantenimiento.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 24
+    }
+  ]
+}

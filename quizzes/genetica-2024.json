@@ -1,0 +1,384 @@
+{
+  "quiz": {
+    "id": "a653b655-88ad-48df-bdc5-03d7e4c81aa2",
+    "title": "Genetica 2024",
+    "description": "Cuestionario basado en \"genetica 2024\"",
+    "time_limit_minutes": 45,
+    "passing_score": null,
+    "shuffle_questions": false,
+    "show_correct_answers": true,
+    "status": "published",
+    "created_at": "2026-02-03T15:25:19.723317+00:00",
+    "updated_at": "2026-02-03T15:25:19.723317+00:00"
+  },
+  "questions": [
+    {
+      "id": "cc27e657-dfe9-45f5-8a45-3bac4000aa79",
+      "question_text": "Cuando se dice que un paciente tiene una enfermedad con herencia autosómica recesiva, que implica",
+      "question_type": "multiple_choice",
+      "options": [
+        "Que los padres tienen la mutación y padecen la enfermedad.",
+        "Que recibió un gen anormal de la madre.",
+        "Que recibió un gen anormal de ambos padres, siendo ellos sanos.",
+        "Que no recibió un gen anormal de sus padres sino que lo generó en su génesis."
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 0
+    },
+    {
+      "id": "090abdf9-704f-4b21-86c4-0fd8dcdd5e6a",
+      "question_text": "El fenómeno de “anticipación” en enfermedades genéticas, ¿que significa?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Que a más edad de aparición de la enfermedad en las sucesivas generaciones, se reduce el número de repeticiones del triplete.",
+        "Que hay una correlación directa entre el número de repeticiones de un triplete y la edad de aparición de la enfermedad en sucesivas generaciones.",
+        "Que en las sucesivas generaciones la enfermedad es cada vez más leve.",
+        "Que hay una correlación inversa entre el número de repeticiones de un triplete y la edad de aparición de la enfermedad en sucesivas generaciones."
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 1
+    },
+    {
+      "id": "8ac35c90-5b58-49a3-aba9-b479d776b1c2",
+      "question_text": "La distrofia muscular de Duchenne o distrofia muscular progresiva (DMD) es una enfermedad hereditaria con un patrón de herencia de tipo recesivo ligado al cromosoma X, provocado por una mutación tipo \"sin sentido\". ¿Que alteraciones provocan este tipo de mutaciones en la transcripción?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Al cambiar una base convierte el triplete codificante en uno no codificante.",
+        "Al cambiar una base se codifica una proteína con potencial protección para una enfermedad.",
+        "Al cambiar una base convierte al triplete codificante en uno sin sentido y se interrumpe la cadena polipeptídica a ese nivel.",
+        "Al cambiar una base convierte el triplete codificante en uno sin sentido y no se produce ninguna cadena polipeptídica."
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 2
+    },
+    {
+      "id": "361afeeb-9da6-42bb-99c1-c9500f335676",
+      "question_text": "Dentro de las ataxias espinocerebelosas autosómico-dominantes, existe una que es causada por la expansión anormal del pentanucleótido ATTCT. Es predominante en poblaciones de Latinoamérica yse caracteriza por la presencia de ataxia y eplipesia. ¿Cuál de las siguientes tiene las mencionadas características?",
+      "question_type": "multiple_choice",
+      "options": [
+        "SCA 9",
+        "SCA 1",
+        "SCA 27",
+        "SCA 10"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 3
+    },
+    {
+      "id": "469a19eb-5cc1-467c-909f-df228e8af4e3",
+      "question_text": "¿Cuál de las siguientes técnicas utilizaría para estudiar una mutación puntual ya definida en una biblioteca de ADN?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Microarray",
+        "PCR convencional",
+        "Secuenciación de Nueva Generación (NGS)",
+        "MLPA"
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 4
+    },
+    {
+      "id": "e39b2e4e-823a-4262-bf5a-19f3e6414173",
+      "question_text": "Un cromosoma está compuesto por",
+      "question_type": "multiple_choice",
+      "options": [
+        "ADN + lípidos.",
+        "ADN + proteínas.",
+        "ADN + hidratos de carbono.",
+        "ADN + minerales."
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 5
+    },
+    {
+      "id": "fad3b4b7-1fcf-4553-a45f-835794d9d6b7",
+      "question_text": "¿Que significa que una enfermedad presenta un patrón de polimorfismo genético?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Una serie de cambios cromosómicos que dan distintas alteraciones fenotípicas",
+        "Una serie de proteínas anormales que se secretan y son dosables en sangre",
+        "Una serie de fenotipos alternativos para una mutación",
+        "Una serie de genotipos alternativos para un mismo fenotipo"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 6
+    },
+    {
+      "id": "104eb754-764b-4179-aea6-06ce4cee8ef2",
+      "question_text": "¿Qué es el IMPRINTING genético?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Es la diferente expresión de un gen en función de la edad del padre.",
+        "Es la diferente expresión de un gen en varones y mujeres.",
+        "Es la diferente expresión de un gen en las sucesivas generaciones.",
+        "Es la diferente expresión de un gen en función del sexo del progenitor del que se heredó."
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 7
+    },
+    {
+      "id": "a14899ca-3f2b-4c1f-8f21-053b566ac895",
+      "question_text": "La mayoría de los pacientes con Enfermedad de Parkinson con herencia Autosómica Recesiva expresan mutaciones en",
+      "question_type": "multiple_choice",
+      "options": [
+        "DJ1.",
+        "PINK1",
+        "LRRK2.",
+        "PARK2."
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 8
+    },
+    {
+      "id": "cb3b4eb9-069c-4c77-a1b7-62198b22cfcb",
+      "question_text": "La presentación de distrofia miotónica DM1 o de Steinert, presenta un fenómeno de anticipación, ¿que impacto en la clínica tiene esta característica?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Existe un decremento en el número de afectados en generaciones sucesivas de una familia.",
+        "Existe un incremento en la severidad clínica en generaciones sucesivas de una familia.",
+        "Hay un decremento del número de portadores en generaciones sucesivas de una familia.",
+        "Esperaríamos un incremento en el número de portadores asintomáticos en generaciones sucesivas de una familia."
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 9
+    },
+    {
+      "id": "d3ad15bd-6d2a-4b1f-81ac-05a1dc11a782",
+      "question_text": "La neuropatía óptica hereditaria de Leber se caracteriza por la pérdida bilateral de la visión central, originada por atrofia del nervio óptico. Aparece en la segunda o tercera década de la vida y afecta a más hombres que a mujeres. Sabiendo que esta proviene de una alteración del ADN mitocondrial, ¿cuál de las siguientes expresiones es correcta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Se expresa clínicamente en los hombres.",
+        "Tiene herencia paterna.",
+        "Tiene herencia materna.",
+        "Tiene herencia autosómica dominante."
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 10
+    },
+    {
+      "id": "781802ca-0840-4eda-818a-61ad0d1439b6",
+      "question_text": "Las neuropatías hereditarias de tipo Charcot-Marie-Tooth tienen distintas causas, ¿cuál de la siguientes formas reconoce herencia autosómico-recesiva?",
+      "question_type": "multiple_choice",
+      "options": [
+        "CMT4.",
+        "CMTX.",
+        "CMT2.",
+        "CMT1."
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 11
+    },
+    {
+      "id": "77a080f4-a146-4b9d-8542-6d812e5a0751",
+      "question_text": "Las paraparesias espásticas hereditarias (SPG) son trastornos neurodegenerativos que se caracterizan por espasticidad y debilidad progresiva de las extremidades inferiores, asociadas a menudo con trastornos urinarios hipertónicos, hipopalestesia e hipobatiestesia. ¿Cual de los siguientes genes es la causa más frecuente de las formas autosómicas dominantes?",
+      "question_type": "multiple_choice",
+      "options": [
+        "SPG tipo 3A, gen ATL1 que codifica Atlastina 1.",
+        "SPG tipo 9, por el gen ALDH18A1 que codifica Aldeido Deshidrogenasa 18.",
+        "SPG tipo 19, por el gen SPG19 que codifica el transportador de sodio RPZ2.",
+        "SPG tipo 4, por el gen SPAST que codifica Spastina."
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 12
+    },
+    {
+      "id": "1c48b8cd-351f-40b8-b670-c25995295a4b",
+      "question_text": "La Ataxia de Friedreich es una enfermedad genética con una herencia autosómica recesiva. Esta depende de una alteración en la función de la proteína Frataxina con una acumulación de hierro en una estructura celular que, consecuentemente, disfunciona, ¿cual es esta estructura celular?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Membrana celular.",
+        "Citosol.",
+        "Lisosomas.",
+        "Mitocondrias."
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 13
+    },
+    {
+      "id": "ef88a6fb-186a-4b4a-81f4-0d4a969bfe58",
+      "question_text": "La enfermedad de Niemann-Pick tipo C es un trastorno hereditario autosómico-recesivo, con manifestaciones neurológicas específicas en las formas del adulto. ¿Cuál de los siguientes signos considera más orientador en las formas tardías de la enfermedad?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Nistagmo evocado por la mirada",
+        "Parálisis supranuclear de la mirada conjugada a predominio vertical.",
+        "Neuropatía periférica.",
+        "Parálisis supranuclear de la mirada conjugada a predominio horizontal."
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 14
+    },
+    {
+      "id": "6561214e-5347-48b2-a24a-8fb89e1e526f",
+      "question_text": "El CADASIL (Cerebral Autosomal Dominant Arteriopathy with Subcortical Infarcts and Leukoencephalopathy) es un trastorno autosómico dominante, cuya fisiopatología consite en una arteriopatía de vasos pequeños. ¿Cual de los siguientes genes es la causa de esta enfermedad?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Gen NOTCH3, que codifica la proteina NOTCH3 de la membrana de musculo liso vascular",
+        "Gen ACTA2, que codifica para la actina alfa-2 (α-2) del musculo liso",
+        "Gen GAL, que codifica para el polipéptido galanina",
+        "Gen CBS, que codifica para la beta-sintetasa cistationina"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 15
+    },
+    {
+      "id": "a78aa5e5-fe4a-42c1-8baa-e0978cc75b3f",
+      "question_text": "Un alelo de la APOE se asocia al desarrollo de hemorragias intracerebrales. Cual es?",
+      "question_type": "multiple_choice",
+      "options": [
+        "APOE E3",
+        "APOE E4",
+        "APOE  E1",
+        "APOE E2"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 16
+    },
+    {
+      "id": "466ad666-5250-4954-a1f8-cdbfe053e02a",
+      "question_text": "¿Qué determina que una enfermedad genética sea una enfermedad hereditaria?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Que la proteína codificante esté presente en el cromosoma afecta por la mutación puntual",
+        "Que la mutación este presente en los cromosomas X o Y que determinan el sexo del nuevo individuo",
+        "Que la mutacion o el gen alterado esté presente en las células germinales",
+        "Que la mutación esté presente en células somáticas específicas"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 17
+    },
+    {
+      "id": "d4bacd82-699a-4019-bfcf-8a10ba4da400",
+      "question_text": "¿Cuales de las mutaciones cariotípicas son más comunes en la clínica?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Poliploidía",
+        "Aneuploidia",
+        "Haploidia",
+        "Alopoloploidia"
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 18
+    },
+    {
+      "id": "b145b192-3345-49ff-92d7-548ef01ab09d",
+      "question_text": "Un paciente de 40 años concurre a preguntarle que test genético debería realizarse dado que su padre, dos tíos y su abuelo tenían Enfermedad de Parkinson de inicio temprano. Ud sospecha una herencia autosómico dominante, ¿cual es el gen que causa la mayoría de estos casos?",
+      "question_type": "multiple_choice",
+      "options": [
+        "SNCA.",
+        "Parkina/PARK2.",
+        "DJ1/PARK7",
+        "PINK1"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 19
+    },
+    {
+      "id": "73a5eb55-8b21-4062-939a-af7a99872b02",
+      "question_text": "Una mutación “Sin sentido o nonsense” implica",
+      "question_type": "multiple_choice",
+      "options": [
+        "Al cambiar una base convierte al triplete codificante en uno sin sentido, se genera un codón de stop y se interrumpe la cadena polipeptídica a ese nivel",
+        "Al cambiar una base convierte el triplete codificante en uno que genera una cadena más larga.",
+        "Al cambiar una base convierte el triplete codificante en uno no codificante.",
+        "Al cambiar una base convierte el triplete codificante en uno sin sentido y no se inicia la cadena polipeptídica."
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 20
+    },
+    {
+      "id": "8dd3a309-717e-4c58-9c86-1978cf00b7ae",
+      "question_text": "Cual de los siguientes genes está vinculado a formas hereditarias de la enfermedad de Alzheimer?",
+      "question_type": "multiple_choice",
+      "options": [
+        "UBQLN2",
+        "PSEN1",
+        "C9orf72",
+        "SOD1"
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 21
+    },
+    {
+      "id": "c4470f30-76bc-49a7-ae36-6b2106f23416",
+      "question_text": "El patrón de herencia Autosómica Recesiva, tiene las siguientes características",
+      "question_type": "multiple_choice",
+      "options": [
+        "Transmisión vertical, alta tasa de consanguinidad, 50 % de recurrencia.",
+        "Transmisión horizontal, padres heterocigotas, 25% de recurrencia.",
+        "Transmisión vertical, un progenitor afectado, 25 % de recurrencia.",
+        "Transmisión vertical, padres heterocigotas, 50 % de recurrencia."
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 22
+    }
+  ]
+}

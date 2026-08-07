@@ -1,0 +1,421 @@
+{
+  "quiz": {
+    "id": "730689d8-bde0-4f9b-94cd-2958a7f5bebf",
+    "title": "Neurorehabilitación 2025",
+    "description": "Examen del módulo de Neurorehabilitación - Certificación SNA 2025",
+    "time_limit_minutes": 30,
+    "passing_score": null,
+    "shuffle_questions": false,
+    "show_correct_answers": true,
+    "status": "published",
+    "created_at": "2026-02-03T12:30:08.212164+00:00",
+    "updated_at": "2026-02-03T12:30:08.212164+00:00"
+  },
+  "questions": [
+    {
+      "id": "3fede1bd-ddb1-485e-ad47-e87063cad0a5",
+      "question_text": "En un paciente que presenta disfagia, la misma puede repercutir en:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Su evolución neurológica y estado nutricional",
+        "Su evolución neurológica, estado nutricional y su aparato respiratorio",
+        "Estado nutricional",
+        "El aparato respiratorio",
+        "Su evolución neurológica"
+      ],
+      "correct_option_index": 1,
+      "explanation": "La disfagia puede afectar múltiples aspectos: evolución neurológica (por riesgo de complicaciones), estado nutricional (por dificultad en la alimentación) y aparato respiratorio (por riesgo de broncoaspiración).",
+      "image_url": null,
+      "points": 1,
+      "display_order": 0
+    },
+    {
+      "id": "36219232-ee96-4d5a-9203-e02f900e0826",
+      "question_text": "Al realizar un abordaje con comunicación aumentativa alternativa, se está trabajando:",
+      "question_type": "multiple_choice",
+      "options": [
+        "El aspecto pragmático",
+        "La expresión oral",
+        "La funcionalidad comunicativa",
+        "La comprensión oral"
+      ],
+      "correct_option_index": 2,
+      "explanation": "La comunicación aumentativa alternativa se enfoca en mejorar la funcionalidad comunicativa del paciente mediante sistemas alternativos o complementarios al lenguaje oral.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 1
+    },
+    {
+      "id": "ca7211c9-807d-4178-9fba-e3528d0519fe",
+      "question_text": "El paradigma de rehabilitación actual defiende:",
+      "question_type": "multiple_choice",
+      "options": [
+        "El derecho a un trato igualitario, orientado a la inclusión social activa",
+        "La familia como pilar de rehabilitación",
+        "La marginación",
+        "La intervención profesional como solución"
+      ],
+      "correct_option_index": 0,
+      "explanation": "El paradigma actual de rehabilitación se centra en los derechos del paciente, promoviendo la igualdad y la inclusión social activa como objetivos fundamentales.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 2
+    },
+    {
+      "id": "048dba74-4bfb-4cef-b379-16aa7d37f229",
+      "question_text": "¿Cuál de los siguientes factores cualifica mejor el pronóstico inicial en el departamento de emergencias?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Duración de la amnesia post traumática",
+        "Tomografía computada o resonancia de ingreso",
+        "Tiempo de duración de la pérdida de conciencia",
+        "Glasgow Coma Scale",
+        "Mecanismo de lesión"
+      ],
+      "correct_option_index": 3,
+      "explanation": "La Escala de Glasgow (GCS) es el mejor predictor pronóstico inicial en emergencias, ya que evalúa de manera estandarizada el nivel de consciencia del paciente.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 3
+    },
+    {
+      "id": "08222345-48da-4fe2-83d1-d66a5235cfc8",
+      "question_text": "Según la OMS, el objetivo general de la neurorrehabilitación es:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Restablecer las funciones motoras, sensitivas, sensoriales, cognitivas, emocionales, y los dominios sociales",
+        "Recuperar la marcha funcional",
+        "Restablecer aquellas funciones más comprometidas",
+        "Compensar los déficits con distintos elementos de apoyo (por ej elementos de ayuda marcha)"
+      ],
+      "correct_option_index": 0,
+      "explanation": "La OMS define la neurorrehabilitación de manera integral, buscando el restablecimiento de todas las funciones: motoras, sensitivas, sensoriales, cognitivas, emocionales y sociales.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 4
+    },
+    {
+      "id": "aaa0629f-e234-4929-beeb-ff7b273e51e6",
+      "question_text": "¿En qué momento de la neurorehabilitación es conveniente iniciar la rehabilitación cognitiva?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Al alta, para que se realice en forma ambulatoria",
+        "Cuando el paciente lo demanda",
+        "Cuando el paciente se descomplejiza clínicamente",
+        "Desde el ingreso al centro de neurorehabilitación"
+      ],
+      "correct_option_index": 2,
+      "explanation": "La rehabilitación cognitiva debe iniciarse cuando el paciente se estabiliza clínicamente y su condición general permite participar activamente en las terapias.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 5
+    },
+    {
+      "id": "6583b335-5020-4f63-82a5-2fc6c4f4d91d",
+      "question_text": "¿Por debajo de qué puntaje Z el rendimiento cognitivo es patológico?",
+      "question_type": "multiple_choice",
+      "options": [
+        "-1.5",
+        "0",
+        "-1",
+        "-2"
+      ],
+      "correct_option_index": 0,
+      "explanation": "Un puntaje Z por debajo de -1.5 desviaciones estándar se considera patológico en la evaluación del rendimiento cognitivo.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 6
+    },
+    {
+      "id": "8b0e8afe-ce32-4442-bac6-587822783ad3",
+      "question_text": "El equipamiento postural de los pacientes:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Se confecciona el mismo equipamiento para todos los pacientes neurológicos",
+        "Es dinámico y personalizado",
+        "No requiere de ningún entrenamiento por parte de la TO",
+        "Si se indica al inicio del tratamiento, debe mantenerse el mismo hasta el momento del alta"
+      ],
+      "correct_option_index": 1,
+      "explanation": "El equipamiento postural debe ser individualizado según las necesidades de cada paciente y modificarse según su evolución, siendo dinámico y personalizado.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 7
+    },
+    {
+      "id": "4742c194-88b0-4b37-937a-1496174c2ae7",
+      "question_text": "Los objetivos desde Terapia Ocupacional:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Se plantean al momento del ingreso y se mantienen los mismos hasta el momento del alta",
+        "Solo deben tener en cuenta el diagnóstico del individuo",
+        "Son centrados en el paciente y se focalizan en las actividades y participación social del individuo",
+        "Están centrados en las funciones y estructuras corporales del individuo"
+      ],
+      "correct_option_index": 2,
+      "explanation": "Los objetivos de Terapia Ocupacional se centran en el paciente como persona, enfocándose en sus actividades cotidianas y su participación social, más allá de las limitaciones físicas.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 8
+    },
+    {
+      "id": "2dd765ac-1d94-44cc-a187-609d81005443",
+      "question_text": "La Neurorehabilitación se lleva a cabo a través de un grupo:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Multidisciplinario",
+        "Transdisciplinario",
+        "Interdisciplinario",
+        "Sólo médicos neurólogos especialistas en neurorrehabilitación"
+      ],
+      "correct_option_index": 2,
+      "explanation": "La neurorehabilitación requiere un equipo interdisciplinario donde diferentes profesionales trabajan de manera coordinada e integrada.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 9
+    },
+    {
+      "id": "6e61478e-7562-4076-be2a-2d7d909cd1e4",
+      "question_text": "La neurorehabilitación kinésica restaurativa tiene como medio:",
+      "question_type": "multiple_choice",
+      "options": [
+        "El mantenimiento del perfil de funcionalidad",
+        "La reversión de las deficiencias",
+        "La modulación de las deficiencias",
+        "El destete de las asistencias indicadas"
+      ],
+      "correct_option_index": 2,
+      "explanation": "La kinesiología restaurativa busca modular las deficiencias neurológicas mediante técnicas específicas de neurorehabilitación.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 10
+    },
+    {
+      "id": "a063f8fd-8999-4f7f-97be-62613d3613ee",
+      "question_text": "El abordaje de la espasticidad en un paciente neurológico:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Es un objetivo básico de tratamiento kinésico",
+        "Su presencia es indicador de tratamiento kinésico restaurativo",
+        "Su presencia es indicador de tratamiento kinésico de mantenimiento",
+        "Su abordaje se relaciona con el impacto sobre una limitación de la actividad"
+      ],
+      "correct_option_index": 3,
+      "explanation": "El tratamiento de la espasticidad debe enfocarse en cómo esta afecta las actividades funcionales del paciente, no solo en su presencia.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 11
+    },
+    {
+      "id": "eb2aab64-db49-4325-b859-fb4aa3dbeddf",
+      "question_text": "¿Cuáles de los siguientes son considerados factores de mal pronóstico en el daño axonal difuso?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Edad mayor a 40 años",
+        "Duración del coma mayor a 20 días",
+        "A y B son correctas",
+        "Todas son correctas",
+        "Amnesia post traumática mayor a 2 semanas"
+      ],
+      "correct_option_index": 2,
+      "explanation": "Tanto la edad mayor a 40 años como la duración del coma mayor a 20 días son factores de mal pronóstico en el daño axonal difuso.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 12
+    },
+    {
+      "id": "795bafdd-f5c8-49fb-8451-f6f5714ff2dd",
+      "question_text": "¿Cuál de las siguientes NO es una característica del estado vegetativo?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Conservación de ciclos sueño vigilia",
+        "Funciones autonómicas preservadas",
+        "Apertura ocular espontánea",
+        "Evidencia de respuesta voluntaria reproducible a estímulos",
+        "Ausencia de comprensión o expresión al lenguaje"
+      ],
+      "correct_option_index": 3,
+      "explanation": "El estado vegetativo se caracteriza por la ausencia de respuestas voluntarias reproducibles. Si hay evidencia de estas respuestas, el paciente no está en estado vegetativo.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 13
+    },
+    {
+      "id": "4c81ee23-2458-406c-ac62-6738596740fe",
+      "question_text": "¿Cuál de las siguientes escalas evalúa la percepción personal del paciente?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Escala analógica visual",
+        "FIM",
+        "Barthel Index",
+        "EDSS"
+      ],
+      "correct_option_index": 0,
+      "explanation": "La escala analógica visual es una herramienta subjetiva que evalúa la percepción personal del paciente, comúnmente usada para valorar dolor o bienestar.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 14
+    },
+    {
+      "id": "2c1b97a6-32bd-4c00-988f-00646e4a1aeb",
+      "question_text": "En caso de vejiga con globos vesicales en lesión medular, ¿qué aconseja?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Cateterismo intermitente",
+        "Tamsulosina",
+        "Sonda vesical permanente",
+        "Anticolinérgicos"
+      ],
+      "correct_option_index": 0,
+      "explanation": "El cateterismo intermitente es el método de elección para el manejo de la vejiga neurogénica con retención urinaria, reduciendo complicaciones infecciosas.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 15
+    },
+    {
+      "id": "3c0ccdf2-15e8-46cc-805a-ee15f5fa9d4c",
+      "question_text": "Las ortesis son utilizadas por los pacientes durante el proceso de rehabilitación. Indique cuál de las siguientes afirmaciones es incorrecta:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Una ortesis es una extensión artificial que remplaza o provee una parte del cuerpo que falta por diversas causas",
+        "Una ortesis es un dispositivo de aplicación externa que se utiliza para modificar los aspectos funcionales o estructurales del sistema neuromuscular y esquelético",
+        "Las férulas antebraquio-palmares se utilizan para controlar la mano en garra",
+        "Las ortesis de pie-tobillo se utilizan para controlar el pie equino"
+      ],
+      "correct_option_index": 0,
+      "explanation": "La definición incorrecta es la primera: las prótesis reemplazan partes del cuerpo que faltan, mientras que las ortesis son dispositivos externos de soporte sin reemplazar partes del cuerpo.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 16
+    },
+    {
+      "id": "65eebf21-c713-4520-94f6-ef0d8f18dde3",
+      "question_text": "Las ayudas para la marcha (APM) son utilizadas por el paciente neurológico durante la deambulación. ¿Cuál de las siguientes afirmaciones es correcta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "El andador se utiliza en pacientes sin trastornos del equilibrio",
+        "El bastón trípode brinda mayor estabilidad en pacientes con trastornos del equilibrio",
+        "El bastón trípode no brinda mayor estabilidad en pacientes con trastornos del equilibrio",
+        "El bastón de un punto se utiliza en pacientes con trastornos del equilibrio"
+      ],
+      "correct_option_index": 1,
+      "explanation": "El bastón trípode, con su base de tres puntos de apoyo, proporciona mayor estabilidad que un bastón simple, siendo útil en pacientes con alteraciones del equilibrio.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 17
+    },
+    {
+      "id": "c800af59-e11f-4cbd-92c0-d556078709fc",
+      "question_text": "La goniometría clínica es utilizada ampliamente en pacientes con secuelas ortopédicas y neurológicas. Marque la opción correcta:",
+      "question_type": "multiple_choice",
+      "options": [
+        "La goniometría se ocupa de medir y registrar la inflamación de cada una de las articulaciones del cuerpo humano",
+        "La goniometría se ocupa de medir y registrar el dolor de cada una de las articulaciones del cuerpo humano",
+        "La goniometría se ocupa de medir y registrar el arco de movimiento de cada una de las articulaciones del cuerpo humano",
+        "La goniometría se ocupa de medir y registrar la fuerza muscular de cada una de las articulaciones del cuerpo humano"
+      ],
+      "correct_option_index": 2,
+      "explanation": "La goniometría es la técnica de medición de los ángulos de movimiento articular, evaluando la amplitud del rango de movimiento de las articulaciones.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 18
+    },
+    {
+      "id": "b2406382-c1b3-4d55-abe5-be143f9cdced",
+      "question_text": "La evaluación inicial del paciente con Vejiga Neurogénica incluye:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Clearence de creatinina, Ecografía renovesical, Examen físico, Urodinamia",
+        "Ecografía renovesical",
+        "Clearence de creatinina",
+        "Examen físico"
+      ],
+      "correct_option_index": 0,
+      "explanation": "La evaluación completa de la vejiga neurogénica requiere múltiples estudios: función renal (clearence), imágenes (ecografía), evaluación clínica y estudio funcional (urodinamia).",
+      "image_url": null,
+      "points": 1,
+      "display_order": 19
+    },
+    {
+      "id": "b7211d88-1621-433e-992d-8d087a8a7a5d",
+      "question_text": "La posibilidad de definir que un sujeto tenga riesgo de caída se obtiene a través de:",
+      "question_type": "multiple_choice",
+      "options": [
+        "A través de la comparación de la medida de resultado con un punto de corte aplicable a la población en estudio",
+        "A través de la ponderación de la actividad y la observación clínica",
+        "La ponderación de la actividad limitada y la comparación de la medida de resultado con los valores normativos",
+        "Por medio de la observación clínica y la anamnesis correspondiente"
+      ],
+      "correct_option_index": 0,
+      "explanation": "El riesgo de caída se determina mediante escalas validadas que comparan los resultados del paciente con puntos de corte establecidos para la población específica.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 20
+    },
+    {
+      "id": "73574ea6-2036-4028-9b07-86be647e838d",
+      "question_text": "Juan es una persona que sufrió un accidente cerebro vascular el cual le dejó como secuela una hemiplejia. Tiene disminución en la fuerza y espasticidad en su miembro inferior derecho, no puede realizar marcha, por lo que se moviliza en silla de ruedas. Actualmente ha tenido que dejar de trabajar ya que en su trabajo no hay rampas para que pueda acceder. SEGÚN LA CIF, EL ACCIDENTE CEREBRO VASCULAR ES:",
+      "question_type": "multiple_choice",
+      "options": [
+        "La secuela",
+        "La condición de salud de Juan",
+        "La discapacidad que le quedó",
+        "Una limitación en sus actividades"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Según la Clasificación Internacional del Funcionamiento (CIF), el ACV es la condición de salud que genera las deficiencias, limitaciones y restricciones en la participación.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 21
+    },
+    {
+      "id": "caa83f84-f75b-4ebe-940a-01048d6fca81",
+      "question_text": "EL CÓDIGO CIF ESTÁ FORMADO POR:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Una letra que representa el componente, números que representan las categorías seguido de un calificador",
+        "4 números que representan las categorías más una letra que es el calificador",
+        "Una letra que representa el componente y un calificador",
+        "Un código de una letra y 3 números"
+      ],
+      "correct_option_index": 2,
+      "explanation": "El código CIF se estructura con una letra inicial que identifica el componente (b=funciones corporales, s=estructuras, d=actividades, e=factores ambientales) seguida de un calificador numérico.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 22
+    },
+    {
+      "id": "9760671b-de49-4bf5-8965-0d49b52abc19",
+      "question_text": "Paciente de 54 años de edad con secuela de ACV isquémico que presenta trastornos en el lenguaje expresivo y comprensivo, con déficit atencional y disfagia orofaríngea. Presenta los siguientes signos clínicos asociados: hemiparesia derecha, hemihipoestesia derecha y hemianopsia homónima derecha. Este cuadro sería compatible con:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Afasia trascortical motora",
+        "Afasia mixta",
+        "Afasia global",
+        "Afasia de Wernicke",
+        "Afasia trascortical sensorial"
+      ],
+      "correct_option_index": 2,
+      "explanation": "La afasia global se caracteriza por compromiso severo tanto de la expresión como de la comprensión del lenguaje, asociada a hemiparesia y otros déficits neurológicos extensos.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 23
+    },
+    {
+      "id": "38f9a36f-c887-4ca9-a929-0874822d61df",
+      "question_text": "Las actividades de la vida diaria se pueden categorizar en:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Actividades de autocuidado, instrumentales, ocio y tiempo libre",
+        "Actividades de la vida diaria básicas, instrumentales y avanzadas",
+        "Actividades de ocio y tiempo libre, cuidado de otros y actividades básicas",
+        "Actividades de autocuidado, cuidado de la salud y actividades avanzadas"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Las AVD se clasifican en tres categorías: básicas (autocuidado), instrumentales (manejo del hogar y entorno) y avanzadas (trabajo, ocio, roles sociales).",
+      "image_url": null,
+      "points": 1,
+      "display_order": 24
+    }
+  ]
+}

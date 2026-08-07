@@ -1,0 +1,336 @@
+{
+  "quiz": {
+    "id": "5b017775-b929-4d5a-b79c-4dd69be25d5c",
+    "title": "Guías AHA/ASA 2026 - Manejo Temprano del ACV Isquémico Agudo",
+    "description": "Quiz comprehensivo sobre las actualizaciones clave de las guías 2026 para el manejo del stroke isquémico agudo",
+    "time_limit_minutes": null,
+    "passing_score": null,
+    "shuffle_questions": false,
+    "show_correct_answers": true,
+    "status": "published",
+    "created_at": "2026-02-02T13:33:37.808751+00:00",
+    "updated_at": "2026-02-02T14:24:46.066675+00:00"
+  },
+  "questions": [
+    {
+      "id": "a5fec23e-0dfc-4e97-8793-5417a4c3cefd",
+      "question_text": "Según las guías 2026, ¿cuál es la recomendación sobre el uso de tenecteplase comparado con alteplase en pacientes dentro de la ventana de 4.5 horas?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Tenecteplase es superior a alteplase (COR I)",
+        "Ambos son igualmente recomendados (COR I)",
+        "Tenecteplase solo se recomienda si alteplase no está disponible (COR IIa)",
+        "Alteplase sigue siendo el único agente recomendado (COR I)"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Las guías 2026 establecen una recomendación COR 1 para usar tenecteplase (0.25 mg/kg, máx 25 mg) O alteplase (0.9 mg/kg) en pacientes dentro de 4.5 horas, basado en trials que mostraron no-inferioridad.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 0
+    },
+    {
+      "id": "9b2d9de6-7d29-42a6-a41a-183fc413c259",
+      "question_text": "Un paciente de 65 años llega con NIHSS 18 a las 2 horas del inicio. Durante la evaluación mejora a NIHSS 3 (disartria leve y paresia facial). ¿Cuál es la recomendación sobre trombólisis según las guías 2026?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Administrar trombólisis independientemente del NIHSS si el déficit es discapacitante",
+        "No administrar trombólisis porque NIHSS <5 es contraindicación",
+        "Esperar 30 minutos más para ver si los síntomas continúan mejorando",
+        "Administrar doble antiagregación en lugar de trombólisis"
+      ],
+      "correct_option_index": 0,
+      "explanation": "Las guías 2026 enfatizan trombólisis rápida en pacientes con déficits discapacitantes dentro de 4.5 horas, independientemente del puntaje NIHSS. La clave es si el déficit es discapacitante para el paciente, no el número del NIHSS.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 1
+    },
+    {
+      "id": "c3907b4b-300f-4e3a-8eb9-95d2bc5cda50",
+      "question_text": "Sobre el uso de Mobile Stroke Units (MSU), las guías 2026 establecen:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Son útiles pero su beneficio es incierto (COR IIb)",
+        "Se recomiendan sobre EMS convencional donde estén disponibles (COR I)",
+        "Solo deben usarse en áreas rurales (COR IIa)",
+        "No se recomiendan debido a costo-efectividad (COR III)"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Las guías 2026 incluyen por primera vez una recomendación COR 1 para el uso de MSUs sobre EMS convencional donde estén disponibles, para pacientes elegibles para trombólisis, mejorando tiempo onset-to-treatment y outcomes funcionales.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 2
+    },
+    {
+      "id": "dd15b33b-fe01-4fdf-ae33-f4f9b7476ff8",
+      "question_text": "Un paciente con oclusión de M1 derecha, ASPECTS 4, NIHSS 16, llega a las 8 horas del inicio. Edad 72 años, mRS previo 0. Según las guías 2026, ¿es candidato a trombectomía?",
+      "question_type": "multiple_choice",
+      "options": [
+        "No, porque ASPECTS <5 es contraindicación absoluta",
+        "Sí, si tiene entre 3-5 de ASPECTS y cumple otros criterios (COR I)",
+        "Solo si primero recibe trombólisis IV (COR I)",
+        "No, la ventana para núcleo grande es solo hasta 6 horas"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Las guías 2026 recomiendan (COR 1) EVT en pacientes seleccionados con ASPECTS 3-5, circulación anterior, 6-24 horas, edad <80, NIHSS ≥6, mRS previo 0-1, basado en trials recientes (RESCUE-Japan LIMIT, SELECT-2, etc.).",
+      "image_url": null,
+      "points": 1,
+      "display_order": 3
+    },
+    {
+      "id": "f2dfd78a-34c5-4998-920b-5bcd7fc5d14d",
+      "question_text": "Respecto a pacientes con déficit NO discapacitante (ej. síndrome sensitivo aislado) dentro de 4.5 horas, las guías 2026 recomiendan:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Trombólisis en todos los casos por el riesgo de deterioro",
+        "Doble antiagregación (DAPT) es preferida sobre trombólisis",
+        "Observación sin tratamiento agudo",
+        "Trombólisis solo si hay oclusión en CTA"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Las guías 2026 establecen que en pacientes con déficits NO discapacitantes, los trials (ej. PRISMS) no demostraron beneficio de trombólisis. DAPT es preferida y recomendada en esta población.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 4
+    },
+    {
+      "id": "6f0c1908-5acd-4385-974b-fc19bb8ac128",
+      "question_text": "Un paciente con oclusión de arteria basilar, NIHSS 20, pc-ASPECTS 7, mRS previo 0, llega a las 15 horas del inicio. Según las guías 2026:",
+      "question_type": "multiple_choice",
+      "options": [
+        "No es candidato a trombectomía por ventana >12 horas",
+        "Es candidato a trombectomía si NIHSS ≥10 dentro de 24 horas (COR I)",
+        "Solo es candidato si recibe trombólisis IV primero",
+        "Solo es candidato si tiene evidencia de mismatch en perfusión"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Las guías 2026 dan recomendación COR 1 para EVT en oclusión basilar con mRS previo 0-1, NIHSS ≥10, pc-ASPECTS ≥6, dentro de 24 horas del inicio, basado en estudios recientes que muestran beneficio.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 5
+    },
+    {
+      "id": "f8e6ab67-db2d-4025-afa5-343e19b455ec",
+      "question_text": "Sobre el manejo de presión arterial post-trombectomía exitosa (TICI 2b-3), las guías 2026 establecen:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Reducción intensiva de PA a <140 mmHg mejora outcomes (COR I)",
+        "Reducción intensiva de PA a <140 mmHg es dañina y no se recomienda (COR III: Harm)",
+        "Mantener PA <180/105 mmHg es suficiente (COR IIa)",
+        "No hay recomendación específica sobre manejo de PA post-EVT"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Las guías 2026 establecen que la reducción intensiva de PAS a <140 mmHg en las primeras 72 horas post-reperfusión exitosa es DAÑINA (COR III: Harm), basado en trials recientes que mostraron peores outcomes.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 6
+    },
+    {
+      "id": "960a48c1-e8f0-4f2b-ba5b-797b1b1ed0a6",
+      "question_text": "Para un paciente con hiperglucemia hospitalizado con ACV isquémico, las guías 2026 recomiendan:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Control intensivo con insulina IV a rango 80-130 mg/dL (COR I)",
+        "Control intensivo a 80-130 mg/dL NO se recomienda, aumenta riesgo de hipoglucemia (COR III: No Benefit)",
+        "Mantener glucosa <180 mg/dL es suficiente (COR I)",
+        "No tratar hiperglucemia en fase aguda"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Las guías 2026 establecen COR III: No Benefit para control intensivo de glucosa 80-130 mg/dL, ya que no mejora outcomes a 3 meses y aumenta riesgo de hipoglucemia severa.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 7
+    },
+    {
+      "id": "34a2260a-c65c-4b74-9ab3-c91eb2293030",
+      "question_text": "Un niño de 8 años con oclusión de M1 izquierda, NIHSS 15, llega a las 4 horas del inicio. Sobre trombectomía pediátrica, las guías 2026 establecen:",
+      "question_type": "multiple_choice",
+      "options": [
+        "No se recomienda EVT en niños menores de 18 años",
+        "EVT puede ser efectiva en niños ≥6 años con LVO dentro de 6 horas (COR IIa)",
+        "EVT solo es apropiada en adolescentes >12 años",
+        "Primero debe recibir trombólisis IV antes de considerar EVT"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Por primera vez, las guías 2026 incluyen recomendaciones pediátricas. EVT puede ser efectiva (COR IIa) en niños ≥6 años con LVO dentro de 6 horas, si realizada por neurointervencionistas experimentados.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 8
+    },
+    {
+      "id": "5589881e-e359-4f9c-8bf5-5bfa6c5f084c",
+      "question_text": "Paciente con minor stroke no cardioembólico (NIHSS 4), estenosis intracraneal del 60%, llega a las 12 horas del inicio. ¿Qué recomienda la guía 2026?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Trombólisis IV si está dentro de ventana extendida",
+        "DAPT (clopidogrel + aspirina) por 21 días seguido de SAPT es razonable (COR IIa)",
+        "Aspirina sola es suficiente",
+        "Anticoagulación inmediata"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Las guías 2026 establecen COR IIa para DAPT en minor stroke (NIHSS ≤5) o TIA de alto riesgo, con causa aterosclerótica presunta (estenosis ≥50%), dentro de 24-72 horas o NIHSS 4-5 dentro de 24 horas.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 9
+    },
+    {
+      "id": "b94be4a8-6b84-4fa9-ba5e-493442f0bcb6",
+      "question_text": "Sobre trombólisis en ventana extendida (4.5-9 horas o wake-up stroke), las guías 2026 recomiendan:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Trombólisis con mismatch DWI-FLAIR o perfusión puede ser razonable (COR IIa)",
+        "No se recomienda trombólisis más allá de 4.5 horas (COR III)",
+        "Solo en pacientes con NIHSS >15 (COR IIb)",
+        "Requiere aprobación de comité de ética hospitalario"
+      ],
+      "correct_option_index": 0,
+      "explanation": "Las guías 2026 establecen COR IIa para trombólisis en ventana extendida (4.5-9 horas o wake-up dentro de 9 horas del punto medio del sueño) si tienen penumbra salvable en perfusión o mismatch DWI-FLAIR.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 10
+    },
+    {
+      "id": "8a6b8f7c-7973-47ec-852c-061a8ac24f48",
+      "question_text": "En un área con sistema de stroke bien coordinado y hospital local competente en trombólisis y transferencia rápida, ¿qué establece la guía 2026 sobre transporte directo a centro de trombectomía distante (45-60 min)?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Siempre es preferible ir directo al centro de trombectomía (COR I)",
+        "No mejora outcomes comparado con ir al centro local (COR III: No Benefit)",
+        "Depende del puntaje NIHSS del paciente (COR IIa)",
+        "Solo si el paciente tiene oclusión confirmada por CTA prehospitalaria"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Las guías 2026 establecen COR III: No Benefit para transporte directo a TSC distante vs centro local en áreas con sistema bien coordinado, hospital proficiente en trombólisis y transferencia secundaria rápida.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 11
+    },
+    {
+      "id": "2ab06ed9-454a-4f37-99e2-9b350158e51b",
+      "question_text": "Sobre el uso de tirofiban pre-EVT en pacientes con oclusión de gran vaso, las guías 2026 establecen:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Se recomienda para mejorar tasas de reperfusión (COR IIa)",
+        "Puede mejorar outcomes funcionales a 90 días (COR IIb)",
+        "No es útil para mejorar outcome funcional a 90 días (COR III: No Benefit)",
+        "Solo debe usarse si hay evidencia de trombo resistente"
+      ],
+      "correct_option_index": 2,
+      "explanation": "Las guías 2026 establecen COR III: No Benefit para administración preoperatoria de tirofiban antes de EVT, ya que no mejora outcome funcional a 90 días en estudios recientes.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 12
+    },
+    {
+      "id": "f8940204-9923-452e-b233-c1df1d8528ff",
+      "question_text": "Un paciente con ACV isquémico anterior con ASPECTS 1 (núcleo muy grande), edad 70 años, NIHSS 18, llega a las 3 horas. ¿Es candidato a trombectomía según guías 2026?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Sí, si cumple criterios adicionales y sin efecto de masa significativo (COR IIa)",
+        "No, ASPECTS <3 es contraindicación absoluta",
+        "Solo si primero responde a trombólisis IV",
+        "Sí, sin restricciones de ASPECTS dentro de 6 horas (COR I)"
+      ],
+      "correct_option_index": 0,
+      "explanation": "Las guías 2026 incluyen recomendación COR IIa para EVT en pacientes seleccionados con ASPECTS 0-2 dentro de 6 horas, edad <80, NIHSS ≥6, mRS previo 0-1, y sin efecto de masa significativo, expandiendo elegibilidad a núcleos muy grandes.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 13
+    },
+    {
+      "id": "8b09dcd8-2494-4283-8afe-c3f2298c6e0f",
+      "question_text": "Sobre estimulación eléctrica faríngea (PES) en pacientes con disfagia post-ACV, las guías 2026 establecen:",
+      "question_type": "multiple_choice",
+      "options": [
+        "No hay evidencia suficiente para recomendar (COR IIb)",
+        "Puede ser beneficiosa para reducir severidad de disfagia y riesgo de aspiración (COR IIa)",
+        "Es el tratamiento de primera línea para toda disfagia (COR I)",
+        "No se recomienda por riesgo de complicaciones (COR III)"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Las guías 2026 incluyen por primera vez recomendación COR IIa para PES en pacientes con disfagia post-stroke, indicando que puede ser beneficiosa para reducir severidad de disfagia y disminuir riesgo de aspiración.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 14
+    },
+    {
+      "id": "6860de18-3dcf-409c-8007-3e6387e7a440",
+      "question_text": "Para pacientes con ACV elegibles para trombólisis E trombectomía, las guías 2026 recomiendan:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Omitir trombólisis para facilitar EVT más rápida",
+        "Esperar a ver si mejoran con trombólisis antes de proceder con EVT",
+        "Administrar ambos rápida y secuencialmente sin retrasar EVT para ver si mejoran",
+        "Solo EVT en pacientes que no mejoran con trombólisis a los 30 minutos"
+      ],
+      "correct_option_index": 2,
+      "explanation": "Las guías 2026 enfatizan que pacientes elegibles para IVT y EVT deben recibir ambos rápida y secuencialmente, SIN retrasar EVT para determinar si los síntomas mejoran con trombólisis. Una estrategia de omitir IVT no se recomienda.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 15
+    },
+    {
+      "id": "ea9b4ba8-89a1-485e-ade6-9e7c51b0de96",
+      "question_text": "Un lactante de 18 meses con síntomas neurológicos agudos y oclusión de gran vaso confirmada, llega a las 6 horas. Sobre EVT pediátrica, las guías 2026 establecen:",
+      "question_type": "multiple_choice",
+      "options": [
+        "EVT está contraindicada en menores de 6 años",
+        "EVT puede ser razonable en 28 días-6 años con tejido salvable dentro de 24 horas (COR IIb)",
+        "Solo observación y manejo médico en esta edad",
+        "EVT solo si falla trombólisis IV primero"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Las guías 2026 incluyen recomendación COR IIb para EVT en niños de 28 días a 6 años con síntomas neurológicos agudos, LVO, dentro de 24 horas y con tejido potencialmente salvable, realizada por neurointervencionistas con experiencia pediátrica.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 16
+    },
+    {
+      "id": "a86e7155-6159-47be-828e-e85cdd51d175",
+      "question_text": "Respecto al manejo de PA en pacientes que recibieron trombólisis IV (sin EVT), las guías 2026 establecen:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Reducción intensiva de PAS a <140 mmHg mejora outcomes (COR I)",
+        "Reducción intensiva de PAS <140 vs <180 mmHg NO mejora outcomes funcionales (COR III: No Benefit)",
+        "Mantener PAS <160 mmHg es óptimo (COR I)",
+        "No hay recomendación específica sobre metas de PA post-IVT"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Las guías 2026 establecen COR III: No Benefit para reducción intensiva de PAS (<140 vs <180 mmHg) post-trombólisis en ACV leve-moderado, ya que no se asocia con mejoría en outcome funcional según trials recientes.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 17
+    },
+    {
+      "id": "2e794dff-0cc9-4cb5-ba62-bc5e52abbade",
+      "question_text": "Un paciente con FA conocida, ACV isquémico leve (NIHSS 5), llega a las 36 horas del evento. Sobre anticoagulación temprana vs tardía, las guías 2026 establecen:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Anticoagulación inmediata dentro de 24 horas es mandatoria (COR I)",
+        "En pacientes cuidadosamente seleccionados (ej. severidad leve), anticoagulación oral temprana es razonable (COR IIa)",
+        "Siempre esperar 7-14 días antes de anticoagular (COR I)",
+        "Anticoagulación está contraindicada en fase aguda (COR III)"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Las guías 2026 establecen COR IIa para estrategia de anticoagulación oral temprana post-ACV en pacientes cuidadosamente seleccionados (ej. severidad leve) con FA, siendo bajo riesgo y razonable comparado con estrategia retrasada.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 18
+    },
+    {
+      "id": "3ddac4c2-8df8-4afe-b607-a777089e5770",
+      "question_text": "Sobre el uso de imágenes multimodales avanzadas (CTA/perfusión) ANTES de administrar trombólisis en pacientes dentro de 4.5 horas con déficit discapacitante, las guías 2026 recomiendan:",
+      "question_type": "multiple_choice",
+      "options": [
+        "Siempre obtener CTA/perfusión antes de trombólisis (COR I)",
+        "Iniciar trombólisis lo más rápido posible, evitando retrasos por imágenes multimodales adicionales (COR I)",
+        "CTA es mandatoria pero perfusión es opcional (COR IIa)",
+        "Solo TC simple es suficiente en todos los casos"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Las guías 2026 enfatizan (COR I) iniciar trombólisis lo más rápido posible en pacientes elegibles dentro de 4.5 horas con déficits discapacitantes, EVITANDO retrasos potenciales asociados con imágenes multimodales adicionales como CTA/MRA o perfusión.",
+      "image_url": null,
+      "points": 1,
+      "display_order": 19
+    }
+  ]
+}

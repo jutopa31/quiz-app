@@ -1,0 +1,720 @@
+{
+  "quiz": {
+    "id": "ac4900c8-0025-4975-9431-ecf2cd8358e7",
+    "title": "Materias Basicas 2022",
+    "description": "Cuestionario basado en \"materias basicas 2022\"",
+    "time_limit_minutes": 45,
+    "passing_score": null,
+    "shuffle_questions": false,
+    "show_correct_answers": true,
+    "status": "published",
+    "created_at": "2026-02-03T15:25:28.919912+00:00",
+    "updated_at": "2026-02-03T15:25:28.919912+00:00"
+  },
+  "questions": [
+    {
+      "id": "e06ed0ea-0a2c-4976-9be4-19ed707fed18",
+      "question_text": "1)      Respecto al uso off label marque lo incorrecto",
+      "question_type": "multiple_choice",
+      "options": [
+        "Se encuentra bajo la responsabilidad del profesional que prescribe el medicamento en forma off label.",
+        "Se encuentra prohibido por la ANMAT.",
+        "El profesional que lo realiza debería guiarse por bibliografía científica que respalde su prescripción.",
+        "Son indicaciones que no figuran en el prospecto autorizado por la ANMAT."
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 0
+    },
+    {
+      "id": "753735cb-b82e-4d7b-90b1-6050f56bf775",
+      "question_text": "¿Quién aprueba un protocolo de investigación?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Investigador Principal que realizará el Protocolo",
+        "ANMAT",
+        "Comité de Ética de la Institución",
+        "Ministerio de Salud y Ambiente de la Nación"
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 1
+    },
+    {
+      "id": "82fa7470-7f35-4cf1-acb3-cd88f54f147d",
+      "question_text": "En cuanto a la Farmacovigilancia señale lo correcto",
+      "question_type": "multiple_choice",
+      "options": [
+        "Está destinada a la prevención de los riesgos asociados a los        medicamentos durante su desarrollo",
+        "Está destinada a la identificación, evaluación y prevención de los             riesgos asociados a los medicamentos durante su desarrollo y su      posterior comercialización",
+        "Está destinada a la identificación, evaluación y prevención de los             riesgos asociados a los medicamentos durante su desarrollo",
+        "Está destinada a la identificación, evaluación y prevención de los             riesgos asociados a los medicamentos una vez comercializados"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 2
+    },
+    {
+      "id": "f0e7bdeb-0905-4d77-8ce6-86afce370e53",
+      "question_text": "¿Cuál de las siguientes características NO corresponde a un ensayo clínico Fase 2?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Generalmente requiere un número pequeño de pacientes",
+        "Provee información preliminar sobre relación dosis – eficacia.",
+        "Provee información preliminar sobre eficacia",
+        "Permite identificar efectos adversos poco frecuentes"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 3
+    },
+    {
+      "id": "f6230b31-9f68-4be1-8d60-7e25d521f08a",
+      "question_text": "Los pacientes con insuficiencia renal presentan cambios farmacocinéticos, señale la correcta",
+      "question_type": "multiple_choice",
+      "options": [
+        "Menor presencia de náuseas y vómitos.",
+        "Aumento de la concentración de albúmina y de su afinidad por el fármaco.",
+        "Aumento de la acetilación y la hidrólisis.",
+        "Disminución de la acidez del estómago por amonio gástrico aumentado"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 4
+    },
+    {
+      "id": "f0c18192-e0c5-4124-a255-8bb476d759c0",
+      "question_text": "¿A qué se llama efectos adversos de los fármacos?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Efectos esperados de acuerdo a la dosis",
+        "Efectos o respuestas nocivas que se presentan con la administración de dosis terapéuticas de un fármaco",
+        "Efectos que siempre se observan al comenzar un tratamiento",
+        "Reacciones alérgicas ocurridas en dosis supra-terapéutica"
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 5
+    },
+    {
+      "id": "2da83b5a-63e1-4a19-a486-ccd5ae0e5c83",
+      "question_text": "Según la OMS, ¿cual es la definición de Teratogénesis?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Parto prematuro inducido por fármacos",
+        "Efectos adversos bioquímicos inducidos durante el período perinatal y detectados en el momento del parto",
+        "Efectos adversos morfológicos, bioquímicos o de la conducta inducidos durante la vida fetal y detectados en el momento del parto o más tardíamente",
+        "Efectos adversos en el crecimientoEfectos adversos del desarrollo fetal, detectados en el momento del parto o más tardíamente"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 6
+    },
+    {
+      "id": "c00ea18f-8194-4fb2-a996-3d416379cc3a",
+      "question_text": "Es consultado por un paciente de 3 años que debe iniciar carbamazepina. La madre le pide corroborar la dosis con respecto a la que recibe su prima de 29 años, que también la toma. ¿Cuál de estos factores NO influirían en el ajuste de dosis en medicamentos para pacientes pediátricos?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Cambios farmacodinámicos",
+        "Cambios genéticos",
+        "Cambios de peso",
+        "Cambios farmacocinéticos"
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 7
+    },
+    {
+      "id": "1a892361-75b9-4f4d-b6ca-1a9d1e7e9518",
+      "question_text": "Señale que factores contribuyen al uso irracional de fármacos",
+      "question_type": "multiple_choice",
+      "options": [
+        "Falta de conocimientos teóricos y prácticos del prescriptor.",
+        "Sobrecarga de trabajo del personal sanitario e inexistencia de políticas     farmacéuticas nacionales coordinadas.",
+        "Promoción inapropiada de los medicamentos y beneficios para el médico por la             prescripción de tal medicamento",
+        "Todas las anteriores son correctas."
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 8
+    },
+    {
+      "id": "29b6d154-d58c-457f-9856-7da873f2fdd0",
+      "question_text": "Cual es la definición correcta de bioequivalencia?",
+      "question_type": "multiple_choice",
+      "options": [
+        "La Bioequivalencia (OMS/OPS, 1999) es la relación entre dos productos farmacéuticos que son equivalentes farmacéuticos y muestran idéntica biodisponibilidad (tasa y grado de disponibilidad), por lo cual, después de administrados son similares a tal grado que sus efectos serían esencialmente los mismos.",
+        "La Bioequivalencia (OMS/OPS, 1999) es la relación entre dos productos farmacéuticos que son equivalentes farmacéuticos y muestran idéntico nivel de absorción, distribución y eliminación.",
+        "La Bioequivalencia (OMS/OPS, 1999) es la relación entre dos productos farmacéuticos que son equivalentes farmacéuticos y muestran idéntica biodisponibilidad (tasa y grado de disponibilidad), por lo cual, después de administrados en la misma dosis molar, son similares a tal grado que sus efectos serían esencialmente los mismos. Por lo tanto, si hay bioequivalencia, dos productos farmacéuticos deben considerarse equivalentes terapéuticos.",
+        "La Bioequivalencia (OMS/OPS, 1999) es la relación entre dos productos farmacéuticos que son equivalentes farmacéuticos y muestran idéntica biodisponibilidad (tasa y grado de disponibilidad)."
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 9
+    },
+    {
+      "id": "fbaea722-63f2-49ca-b1de-d23fb9c767b4",
+      "question_text": "¿Cuál de las siguientes características NO corresponde a un ensayo clínico Fase I?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Determinan la eficacia de un fármaco",
+        "No tienen grupo control",
+        "Se realizan en seres humanos",
+        "Sirve para identificar un intervalo de dosis"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 10
+    },
+    {
+      "id": "125fe548-f8c4-4b12-a636-64770ba5d252",
+      "question_text": "¿Cuál de estas características propias del anciano complican el tratamiento farmacológico?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Adherencia adecuada a los tratamientos",
+        "Aumento de las funciones fisiológicas de clearance",
+        "Filtración glomerular ≥ 90 ml/min",
+        "Aumento potencial y real de la incidencia de interacciones"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 11
+    },
+    {
+      "id": "45d8ec14-0ee8-4624-aacf-7c5a4aa80b83",
+      "question_text": "El código de Núremberg regula la investigación en seres humanos luego de la Segunda Guerra Mundial, como consecuencia de las investigaciones realizadas en los campos de detención. ¿Cuál se los siguientes puntos son incluidos en el código?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Consentimiento voluntario.",
+        "Beneficio de la sociedad.",
+        "Resultados previos justificarán la realización del experimento.",
+        "Todos los puntos previamente mencionados."
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 12
+    },
+    {
+      "id": "80577224-17d6-44bf-a551-9c55f1098f0c",
+      "question_text": "La hepatotoxicidad por fármacos es un efecto adverso que se debe monitorear ¿cuál de estas afirmaciones es correcta?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Es un efecto adverso predecible en todos los casos",
+        "Es la principal causa de insuficiencia hepática aguda y retiro del fármaco",
+        "Siempre se produce por asociación de fármacos",
+        "El espectro clínico es similar en todos los casos"
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 13
+    },
+    {
+      "id": "2ec6168c-a484-45b2-a0e5-694ea5aaca38",
+      "question_text": "¿Cuáles de las siguientes situaciones se reportan al ANMAT?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Todas son correctas",
+        "Reacciones adversas en grupos especiales (niños, ancianos, embarazadas)",
+        "Reacciones adversas por Medicamentos",
+        "Reacciones adversas graves de cualquier medicamento"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 14
+    },
+    {
+      "id": "377fe5e0-1ee4-4938-bf8c-73d0faeb3155",
+      "question_text": "Un paciente con diagnóstico de enfermedad de Parkinson y cuadro de alucinaciones visuales. ¿Cuál de las siguientes drogas elegiría para su tratamiento?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Quetiapina.",
+        "Levomepromazina.",
+        "Haloperidol.",
+        "Clonazepam."
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 15
+    },
+    {
+      "id": "92ad2261-8c33-4a1a-91ae-4b36a0d0770f",
+      "question_text": "Con respecto a los cambios farmacocinéticos en el Embarazo, señale la opción correcta",
+      "question_type": "multiple_choice",
+      "options": [
+        "Disminuyen proteínas plasmáticas, aumenta fracción libre de fármacos.",
+        "Disminuye la grasa corporal 25%, se acumulan fármacos lipofílicos, y las concentraciones aumentan.",
+        "Fármacos atraviesan placenta solo por difusión activa.",
+        "La transferencia placentaria de fármacos depende solo del peso molecular."
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 16
+    },
+    {
+      "id": "97d5b842-4c4b-4291-97e2-739e9a458c9c",
+      "question_text": "En cuanto a la farmacovigilancia marque lo correcto",
+      "question_type": "multiple_choice",
+      "options": [
+        "Es la actividad de salud pública destinada a la identificación, evaluación y prevención de los riesgos asociados a los medicamentos  ya comercializados y los que se encuentran en fase de evaluación a través de ensayos clínicos.",
+        "Es una actividad que tiene como fin la detección de anomalías en la elaboración de los medicamentos.",
+        "Es la actividad de salud pública destinada a la identificación, evaluación y prevención de los riesgos asociados a los medicamentos  durante los ensayos clínicos.",
+        "Es la actividad de salud pública destinada a la identificación, evaluación y prevención de los riesgos asociados a los medicamentos una vez comercializados."
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 17
+    },
+    {
+      "id": "4b45d577-5dab-46c4-9420-7bb067116f0d",
+      "question_text": "¿Qué se entiende por farmacodinamia?",
+      "question_type": "multiple_choice",
+      "options": [
+        "La desensibilización química de los receptores",
+        "La estructura química del fármaco",
+        "La unión química del fármaco con los receptores que conlleva a la acción del fármaco",
+        "La dosis óptima con la cual se absorbe al 70%"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 18
+    },
+    {
+      "id": "adeb7c9b-ea4d-4e92-a06c-acb5655d3582",
+      "question_text": "¿Que implica que un medicamento sea original?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Que contiene un ingrediente farmacológico no activo que se utiliza en investigación con la finalidad de actuar como comparador",
+        "Que la preparación o producto farmacéutico se emplea para la prevención, diagnóstico y tratamiento en beneficio de una persona",
+        "Que contiene el principio activo que ha realizado una investigación o desarrollo completos y al que la autoridad sanitaria autorizó para la comercialización",
+        "Son aquellos medicamentos que se registran una vez vencida la patente"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 19
+    },
+    {
+      "id": "b3081a08-e0e9-4a54-8c83-643daf59d816",
+      "question_text": "¿Con que objetivo medimos un potencial evocado somatosensitivo?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Evaluar la actividad de la vía termoalgésica desde periferia hasta la corteza",
+        "La actividad de la cola de caballo",
+        "La actividad  de los Corpúsculos de Pacini",
+        "Valorar la actividad de la vía cordonal posterior desde la periferia hasta la corteza"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 20
+    },
+    {
+      "id": "d0bfdb55-087c-4659-9a84-14b4c92d4fbc",
+      "question_text": "Un paciente con antecedentes de esclerosis múltiple le trae un estudio de potenciales evocados motores por estimulación magnética transcraneana. ¿Que es lo que podemos estudiar con esta técnica?",
+      "question_type": "multiple_choice",
+      "options": [
+        "La vía sensitiva, desde receptores hasta corteza poscentral",
+        "La actividad de los músculos oculomotores",
+        "Los potenciales musculares",
+        "La vía motora completa, desde corteza precentral hasta efectores musculares"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 21
+    },
+    {
+      "id": "3c2ec160-0873-4cc2-ac1b-43b1c316fc78",
+      "question_text": "¿Cuál de los siguientes estudios del sueño es considerado el más completo para evaluar los trastornos del sueño?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Polisomnografía (PSG)",
+        "Poligrafía con EEG",
+        "Poligrafía sin EEG",
+        "Oxicapnografía"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 22
+    },
+    {
+      "id": "01a6976f-a041-422f-aead-5e9ef106ad5b",
+      "question_text": "¿Cuál de las siguientes NO es una indicación para realizar una Polisomnografía (PSG)",
+      "question_type": "multiple_choice",
+      "options": [
+        "Síndrome de apnea-hipopnea obstructiva del sueño (SAHOS)",
+        "Trastorno de movimientos periódicos de las piernas (PLM)",
+        "Evaluación del estrés laboral en trabajadores nocturnos",
+        "Hipersomnia de causa no clara"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 23
+    },
+    {
+      "id": "5ca3c99f-46f4-4538-9bc9-e369a52af865",
+      "question_text": "¿Cuál de los siguientes síntomas puede referir un paciente con sospecha de síndrome de apnea-hipopnea obstructiva del sueño (SAHOS)?",
+      "question_type": "multiple_choice",
+      "options": [
+        "A) Ronquidos frecuentes y somnolencia diurna excesiva",
+        "B) Aumento de la libido y sensación de descanso al despertar",
+        "Movimientos involuntarios de las piernas durante el sueño",
+        "Alucinaciones visuales nocturnas"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 24
+    },
+    {
+      "id": "550ee960-4520-47ee-ab62-c0459d2c8fdd",
+      "question_text": "¿Qué información proporciona el hipnograma en un estudio de sueño?",
+      "question_type": "multiple_choice",
+      "options": [
+        "La cantidad de oxígeno en sangre durante el sueño",
+        "La estructura y las etapas del sueño a lo largo de la noche",
+        "La actividad muscular durante los despertares",
+        "La frecuencia cardíaca y su variabilidad durante el sueño"
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 25
+    },
+    {
+      "id": "7782dd37-de2a-4409-81b9-7dfaeb5709a0",
+      "question_text": "¿Cómo se diagnostica el SAHOS de grado severo según el índice de perturbación respiratoria (IPR)?",
+      "question_type": "multiple_choice",
+      "options": [
+        "A) IPR ≥ 5 eventos por hora",
+        "IPR ≥ 15 eventos por hora",
+        "IPR ≥ 30 eventos por hora",
+        "IPR ≥ 50 eventos por hora"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 26
+    },
+    {
+      "id": "c2df1a60-ae13-4ef5-8e26-e5605c8c35a3",
+      "question_text": "¿Cómo se identifica una hipoapnea en un registro de polisomnografía (PSG)?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Una reducción del flujo respiratorio ≥ 30% con desaturación de oxígeno o microdespertar asociado",
+        "Una ausencia completa del flujo respiratorio durante al menos 10 segundos",
+        "Un incremento del esfuerzo respiratorio sin cambios en la saturación de oxígeno",
+        "Una reducción del ritmo cardíaco con aumento de la actividad muscular"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 27
+    },
+    {
+      "id": "867fcc90-5308-464b-ad95-755ea7712ba5",
+      "question_text": "¿Cuál es la principal diferencia entre una apnea central y una apnea obstructiva en un estudio de sueño en la PSG?",
+      "question_type": "multiple_choice",
+      "options": [
+        "En la apnea central hay una obstrucción completa de la vía aérea superior, mientras que en la apnea obstructiva solo hay una reducción parcial del flujo aéreo",
+        "En la apnea central no hay esfuerzo respiratorio detectable en las bandas toracoabdominales, mientras que en la apnea obstructiva sí hay esfuerzo respiratorio presente",
+        "En la apnea central el flujo de aire se detiene sin desaturación de oxígeno, mientras que en la apnea obstructiva siempre hay una caída de la saturación",
+        "En la apnea central solo ocurre durante el sueño REM, mientras que en la apnea obstructiva ocurre en todas las etapas del sueño"
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 28
+    },
+    {
+      "id": "692def9b-6ae5-4040-a105-3c807e728c45",
+      "question_text": "¿Cuál es el tratamiento más comúnmente recomendado para el síndrome de apnea-hipopnea obstructiva del sueño (SAHOS) leve?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Uso de CPAP (presión positiva continua en la vía aérea) de manera obligatoria",
+        "Cirugía inmediata para corregir obstrucciones anatómicas",
+        "Cambios en el estilo de vida como pérdida de peso y control postural durante el sueño",
+        "Terapia con oxígeno suplementario durante toda la noche"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 29
+    },
+    {
+      "id": "1b8c0be2-0f44-45b1-bd82-6c1de5f7cb30",
+      "question_text": "¿Cuál es el tratamiento recomendado para el síndrome de apnea-hipopnea obstructiva del sueño (SAHOS) moderado?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Cambios en el estilo de vida únicamente",
+        "Uso de CPAP únicamente",
+        "Terapia farmacológica específica para el sueño",
+        "Cambios en el estilo de vida únicamente y CIPAP"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 30
+    },
+    {
+      "id": "17e36c25-310e-4277-8b68-04559a7b9a36",
+      "question_text": "En un registro de PSG, ¿qué combinación de señales se utiliza para identificar la transición a sueño REM?",
+      "question_type": "multiple_choice",
+      "options": [
+        "EEG con ondas alfa dominantes, aumento de EMG y movimientos oculares lentos en el EOG",
+        "EEG con ondas delta predominantes, ausencia de EMG y movimientos oculares rápidos en el EOG",
+        "EEG con ondas de baja amplitud y alta frecuencia, reducción del EMG y movimientos oculares rápidos en el EOG",
+        "EEG con ondas teta, aumento del EMG y ausencia de movimientos oculares en el EOG"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 31
+    },
+    {
+      "id": "ac72e166-a8d4-4dd3-9bd5-7ef874b15d61",
+      "question_text": "La prolongación de la latencia en los PEV (visuales) nos hace pensar en",
+      "question_type": "multiple_choice",
+      "options": [
+        "Enfermedad vascular del nervio óptico",
+        "Deficiencia en el procesamiento de estímulos olfatorios",
+        "Alteración en la corteza motora primaria",
+        "Disfunción en el nervio óptico o en las vías visuales centrales"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 32
+    },
+    {
+      "id": "10da44fc-b77d-4976-9feb-c99e56dd3db1",
+      "question_text": "La onda característica que se evalúa en los potenciales evocados visuales es",
+      "question_type": "multiple_choice",
+      "options": [
+        "P39",
+        "P100",
+        "N13",
+        "N9"
+      ],
+      "correct_option_index": 1,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 33
+    },
+    {
+      "id": "958e6f98-0dea-4d11-80e6-6e73117e3abd",
+      "question_text": "Los potenciales evocados auditivos de tronco cerebral evalúan fundamentalmente",
+      "question_type": "multiple_choice",
+      "options": [
+        "La percepción consciente del sonido en la corteza auditiva",
+        "Los movimientos reflejos asociados a estímulos sonoros",
+        "La integridad de las vías auditivas desde el oído interno hasta el tronco cerebral",
+        "La funcionalidad del nervio vestibular y su conexión con el cerebelo"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 34
+    },
+    {
+      "id": "667e0c77-d9da-4c9b-9b41-3fa33554388d",
+      "question_text": "¿Los potenciales evocados multimodales son?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Un registro de actividad motora durante la estimulación eléctrica del sistema nervioso periférico",
+        "Una herramienta para medir la función cognitiva mediante estímulos visuales únicamente",
+        "Una técnica exclusiva para evaluar la actividad eléctrica cortical en respuesta a estímulos sensoriales simples",
+        "Una combinación de potenciales evocados visuales, auditivos y somatosensoriales utilizados para evaluar múltiples sistemas del sistema nervioso central"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 35
+    },
+    {
+      "id": "c04fab2d-3976-4676-a482-ad4a469b96a1",
+      "question_text": "Los potenciales evocados visuales son estudios que evalúan la integridad de",
+      "question_type": "multiple_choice",
+      "options": [
+        "El nervio vestibular y el cerebelo",
+        "Las áreas de asociación visual en la corteza parietal",
+        "Las vías visuales desde la retina hasta la corteza occipital",
+        "La conexión entre el nervio óptico y los músculos extraoculares"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 36
+    },
+    {
+      "id": "ab2c430a-a593-4cfa-87e0-cf65251c951d",
+      "question_text": "¿Las fibras nerviosas que evalúan los potenciales evocados somatosensitivos (PESS) son principalmente?",
+      "question_type": "multiple_choice",
+      "options": [
+        "Fibras de gran diámetro y alta velocidad de conducción (fibras A-beta)",
+        "Fibras de pequeño diámetro y baja velocidad de conducción (fibras C)",
+        "Fibras de conducción mixta encargadas de funciones autónomas",
+        "Fibras motoras encargadas de la contracción muscular"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 37
+    },
+    {
+      "id": "45491568-27a9-493b-aa98-bcd2646be640",
+      "question_text": "Los potenciales evocados somato-sensitivos evalúan",
+      "question_type": "multiple_choice",
+      "options": [
+        "Cordón posterior",
+        "Cordón antero-lateral",
+        "Haz cortico espina",
+        "Cordón lateral"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 38
+    },
+    {
+      "id": "6c47dd54-6977-4501-b90b-09050855d9ed",
+      "question_text": "La estimulación para la realización de potenciales evocados somato-sensitivos es",
+      "question_type": "multiple_choice",
+      "options": [
+        "Estimulación magnética",
+        "Todos son correctas",
+        "Estimulación sensitiva (calor y vibración)",
+        "Estimulación eléctrica"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 39
+    },
+    {
+      "id": "de5d871c-8b0b-47c8-9108-4ee7d148c4db",
+      "question_text": "En los potenciales evocados somatosensitivos de los miembros superiores (MMSS), la respuesta cortical configura una onda denominada",
+      "question_type": "multiple_choice",
+      "options": [
+        "P300",
+        "P100",
+        "N20",
+        "N13"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 40
+    },
+    {
+      "id": "94464995-f520-44ec-8442-86ec002053d3",
+      "question_text": "En los potenciales evocados somatosensitivos de los miembros superiores (MMSS), ¿qué onda refleja la actividad a nivel del tronco cerebral o las raíces cervicales?",
+      "question_type": "multiple_choice",
+      "options": [
+        "N13",
+        "P300",
+        "N20",
+        "P100"
+      ],
+      "correct_option_index": 0,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 41
+    },
+    {
+      "id": "e6e9a483-566f-401a-ada7-07a79d27c8bd",
+      "question_text": "¿Qué potencial evocado se asocia típicamente con procesos cognitivos y atención, en lugar de estímulos puramente sensoriales?",
+      "question_type": "multiple_choice",
+      "options": [
+        "N13",
+        "N20",
+        "P300",
+        "P100"
+      ],
+      "correct_option_index": 2,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 42
+    },
+    {
+      "id": "31e33fe8-fd92-4770-a8af-b04ea510cffe",
+      "question_text": "El tiempo de conducción central (TCC) de los potenciales evocados somato-sensitivos en MMII",
+      "question_type": "multiple_choice",
+      "options": [
+        "No se modifica con la temperatura",
+        "Se modifica con la temperatura",
+        "Se debe correlaciona con la altura del paciente",
+        "No se modifican con la altura"
+      ],
+      "correct_option_index": 3,
+      "explanation": null,
+      "image_url": null,
+      "points": 1,
+      "display_order": 43
+    }
+  ]
+}
