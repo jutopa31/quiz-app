@@ -10,6 +10,8 @@ export interface Quiz {
   passing_score?: number | null
   shuffle_questions?: boolean
   show_correct_answers?: boolean
+  /** Reveal whether each answer was right as soon as it is picked, not only at the end. */
+  immediate_feedback?: boolean
   created_by: string
   created_at: string
   updated_at: string

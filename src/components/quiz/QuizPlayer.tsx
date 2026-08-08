@@ -21,6 +21,11 @@ export function QuizPlayer({ quiz, questions }: QuizPlayerProps) {
   const [submitting, setSubmitting] = useState(false)
 
   const currentQuestion = questions[currentIndex]
+  // Some quizzes mark each answer right or wrong as soon as it is picked,
+  // instead of holding everything back until the results page.
+  const immediateFeedback = quiz.immediate_feedback ?? false
+  const currentAnswer = answers[currentQuestion.id]
+  const showFeedback = immediateFeedback && currentAnswer !== undefined
   const isFirstQuestion = currentIndex === 0
   const isLastQuestion = currentIndex === questions.length - 1
   const answeredCount = Object.keys(answers).length
@@ -28,6 +33,10 @@ export function QuizPlayer({ quiz, questions }: QuizPlayerProps) {
 
   // Create attempt on first answer
   const handleSelectOption = async (optionId: string) => {
+    // With immediate feedback the answer is final: changing it after seeing the
+    // result would just be scoring yourself.
+    if (showFeedback) return
+
     // Create attempt if not exists
     if (!attemptId && user) {
       const attempt = await createAttempt(quiz.id, user.id, user.email ?? undefined)
@@ -92,8 +101,9 @@ export function QuizPlayer({ quiz, questions }: QuizPlayerProps) {
           question={currentQuestion}
           questionNumber={currentIndex + 1}
           totalQuestions={questions.length}
-          selectedOption={answers[currentQuestion.id]}
+          selectedOption={currentAnswer}
           onSelectOption={handleSelectOption}
+          showResult={showFeedback}
         />
       </div>
 
