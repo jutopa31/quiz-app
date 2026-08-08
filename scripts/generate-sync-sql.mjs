@@ -69,6 +69,11 @@ function lit(value) {
   return `'${String(value).replace(/'/g, "''")}'`
 }
 
+/** Numeric SQL literal with a fallback, so a missing field never emits `undefined`. */
+function num(value, fallback) {
+  return typeof value === 'number' && Number.isFinite(value) ? String(value) : String(fallback)
+}
+
 function textArray(values) {
   if (!values.length) return "'{}'::text[]"
   return `ARRAY[${values.map(lit).join(', ')}]::text[]`
@@ -138,14 +143,15 @@ for (const { quiz, questions } of missing) {
   out.push(`insert into academy_quizzes (id, title, description, time_limit_minutes, passing_score, shuffle_questions, show_correct_answers, status, created_by)`)
   out.push(
     `values (${lit(quiz.id)}, ${lit(quiz.title)}, ${lit(quiz.description)}, ` +
-      `${quiz.time_limit_minutes ?? 'NULL'}, ${quiz.passing_score ?? 'NULL'}, ` +
+      `${quiz.time_limit_minutes == null ? 'NULL' : num(quiz.time_limit_minutes, 'NULL')}, ` +
+      `${quiz.passing_score == null ? 'NULL' : num(quiz.passing_score, 'NULL')}, ` +
       `${quiz.shuffle_questions ? 'true' : 'false'}, ${quiz.show_correct_answers === false ? 'false' : 'true'}, ` +
       `'published', 'repo-sync')`
   )
   out.push('on conflict (id) do nothing;')
   out.push('')
 
-  for (const q of questions) {
+  questions.forEach((q, index) => {
     const optionIds = buildOptionIds(q.options)
     const correctId = optionIds[q.correct_option_index] ?? optionIds[0]
     out.push(
@@ -153,14 +159,14 @@ for (const { quiz, questions } of missing) {
     )
     out.push(
       `values (${lit(q.id)}, ${lit(quiz.id)}, ${lit(q.question_text)}, ${lit(q.question_type || 'multiple_choice')}, ` +
-        `${textArray(q.options)}, ${q.correct_option_index}, ${textArray(optionIds)}, ${lit(correctId)}, ` +
-        `${lit(q.explanation)}, ${q.points ?? 1}, ${q.display_order})`
+        `${textArray(q.options)}, ${num(q.correct_option_index, 0)}, ${textArray(optionIds)}, ${lit(correctId)}, ` +
+        `${lit(q.explanation)}, ${num(q.points, 1)}, ${num(q.display_order, index)})`
     )
     out.push('on conflict (id) do update set')
     out.push('  option_ids = excluded.option_ids,')
     out.push('  correct_option_id = excluded.correct_option_id;')
     out.push('')
-  }
+  })
 }
 
 // ---- 3. data repairs ----------------------------------------------------
@@ -195,8 +201,19 @@ out.push('')
 out.push('commit;')
 out.push('')
 
+const sql = out.join('\n')
+
+// A bare `undefined`/`NaN` in generated SQL is read by Postgres as a column name;
+// fail loudly here rather than shipping a file that dies mid-run.
+const bad = sql.split('\n').filter(line => /(?<!')\b(undefined|NaN)\b(?!')/.test(line))
+if (bad.length) {
+  console.error(`Valores inválidos en ${bad.length} línea(s):`)
+  bad.slice(0, 5).forEach(line => console.error('  ', line.slice(0, 120)))
+  process.exit(1)
+}
+
 const target = resolve(root, 'supabase/migrations/20260807000000_sync_repo_and_stable_option_ids.sql')
-writeFileSync(target, out.join('\n'))
+writeFileSync(target, sql)
 
 const totalQuestions = quizzes.reduce((n, q) => n + q.questions.length, 0)
 console.log(`${quizzes.length} quizzes / ${totalQuestions} preguntas`)
