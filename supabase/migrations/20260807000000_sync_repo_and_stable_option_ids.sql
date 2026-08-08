@@ -11,7 +11,7 @@ alter table academy_quiz_questions
 comment on column academy_quiz_questions.option_ids is 'Stable id per option, derived from its text (src/lib/optionIds.js). Reordering options no longer moves the correct answer.';
 comment on column academy_quiz_questions.correct_option_id is 'Value of option_ids that is correct. correct_option_index is kept for older clients.';
 
--- 2. Backfill stable ids on the 259 questions already stored.
+-- 2. Backfill stable ids on the 284 questions already stored.
 update academy_quiz_questions q
 set option_ids = v.option_ids, correct_option_id = v.correct_option_id
 from (values
@@ -40,6 +40,31 @@ from (values
   ('2d7fc198-cee4-4409-911b-0c7b7fba6158'::uuid, ARRAY['18ekijt', '1xy5y0q', '13dxbhs', '1501jw9']::text[], '13dxbhs'),
   ('dcf14e7c-07c5-40ac-9752-35cbf22bd647'::uuid, ARRAY['1tucqp1', 'y30rdq', '1anmz7t', 'pmmaay']::text[], '1tucqp1'),
   ('4365735b-0069-4994-bbc6-498a8a092b28'::uuid, ARRAY['1ilha6j', '1py92xh', '7pj1e', '3xs19z']::text[], '1ilha6j'),
+  ('bd318faa-88a2-4fce-b01e-02ef8d2eda5f'::uuid, ARRAY['qjuhi', '183dxb8', 'jkh1ii', '1fl43dj']::text[], 'jkh1ii'),
+  ('001cd673-1fd6-49c0-8392-d7057bbab7f3'::uuid, ARRAY['34b7q0', '14xofl7', '1vo5t7w', 'yuufsp']::text[], '14xofl7'),
+  ('e97a9796-93b5-4d7b-a191-808eeb9070d1'::uuid, ARRAY['16ppdkf', '12lvx2z', 'twyk0e', '1c7gp1h']::text[], 'twyk0e'),
+  ('94ba56dd-79f2-4c94-8708-09e4f3a7ebcd'::uuid, ARRAY['6tlvqt', '1p6u0rp', '1a3u3tb', '1ne1pwr']::text[], '1a3u3tb'),
+  ('c0f0afdf-b0f2-4277-8df8-7ccc137d8705'::uuid, ARRAY['6p8fre', '1jkn9qj', '1rx3fp0', '1bauend']::text[], '1rx3fp0'),
+  ('e0e1d001-ca58-431e-a0f1-9aefc02f6b42'::uuid, ARRAY['tpekf2', '15ylbdx', '1d6bl02', '1cqhzmi']::text[], '1d6bl02'),
+  ('0b8bfda5-40fb-467c-99d5-c6bb89ffc467'::uuid, ARRAY['1p5b9o', '1k67381', 'y8ho01', 'xgaq8a']::text[], '1k67381'),
+  ('d2f08cae-bac0-466b-a4b0-a0afab46b497'::uuid, ARRAY['1t15o31', 'hidzuo', '173mcyg', '18pj5mo']::text[], '1t15o31'),
+  ('e0c53342-ed17-42a2-a412-ad02f6c0b954'::uuid, ARRAY['b6l0uj', '4pxvsx', 'khozha', 'fi0umn']::text[], 'fi0umn'),
+  ('4928ae4c-96fd-4595-8312-d7cae90ceaac'::uuid, ARRAY['71a6t9', '128tynp', '1q1gwe2', '4nd9m8']::text[], '128tynp'),
+  ('ef3db973-916e-4d7b-a7bb-d984c07fc784'::uuid, ARRAY['4i7iuj', '1d36eiv', '1jnvth3', '1rgxm68', '4wx7l2']::text[], '4wx7l2'),
+  ('abdc86b3-d148-42a0-ac03-129416b11461'::uuid, ARRAY['czocqp', '1hx6h1w', '1p6phnw', 't4sxs8']::text[], 't4sxs8'),
+  ('3aadf604-2a9b-4568-8967-0f5a3641b592'::uuid, ARRAY['1eyv0l4', 'yg43mn', '1dcgm6d', 'ddht5c']::text[], '1dcgm6d'),
+  ('a87745b1-b7b5-4a7f-99f1-24db9fa31928'::uuid, ARRAY['vjfdpv', '1xdojf9', 'tm3prk', '16ppdkf']::text[], '16ppdkf'),
+  ('9460a3fd-588c-4690-841e-f5feebdb54c5'::uuid, ARRAY['m3asvq', '1xyzeqw', 'xd9ziu', '1bzq5tu']::text[], 'xd9ziu'),
+  ('09cae5c4-258e-4e8d-beee-309203918d13'::uuid, ARRAY['1qvbn9w', 't7xauj', '14eoqk5', '17677no']::text[], '1qvbn9w'),
+  ('fb8aa354-b73e-48b0-bc5c-a230967f8348'::uuid, ARRAY['1t6gmo7', 'ilj9ct', 'k1jr8s', '1088b94']::text[], '1088b94'),
+  ('144b975c-bb6f-4a90-afe9-c46149d4cfe9'::uuid, ARRAY['1h13hfc', '12xgxfx', '1412pk8', '14hzivv', '6zyb1g']::text[], '1h13hfc'),
+  ('ede6032f-a7aa-47af-beab-6ef5640c4917'::uuid, ARRAY['17a2e1m', '12lvx2z', 'bj673u', '1o4wx0d']::text[], '17a2e1m'),
+  ('89b9cfa8-4363-46b3-845a-2c4b376d6482'::uuid, ARRAY['12uzan1', '18syc9g', 'rwifnw', 'v4kn93']::text[], '18syc9g'),
+  ('8f79ca43-96db-4dbc-94cd-f24d874b2dce'::uuid, ARRAY['xhdku8', '1ki249d', '1h12w1v', '154hr8v']::text[], '1h12w1v'),
+  ('f521c34a-9898-4d0b-b91a-4b9d1997cdb3'::uuid, ARRAY['1sfw1us', 'kkc50b', 'vn5w5t', 'h9h6ip']::text[], '1sfw1us'),
+  ('cd09d288-3733-4e24-bf8c-47b23930a7c4'::uuid, ARRAY['pv9sf7', '14v2a2c', '19ksu93', '15w79uo']::text[], '19ksu93'),
+  ('8a6b2e88-efbc-48f6-8cc9-3b9f7a9625f8'::uuid, ARRAY['tiewgc', '1li21w0', '1e58m9y', '2ewbqu']::text[], '1li21w0'),
+  ('60d1edf8-7887-467b-a4e7-9b16a7d1170c'::uuid, ARRAY['wuxv3g', '1s3icn2', 'yrfnap', '1vwkcu7']::text[], '1s3icn2'),
   ('e32e39ac-476d-4771-b57d-0f1d13d7b5f8'::uuid, ARRAY['1nxtnyy', 'thxefw', '1del9oq', '1fvcprq']::text[], '1nxtnyy'),
   ('31794e03-ac77-4853-881c-780113d6722a'::uuid, ARRAY['1bohd1x', 'mjqv95', '14q389k', 'bvula2']::text[], 'mjqv95'),
   ('3dae3222-3aa7-4bed-a1e3-f235097e2638'::uuid, ARRAY['4u2cyr', '103q5ov', 'eb2beh', 'pw43jb']::text[], '4u2cyr'),
@@ -277,236 +302,22 @@ from (values
 ) as v(id, option_ids, correct_option_id)
 where q.id = v.id;
 
--- 3. "Enfermedades desmielinizantes SNA 2023" lives only in the repo; create it.
-insert into academy_quizzes (id, title, description, time_limit_minutes, passing_score, shuffle_questions, show_correct_answers, status, created_by)
-values ('f1180a0d-921d-4d47-8c3d-3c56836124b2', 'Enfermedades desmielinizantes SNA 2023', 'Examen de 25 preguntas sobre esclerosis múltiple, NMOSD, MOGAD, diagnóstico, tratamiento y manejo sintomático.', 40, NULL, false, true, 'published', 'repo-sync')
-on conflict (id) do nothing;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('bd318faa-88a2-4fce-b01e-02ef8d2eda5f', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', 'Respecto a los anticuerpos anti-acuaporina-4 (AQP4-IgG), ¿cuál de las siguientes afirmaciones es correcta?', 'multiple_choice', ARRAY['Reconocen un epítopo intracelular de la acuaporina-4.', 'Los ensayos ELISA son el método de mayor sensibilidad diagnóstica.', 'El método de elección para su detección es el Cell-Based Assay (CBA).', 'Su positividad confirma esclerosis múltiple.']::text[], 2, ARRAY['qjuhi', '183dxb8', 'jkh1ii', '1fl43dj']::text[], 'jkh1ii', 'AQP4-IgG debe buscarse en suero mediante un ensayo basado en células (CBA), que conserva los epítopos extracelulares y conformacionales de la acuaporina-4. Los ensayos ELISA tienen menor sensibilidad y pueden dar falsos positivos, sobre todo con títulos bajos.
-
-La positividad, en un cuadro clínico compatible, identifica NMOSD AQP4 positivo, no esclerosis múltiple. El anticuerpo suele ser una IgG1 que se une a la acuaporina-4 de los pies astrocitarios, activa el complemento y produce una astrocitopatía; el daño de oligodendrocitos y la desmielinización son secundarios.
-
-Referencia: Wingerchuk DM et al. International consensus diagnostic criteria for neuromyelitis optica spectrum disorders. Neurology. 2015;85:177-189.', 1, 0)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('001cd673-1fd6-49c0-8392-d7057bbab7f3', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', '¿Cuál de las siguientes características de la mielitis es más sugestiva de NMOSD que de esclerosis múltiple?', 'multiple_choice', ARRAY['Lesión medular periférica menor de un segmento.', 'Mielitis longitudinalmente extensa (≥3 segmentos vertebrales).', 'Recuperación clínica completa en la mayoría de los pacientes.', 'Predominio de lesiones dorsolaterales cervicales.']::text[], 1, ARRAY['34b7q0', '14xofl7', '1vo5t7w', 'yuufsp']::text[], '14xofl7', 'La mielitis longitudinalmente extensa, definida por una lesión que abarca al menos tres segmentos vertebrales, es un patrón característico de NMOSD. Suele ser central, comprometer gran parte del área transversal de la médula y dejar secuelas importantes.
-
-Las lesiones medulares de esclerosis múltiple suelen ser cortas, periféricas, laterales y ocupar menos de la mitad del área axial. MOGAD también puede producir mielitis longitudinalmente extensa, en especial con afectación del cono o signo de la H. Una lesión corta no excluye NMOSD: puede verse al comienzo del ataque o después de que una lesión extensa se fragmente con el tratamiento.', 1, 1)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('e97a9796-93b5-4d7b-a191-808eeb9070d1', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', 'Una mujer de 35 años consulta por neuritis óptica grave unilateral y mielitis longitudinalmente extensa. El Cell-Based Assay resulta positivo para AQP4-IgG. ¿Cuál de las siguientes terapias cuenta con evidencia de un ensayo clínico pivotal específico para reducir el riesgo de recaídas en esta enfermedad?', 'multiple_choice', ARRAY['Interferón beta.', 'Fingolimod.', 'Inebilizumab.', 'Acetato de glatiramer.']::text[], 2, ARRAY['16ppdkf', '12lvx2z', 'twyk0e', '1c7gp1h']::text[], 'twyk0e', 'Inebilizumab es un anticuerpo monoclonal anti-CD19 que depleciona una franja amplia de la línea B, incluidas células implicadas en la producción de AQP4-IgG. En N-MOmentum redujo de manera marcada el riesgo de nuevos ataques frente a placebo, con mayor claridad en pacientes AQP4-IgG positivos.
-
-Interferón beta, fingolimod y acetato de glatiramer son tratamientos de esclerosis múltiple; no previenen adecuadamente las recaídas de NMOSD y algunos pueden agravarla. Otros tratamientos con ensayos específicos en NMOSD AQP4 positivo son eculizumab, que inhibe el complemento, y satralizumab, que bloquea la señalización de IL-6.
-
-N-MOmentum fue publicado formalmente como un ensayo fase 2/3, no como fase III pura. Referencia: Cree BAC et al. Lancet. 2019;394:1352-1363.', 1, 2)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('94ba56dd-79f2-4c94-8708-09e4f3a7ebcd', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', 'Un paciente de 28 años consulta por una neuritis óptica típica. La RM demuestra diseminación en el espacio, pero no diseminación en el tiempo. El LCR presenta bandas oligoclonales patrón tipo 2. ¿Cuál es la interpretación correcta según la revisión de los criterios de McDonald 2024?', 'multiple_choice', ARRAY['Las bandas oligoclonales sólo aportan valor pronóstico.', 'Es necesario esperar una segunda recaída para confirmar EM.', 'Las bandas oligoclonales pueden sustituir la demostración de diseminación en el tiempo.', 'Debe repetirse la RM a los 6 meses antes de establecer el diagnóstico.']::text[], 2, ARRAY['6tlvqt', '1p6u0rp', '1a3u3tb', '1ne1pwr']::text[], '1a3u3tb', 'Las bandas oligoclonales restringidas al LCR, patrón tipo 2, demuestran síntesis intratecal de IgG. En un síndrome clínico típico que ya cumple diseminación en el espacio, permiten establecer el diagnóstico sin esperar una segunda recaída o una nueva lesión en la RM.
-
-La revisión 2024 incorporó el nervio óptico como quinta topografía, aceptó el índice de cadenas livianas kappa como alternativa a las bandas y sumó marcadores de especificidad como el signo de la vena central y las lesiones con anillo paramagnético. Ningún biomarcador reemplaza la necesidad de un cuadro compatible y de excluir una explicación mejor.
-
-Referencia: Montalban X et al. Diagnosis of multiple sclerosis: 2024 revisions of the McDonald criteria. Lancet Neurol. 2025.', 1, 3)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('c0f0afdf-b0f2-4277-8df8-7ccc137d8705', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', '¿Cuál de las siguientes situaciones representa una bandera roja que debería hacer reconsiderar el diagnóstico de esclerosis múltiple antes de aplicar los criterios de McDonald?', 'multiple_choice', ARRAY['Neuritis óptica unilateral con buena recuperación.', 'Síndrome de tronco encefálico típico.', 'Síndrome de área postrema con náuseas, vómitos e hipo persistentes.', 'Mielitis parcial con predominio sensitivo.']::text[], 2, ARRAY['6p8fre', '1jkn9qj', '1rx3fp0', '1bauend']::text[], '1rx3fp0', 'El síndrome de área postrema se presenta con hipo, náuseas o vómitos persistentes sin otra explicación. Es una manifestación central de NMOSD, relacionada con la elevada expresión de acuaporina-4 en el bulbo dorsal.
-
-Una neuritis óptica unilateral dolorosa, una mielitis parcial sensitiva y determinados síndromes focales de tronco son presentaciones típicas de esclerosis múltiple. Los criterios de McDonald no diferencian EM de sus imitadores: se aplican después de comprobar que el síndrome es compatible. Ante un síndrome de área postrema corresponde solicitar AQP4-IgG en suero mediante CBA y revisar la RM del bulbo antes de indicar una terapia para EM.', 1, 4)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('e0e1d001-ca58-431e-a0f1-9aefc02f6b42', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', '¿Cuál de las siguientes afirmaciones define correctamente una recaída de esclerosis múltiple?', 'multiple_choice', ARRAY['Los síntomas deben durar al menos 12 horas.', 'Puede diagnosticarse durante una infección sistémica si la RM es compatible.', 'Debe corresponder a un episodio inflamatorio desmielinizante del SNC de al menos 24 horas de duración y sin fiebre ni infección.', 'Siempre requiere recuperación clínica completa.']::text[], 2, ARRAY['tpekf2', '15ylbdx', '1d6bl02', '1cqhzmi']::text[], '1d6bl02', 'Una recaída es un episodio neurológico nuevo o un empeoramiento atribuible a inflamación desmielinizante del SNC, de al menos 24 horas, sin fiebre, infección ni otra causa metabólica. La recuperación puede ser completa o dejar secuelas.
-
-Los síntomas paroxísticos duran segundos o minutos, pero pueden contar como recaída si se repiten durante un período total de al menos 24 horas. Para considerar dos brotes separados suele exigirse un intervalo aproximado de 30 días. La reaparición de déficits antiguos durante una infección o con aumento de temperatura es una pseudorrecaída y no implica necesariamente actividad inflamatoria nueva.', 1, 5)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('0b8bfda5-40fb-467c-99d5-c6bb89ffc467', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', '¿Cuál de las siguientes afirmaciones respecto a la neuritis óptica típica de esclerosis múltiple es correcta?', 'multiple_choice', ARRAY['Habitualmente es bilateral y presenta edema de papila marcado.', 'Generalmente es unilateral, dolorosa con los movimientos oculares y presenta buena recuperación funcional.', 'Se caracteriza por pérdida visual severa menor de 20/200 y mala recuperación.', 'Se acompaña frecuentemente de exudados retinianos.']::text[], 1, ARRAY['1p5b9o', '1k67381', 'y8ho01', 'xgaq8a']::text[], '1k67381', 'La neuritis óptica típica de esclerosis múltiple es unilateral, subaguda, dolorosa con los movimientos oculares y suele causar un escotoma central con discromatopsia. El fondo de ojo puede ser normal porque la inflamación suele ser retrobulbar, y la recuperación funcional habitualmente es buena.
-
-El patrón ayuda al diagnóstico diferencial. NMOSD AQP4 positivo suele comprometer el segmento posterior y el quiasma, con pérdida grave y recuperación pobre. MOGAD afecta con mayor frecuencia el segmento anterior, puede ser bilateral y produce edema papilar marcado, exudados y realce de la grasa perineural. Una neuritis bilateral simultánea es atípica para EM.', 1, 6)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('d2f08cae-bac0-466b-a4b0-a0afab46b497', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', 'Respecto a la mielitis asociada a MOGAD, ¿cuál de las siguientes afirmaciones es correcta?', 'multiple_choice', ARRAY['La afectación del cono medular es una característica sugestiva de MOGAD.', 'La recuperación funcional suele ser peor que en NMOSD.', 'Las lesiones medulares son habitualmente menores de un segmento vertebral.', 'Los síntomas esfinterianos son excepcionales.']::text[], 0, ARRAY['1t15o31', 'hidzuo', '173mcyg', '18pj5mo']::text[], '1t15o31', 'La afectación del cono medular es un rasgo sugestivo de MOGAD y explica la frecuencia de disfunción vesical, intestinal y sexual. Otros patrones de apoyo son la mielitis longitudinalmente extensa y el signo de la H en el corte axial, producido por el compromiso predominante de la sustancia gris.
-
-MOGAD también puede causar lesiones cortas, por lo que la longitud aislada no establece el diagnóstico. La recuperación motora suele ser mejor que en NMOSD AQP4 positivo, aunque pueden persistir secuelas esfinterianas o sexuales. El diagnóstico requiere un evento compatible, MOG-IgG en suero mediante CBA y ausencia de una explicación alternativa.
-
-Referencia: Banwell B et al. Diagnosis of MOG antibody-associated disease: International MOGAD Panel proposed criteria. Lancet Neurol. 2023;22:268-282.', 1, 7)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('e0c53342-ed17-42a2-a412-ad02f6c0b954', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', 'Un paciente presenta un primer episodio de ADEM con anticuerpos anti-MOG positivos. ¿Cuál de las siguientes afirmaciones es la más adecuada?', 'multiple_choice', ARRAY['Todos los pacientes evolucionarán a una enfermedad recurrente.', 'La persistencia de anticuerpos anti-MOG predice con certeza una evolución recurrente.', 'Debe iniciarse indefinidamente inmunoterapia de mantenimiento en todos los casos.', 'MOGAD puede ser monofásica o recurrente, por lo que el seguimiento clínico es fundamental.']::text[], 3, ARRAY['b6l0uj', '4pxvsx', 'khozha', 'fi0umn']::text[], 'fi0umn', 'MOGAD puede seguir un curso monofásico o recurrente. En la infancia, ADEM es una forma frecuente de presentación, pero un primer episodio anti-MOG positivo no permite anticipar con certeza la evolución. La persistencia de títulos altos aumenta la sospecha de recurrencia, sin determinarla por sí sola.
-
-El ataque agudo se trata con corticoides y un descenso cuidadoso. La inmunoterapia prolongada se individualiza y tiene mayor fundamento después de una segunda recaída, ante un ataque muy grave con mala recuperación o cuando aparecen recaídas al reducir los corticoides. El seguimiento debe incluir evolución clínica, función cognitiva, RM seriada e interpretación contextual de MOG-IgG.', 1, 8)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('4928ae4c-96fd-4595-8312-d7cae90ceaac', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', 'Respecto al estudio del líquido cefalorraquídeo, ¿cuál de los siguientes hallazgos constituye una bandera roja para esclerosis múltiple?', 'multiple_choice', ARRAY['Bandas oligoclonales aisladas en LCR.', 'Pleocitosis marcada, mayor de 50 células/mm³.', 'Índice IgG elevado.', 'Síntesis intratecal de IgG.']::text[], 1, ARRAY['71a6t9', '128tynp', '1q1gwe2', '4nd9m8']::text[], '128tynp', 'En esclerosis múltiple puede haber una pleocitosis linfocitaria leve, pero un recuento mayor de 50 células/mm³ es una bandera roja. Obliga a investigar infecciones, neurosarcoidosis, vasculitis, neoplasias hematológicas y otras enfermedades inflamatorias. También son atípicos el predominio de neutrófilos, la hiperproteinorraquia o hipoglucorraquia marcadas y las bandas en espejo entre suero y LCR.
-
-Las bandas oligoclonales restringidas al LCR y la síntesis intratecal de IgG apoyan el diagnóstico, aunque no son patognomónicas. El índice IgG puede elevarse, pero es menos sensible y específico que las bandas. Los criterios de McDonald 2024 también aceptan el índice de cadenas livianas kappa como alternativa para demostrar inflamación intratecal.', 1, 9)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('ef3db973-916e-4d7b-a7bb-d984c07fc784', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', '¿La infección previa por cuál de los siguientes virus ha mostrado una asociación significativa con un riesgo aumentado de esclerosis múltiple?', 'multiple_choice', ARRAY['Enterovirus D68.', 'Citomegalovirus (CMV).', 'Herpes simplex virus (HSV).', 'Parvovirus B19.', 'Epstein-Barr virus (EBV).']::text[], 4, ARRAY['4i7iuj', '1d36eiv', '1jnvth3', '1rgxm68', '4wx7l2']::text[], '4wx7l2', 'La infección por Epstein-Barr virus es el factor infeccioso con la asociación más sólida con esclerosis múltiple. En una cohorte de más de diez millones de militares estadounidenses, el riesgo aumentó 32 veces después de la seroconversión para EBV, sin un aumento comparable tras la infección por CMV.
-
-EBV no es suficiente para causar EM: infecta a la gran mayoría de la población y sólo una pequeña proporción desarrolla la enfermedad. Los mecanismos propuestos incluyen mimetismo molecular, alteración de la barrera hematoencefálica y persistencia del virus en células B autorreactivas.
-
-Referencia: Bjornevik K et al. Longitudinal analysis reveals high prevalence of Epstein-Barr virus associated with multiple sclerosis. Science. 2022;375:296-301. doi:10.1126/science.abj8222.', 1, 10)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('abdc86b3-d148-42a0-ac03-129416b11461', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', 'Una mujer de 42 años con EMRR consulta por infección urinaria y fiebre de 39,5 °C. La debilidad y la espasticidad ya conocidas en ambos miembros inferiores empeoraron durante las últimas 36 horas. ¿Cuál es la interpretación más probable?', 'multiple_choice', ARRAY['Debe solicitarse un EMG.', 'Presenta EM progresiva y debe retirarse el interferón.', 'Presenta una recaída y debe recibir antibióticos y corticoides.', 'Probablemente presenta una pseudorrecaída.']::text[], 3, ARRAY['czocqp', '1hx6h1w', '1p6phnw', 't4sxs8']::text[], 't4sxs8', 'La reaparición o intensificación de déficits conocidos durante una infección febril corresponde probablemente a una pseudorrecaída. El aumento de temperatura empeora transitoriamente la conducción en axones desmielinizados, sin implicar una nueva lesión inflamatoria.
-
-La conducta inicial es tratar la infección, controlar la fiebre y reevaluar. No corresponde diagnosticar progresión, retirar la terapia modificadora ni indicar corticoides de manera automática. Una infección y una recaída verdadera pueden coexistir; si aparecen síntomas completamente nuevos o el deterioro persiste después de resolver la intercurrencia, debe reconsiderarse un brote.', 1, 11)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('3aadf604-2a9b-4568-8967-0f5a3641b592', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', 'Un paciente con EM secundaria progresiva camina con andador y aumenta su espasticidad de leve a moderada o grave en 48 horas, hasta impedirle la deambulación. ¿Cuál es la primera conducta?', 'multiple_choice', ARRAY['Aumentar la dosis de antiespásticos orales.', 'Incrementar las sesiones de kinesiología.', 'Descartar una intercurrencia clínica.', 'Aplicar toxina botulínica.']::text[], 2, ARRAY['1eyv0l4', 'yg43mn', '1dcgm6d', 'ddht5c']::text[], '1dcgm6d', 'Un aumento abrupto de la espasticidad obliga a buscar una causa desencadenante antes de modificar el tratamiento. Las causas frecuentes incluyen infección urinaria, fiebre, retención vesical, constipación, dolor, lesiones cutáneas, mala postura y exposición al calor.
-
-Aumentar antiespásticos sin evaluar la causa puede producir debilidad, sedación y caídas. La toxina botulínica se reserva para patrones focales persistentes; no es la respuesta inicial a un deterioro generalizado en 48 horas. Resuelta la intercurrencia, la espasticidad basal se reevalúa y se define un plan funcional con rehabilitación, tratamiento oral o intervenciones focales.', 1, 12)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('a87745b1-b7b5-4a7f-99f1-24db9fa31928', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', 'Todas las siguientes drogas se utilizan como tratamiento preventivo en pacientes con MOGAD, excepto:', 'multiple_choice', ARRAY['Micofenolato.', 'Azatioprina.', 'Inmunoglobulina intravenosa.', 'Interferón beta.']::text[], 3, ARRAY['vjfdpv', '1xdojf9', 'tm3prk', '16ppdkf']::text[], '16ppdkf', 'Interferón beta es una terapia para esclerosis múltiple que no previene adecuadamente las recaídas de MOGAD y puede ser perjudicial. También deben evitarse otras extrapolaciones automáticas desde EM, como acetato de glatiramer, teriflunomida, dimetilfumarato y natalizumab.
-
-Micofenolato, azatioprina e inmunoglobulina intravenosa se utilizan como tratamientos de mantenimiento en MOGAD recurrente. La evidencia no es equivalente entre ellos y proviene en gran parte de cohortes observacionales. La decisión de iniciar tratamiento prolongado depende del número y gravedad de los ataques, la recuperación, la dependencia de corticoides, la edad y las comorbilidades.', 1, 13)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('9460a3fd-588c-4690-841e-f5feebdb54c5', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', 'Respecto al curso del embarazo en la esclerosis múltiple, ¿cuál de las siguientes afirmaciones es correcta?', 'multiple_choice', ARRAY['Es siempre un embarazo de alto riesgo.', 'Existe un aumento definido del riesgo de aborto espontáneo y parto pretérmino por la enfermedad en sí misma.', 'La esclerosis múltiple per se no condiciona un embarazo de alto riesgo.', 'La esclerosis múltiple aumenta por sí misma el riesgo de malformaciones congénitas.']::text[], 2, ARRAY['m3asvq', '1xyzeqw', 'xd9ziu', '1bzq5tu']::text[], 'xd9ziu', 'La esclerosis múltiple por sí sola no obliga a clasificar el embarazo como de alto riesgo y no es una enfermedad teratogénica. El riesgo individual depende de la discapacidad, la actividad inflamatoria, las comorbilidades y la exposición a tratamientos.
-
-La actividad de la EM suele disminuir durante la gestación, con un mínimo en el tercer trimestre, y aumentar durante los primeros meses posparto. La planificación debe incluir estabilidad previa, selección de una terapia compatible y prevención del rebote al suspender fármacos de alta eficacia. Algunos estudios observacionales recientes describen asociaciones modestas con resultados obstétricos adversos, pero no demuestran que la EM aislada sea la causa; la evaluación sigue siendo individual.', 1, 14)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('09cae5c4-258e-4e8d-beee-309203918d13', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', '¿Cuánto tiempo de enfermedad estable y bajo tratamiento se recomienda, como mínimo, antes de planificar el embarazo en una paciente con EM de baja actividad?', 'multiple_choice', ARRAY['Al menos 1 año.', 'Al menos 5 años.', 'Al menos 6 meses.', 'No se hace ninguna recomendación.']::text[], 0, ARRAY['1qvbn9w', 't7xauj', '14eoqk5', '17677no']::text[], '1qvbn9w', 'En una paciente con baja actividad y factores pronósticos favorables se recomienda al menos un año de estabilidad clínica y radiológica bajo tratamiento antes de intentar el embarazo. Si la enfermedad es activa, el período recomendado aumenta a dos años.
-
-La estabilidad no se define sólo por el paso del tiempo: deben revisarse las recaídas, la recuperación, la RM, el tratamiento utilizado y su eventual período de lavado o riesgo de rebote. La edad materna y la reserva ovárica también condicionan la decisión, por lo que no debe postergarse el tratamiento ni la planificación sin una evaluación individual.', 1, 15)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('fb8aa354-b73e-48b0-bc5c-a230967f8348', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', '¿Cuál de los siguientes parámetros no forma parte del NEDA-3?', 'multiple_choice', ARRAY['La actividad en la RM convencional.', 'Las recaídas clínicas.', 'La progresión de la discapacidad.', 'La atrofia cerebral en RM.']::text[], 3, ARRAY['1t6gmo7', 'ilj9ct', 'k1jr8s', '1088b94']::text[], '1088b94', 'NEDA-3 exige ausencia de recaídas, ausencia de progresión confirmada de la discapacidad y ausencia de actividad en RM, definida por lesiones T2 nuevas o aumentadas y lesiones captantes de gadolinio. La atrofia cerebral no forma parte de esos tres dominios; se agrega en NEDA-4.
-
-NEDA-3 está orientado sobre todo a la inflamación focal y puede no detectar PIRA, deterioro cognitivo, lesiones corticales o inflamación compartimentalizada. La medición individual de volumen cerebral también tiene limitaciones por variabilidad técnica, hidratación, envejecimiento y pseudoatrofia después de iniciar un tratamiento eficaz.
-
-Referencia: Kappos L et al. Inclusion of brain volume loss in a revised measure of no evidence of disease activity (NEDA-4). Mult Scler. 2016;22:1297-1305.', 1, 16)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('144b975c-bb6f-4a90-afe9-c46149d4cfe9', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', '¿Qué significa el refuerzo con gadolinio de una placa desmielinizante?', 'multiple_choice', ARRAY['Es un signo de actividad inflamatoria de la enfermedad.', 'Está directamente relacionado con la discapacidad.', 'Es un signo específico de EM secundaria progresiva.', 'Siempre se transforma en un agujero negro.', 'Todas son correctas.']::text[], 0, ARRAY['1h13hfc', '12xgxfx', '1412pk8', '14hzivv', '6zyb1g']::text[], '1h13hfc', 'El realce con gadolinio indica alteración activa de la barrera hematoencefálica y permite reconocer la fase inflamatoria reciente de una lesión. No es específico de esclerosis múltiple y debe interpretarse junto con la morfología, la localización y el contexto clínico.
-
-El realce suele ser transitorio. Si persiste durante más de tres meses, debe reconsiderarse el diagnóstico y buscar vasculitis, neoplasia, sarcoidosis u otra causa. No toda lesión captante evoluciona a un agujero negro. Los agujeros negros son lesiones hipointensas en T1 que reflejan daño tisular más permanente, gliosis y pérdida axonal, y tienen una relación más estrecha con discapacidad que el realce transitorio.', 1, 17)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('ede6032f-a7aa-47af-beab-6ef5640c4917', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', '¿Cuál de las siguientes drogas modificadoras de la enfermedad es considerada una terapia de reconstitución inmune?', 'multiple_choice', ARRAY['Alemtuzumab.', 'Fingolimod.', 'Dimetilfumarato.', 'Ninguna de ellas.']::text[], 0, ARRAY['17a2e1m', '12lvx2z', 'bj673u', '1o4wx0d']::text[], '17a2e1m', 'Alemtuzumab produce una depleción profunda de linfocitos T y B seguida de repoblación inmunitaria. Se administra en cursos breves con un efecto que puede persistir sin tratamiento continuo. Cladribina comparte este concepto de reconstitución inmune pulsada.
-
-Fingolimod y dimetilfumarato son terapias de mantenimiento: requieren administración diaria para sostener su efecto. La clasificación no es completamente uniforme; algunas revisiones utilizan una definición más amplia para otras terapias depletoras. En el uso clínico habitual, alemtuzumab y cladribina son los ejemplos farmacológicos prototípicos de reconstitución inmune.', 1, 18)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('89b9cfa8-4363-46b3-845a-2c4b376d6482', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', '¿Cuál afirmación es correcta respecto a la fisiopatología de NMOSD AQP4 positivo?', 'multiple_choice', ARRAY['La neurona permanece siempre indemne.', 'La desmielinización es un fenómeno secundario al daño astrocitario.', 'La barrera hematoencefálica permanece intacta.', 'Nunca se activa el sistema del complemento.']::text[], 1, ARRAY['12uzan1', '18syc9g', 'rwifnw', 'v4kn93']::text[], '18syc9g', 'NMOSD AQP4 positivo es una astrocitopatía primaria. AQP4-IgG entra al SNC a través de una barrera hematoencefálica alterada, se une a los pies astrocitarios y activa el complemento. La lesión atrae neutrófilos y eosinófilos y produce muerte del astrocito; la desmielinización, el daño axonal y la pérdida neuronal aparecen de forma secundaria.
-
-La destrucción astrocitaria también reduce el transportador EAAT2, favoreciendo acumulación de glutamato y excitotoxicidad. Esta secuencia explica la eficacia de tratamientos dirigidos a la línea B, IL-6 o complemento y diferencia a NMOSD de la esclerosis múltiple, donde el blanco inicial no es el astrocito.', 1, 19)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('8f79ca43-96db-4dbc-94cd-f24d874b2dce', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', 'Respecto a la fatiga en esclerosis múltiple, ¿cuál debe ser el primer paso antes de indicar un tratamiento farmacológico?', 'multiple_choice', ARRAY['Iniciar amantadina.', 'Solicitar polisomnografía en todos los pacientes.', 'Identificar y tratar causas secundarias de fatiga.', 'Indicar modafinilo.']::text[], 2, ARRAY['xhdku8', '1ki249d', '1h12w1v', '154hr8v']::text[], '1h12w1v', 'La evaluación comienza por buscar causas secundarias: depresión, trastornos del sueño, nocturia, espasmos nocturnos, dolor, anemia, hipotiroidismo, infecciones y efectos adversos de medicamentos. La polisomnografía se reserva para una sospecha concreta, como apnea o movimientos periódicos de las piernas.
-
-El tratamiento inicial combina ejercicio aeróbico adaptado, conservación de energía, descansos breves programados, terapia ocupacional y, cuando corresponde, intervenciones cognitivo-conductuales. Amantadina y modafinilo pueden probarse en casos seleccionados, pero la evidencia es limitada e inconsistente; no sustituyen la corrección de una causa reversible.', 1, 20)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('f521c34a-9898-4d0b-b91a-4b9d1997cdb3', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', 'En un paciente con vejiga hipoactiva secundaria a esclerosis múltiple, ¿cuál es la indicación clásica para iniciar cateterismo intermitente limpio?', 'multiple_choice', ARRAY['Residuo posmiccional persistentemente elevado, aproximadamente mayor de 100 ml.', 'Cualquier urgencia miccional.', 'Incontinencia de esfuerzo.', 'Nicturia aislada.']::text[], 0, ARRAY['1sfw1us', 'kkc50b', 'vn5w5t', 'h9h6ip']::text[], '1sfw1us', 'La vejiga hipoactiva produce vaciamiento incompleto, retención e incontinencia por rebosamiento. Un residuo posmiccional persistentemente mayor de 100 ml es el umbral clásico para considerar cateterismo intermitente limpio. La urgencia corresponde con mayor frecuencia a vejiga hiperactiva; la nicturia o la incontinencia de esfuerzo aisladas no demuestran retención.
-
-La evaluación incluye orina completa, urocultivo, ecografía con residuo posmiccional y urodinamia cuando está indicada. El umbral no es absoluto: también se consideran capacidad vesical, síntomas, infecciones recurrentes, presiones urodinámicas y función renal. Una medición aislada no basta para indicar cateterismo permanente.', 1, 21)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('cd09d288-3733-4e24-bf8c-47b23930a7c4', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', '¿Cuál de las siguientes medidas forma parte del manejo integral de la espasticidad?', 'multiple_choice', ARRAY['Únicamente tratamiento farmacológico.', 'Sólo fisioterapia.', 'Abordaje multidisciplinario con rehabilitación y tratamiento farmacológico cuando esté indicado.', 'Reposo prolongado.']::text[], 2, ARRAY['pv9sf7', '14v2a2c', '19ksu93', '15w79uo']::text[], '19ksu93', 'La espasticidad se trata según su distribución, gravedad, dolor e impacto funcional. El plan combina identificación de desencadenantes, ejercicio, estiramientos, postura, fisioterapia, terapia ocupacional, ortesis y medicación cuando aporta un beneficio concreto.
-
-La espasticidad focal puede tratarse con toxina botulínica y rehabilitación; la generalizada puede requerir baclofeno, tizanidina o gabapentina. El reposo prolongado favorece debilidad y contracturas. Tampoco debe eliminarse el tono de manera indiscriminada: algunos pacientes lo utilizan para mantenerse de pie o realizar transferencias, y una relajación excesiva puede empeorar la función.', 1, 22)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('8a6b2e88-efbc-48f6-8cc9-3b9f7a9625f8', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', '¿Cuál de los siguientes fármacos se encuentra entre las opciones iniciales para el tratamiento del dolor neuropático persistente en esclerosis múltiple?', 'multiple_choice', ARRAY['Ibuprofeno.', 'Duloxetina.', 'Prednisona.', 'Tramadol como tratamiento inicial.']::text[], 1, ARRAY['tiewgc', '1li21w0', '1e58m9y', '2ewbqu']::text[], '1li21w0', 'Duloxetina es una opción para disestesias urentes y dolor neuropático persistente. Otras alternativas son venlafaxina, amitriptilina, gabapentina y pregabalina, elegidas según comorbilidades, tolerancia y tipo de dolor.
-
-Ibuprofeno es más apropiado para dolor musculoesquelético que para dolor neuropático. Prednisona no es un analgésico crónico y se reserva para recaídas inflamatorias que requieren tratamiento. Tramadol y otros opioides no son opciones iniciales por su beneficio limitado y por los riesgos de sedación, tolerancia y dependencia. El dolor paroxístico, como Lhermitte o neuralgia del trigémino, suele responder mejor a fármacos como carbamazepina.', 1, 23)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
-insert into academy_quiz_questions (id, quiz_id, question_text, question_type, options, correct_option_index, option_ids, correct_option_id, explanation, points, display_order)
-values ('60d1edf8-7887-467b-a4e7-9b16a7d1170c', 'f1180a0d-921d-4d47-8c3d-3c56836124b2', 'Respecto al Symbol Digit Modalities Test (SDMT) en pacientes con esclerosis múltiple, ¿cuál de las siguientes afirmaciones es correcta?', 'multiple_choice', ARRAY['Evalúa principalmente memoria episódica verbal.', 'Es una prueba de screening de la velocidad de procesamiento y una de las herramientas más sensibles para detectar deterioro cognitivo en EM.', 'Requiere aproximadamente 45 minutos para su administración.', 'Ha sido reemplazado por el PASAT como herramienta de screening.']::text[], 1, ARRAY['wuxv3g', '1s3icn2', 'yrfnap', '1vwkcu7']::text[], '1s3icn2', 'El SDMT evalúa principalmente velocidad de procesamiento, atención y eficiencia visomotora. La tarea cronometrada dura 90 segundos y puede completarse, con instrucciones, en pocos minutos. Es una de las pruebas más sensibles para detectar y seguir deterioro cognitivo en esclerosis múltiple.
-
-El PASAT fue desplazado en la práctica por ser más complejo, estresante y dependiente de una presentación auditiva estandarizada. Un SDMT alterado es una señal para ampliar la evaluación neuropsicológica, no un diagnóstico aislado. El resultado puede verse afectado por déficit visual o motor, fatiga, depresión, recaídas y efecto de aprendizaje.
-
-Referencia: Kalb R et al. Recommendations for cognitive screening and management in multiple sclerosis care. Mult Scler. 2018;24:1665-1680.', 1, 24)
-on conflict (id) do update set
-  option_ids = excluded.option_ids,
-  correct_option_id = excluded.correct_option_id;
-
 -- 4. Repair the title mangled on import (shows up in the ranking view).
 update academy_quizzes set title = 'Neurocognitivo y Psiquiatría' where id = '1eb7f501-e3c6-417d-9c38-b3dfa0c1698f';
 
--- 5. Drop the exact duplicate of "Examen de Semiologia 2024" (created 5s after its twin),
---    but only if nothing was ever recorded against it.
+-- 5. Retire the exact duplicate of "Examen de Semiologia 2024" (created 5s after its twin).
+--    Delete it when unused; if somebody already sat it, archive instead so their
+--    attempts survive. Either way it stops showing in the app.
 delete from academy_quiz_questions
 where quiz_id = 'de9aa85a-e3b2-4058-9ff1-aa16916835aa'
   and not exists (select 1 from academy_quiz_attempts a where a.quiz_id = 'de9aa85a-e3b2-4058-9ff1-aa16916835aa');
 delete from academy_quizzes
 where id = 'de9aa85a-e3b2-4058-9ff1-aa16916835aa'
   and not exists (select 1 from academy_quiz_attempts a where a.quiz_id = 'de9aa85a-e3b2-4058-9ff1-aa16916835aa');
+
+update academy_quizzes
+set status = 'archived'
+where id = 'de9aa85a-e3b2-4058-9ff1-aa16916835aa' and status <> 'archived';
 
 -- 6. Report: what the database looks like afterwards.
 do $$
@@ -515,9 +326,9 @@ declare
   dup int;
 begin
   select count(*) into pending from academy_quiz_questions where correct_option_id is null;
-  select count(*) into dup from academy_quizzes where id = 'de9aa85a-e3b2-4058-9ff1-aa16916835aa';
+  select count(*) into dup from academy_quizzes where id = 'de9aa85a-e3b2-4058-9ff1-aa16916835aa' and status = 'published';
   raise notice 'preguntas sin id estable: %', pending;
-  raise notice 'duplicado de Semiologia todavia presente: %', dup;
+  raise notice 'duplicado de Semiologia visible en la app: %', dup;
 end $$;
 
 commit;
