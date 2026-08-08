@@ -10,8 +10,13 @@ export interface Quiz {
   passing_score?: number | null
   shuffle_questions?: boolean
   show_correct_answers?: boolean
-  /** Reveal whether each answer was right as soon as it is picked, not only at the end. */
-  immediate_feedback?: boolean
+  /**
+   * When the answer is revealed:
+   *   'end'     — only on the results page (default)
+   *   'instant' — the moment an option is picked
+   *   'check'   — after confirming with the Comprobar button, so a pick can still be changed
+   */
+  feedback_mode?: 'end' | 'instant' | 'check'
   created_by: string
   created_at: string
   updated_at: string

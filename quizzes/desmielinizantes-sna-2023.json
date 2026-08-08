@@ -7,7 +7,7 @@
     "show_correct_answers": true,
     "status": "published",
     "id": "f1180a0d-921d-4d47-8c3d-3c56836124b2",
-    "immediate_feedback": true
+    "feedback_mode": "check"
   },
   "questions": [
     {

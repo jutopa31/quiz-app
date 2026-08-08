@@ -16,7 +16,7 @@ interface StaticQuizFile {
     passing_score?: number | null
     shuffle_questions?: boolean
     show_correct_answers?: boolean
-    immediate_feedback?: boolean
+    feedback_mode?: 'end' | 'instant' | 'check'
     status?: string
     created_at?: string
     updated_at?: string
@@ -60,7 +60,7 @@ function build(path: string, file: StaticQuizFile): { quiz: Quiz; questions: Que
     passing_score: file.quiz.passing_score ?? null,
     shuffle_questions: file.quiz.shuffle_questions ?? false,
     show_correct_answers: file.quiz.show_correct_answers ?? true,
-    immediate_feedback: file.quiz.immediate_feedback ?? false,
+    feedback_mode: file.quiz.feedback_mode ?? 'end',
     created_by: 'static',
     created_at: timestamp,
     updated_at: timestamp,

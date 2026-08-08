@@ -16,16 +16,23 @@ export function QuizPlayer({ quiz, questions }: QuizPlayerProps) {
   const { user } = useAuth()
   const [currentIndex, setCurrentIndex] = useState(0)
   const [answers, setAnswers] = useState<Record<string, string>>({})
+  const [checked, setChecked] = useState<Record<string, true>>({})
   const [attemptId, setAttemptId] = useState<string | null>(null)
   const [startedAt] = useState(new Date())
   const [submitting, setSubmitting] = useState(false)
 
   const currentQuestion = questions[currentIndex]
-  // Some quizzes mark each answer right or wrong as soon as it is picked,
-  // instead of holding everything back until the results page.
-  const immediateFeedback = quiz.immediate_feedback ?? false
+  // Quizzes can reveal the answer as it is picked ('instant'), after the user
+  // confirms it ('check'), or not until the results page ('end', the default).
+  const feedbackMode = quiz.feedback_mode ?? 'end'
   const currentAnswer = answers[currentQuestion.id]
-  const showFeedback = immediateFeedback && currentAnswer !== undefined
+  const isAnswered = currentAnswer !== undefined
+  const showFeedback =
+    feedbackMode === 'instant'
+      ? isAnswered
+      : feedbackMode === 'check' && checked[currentQuestion.id] === true
+  // In 'check' mode the pick can still be changed, until it is confirmed.
+  const awaitingCheck = feedbackMode === 'check' && isAnswered && !showFeedback
   const isFirstQuestion = currentIndex === 0
   const isLastQuestion = currentIndex === questions.length - 1
   const answeredCount = Object.keys(answers).length
@@ -33,8 +40,8 @@ export function QuizPlayer({ quiz, questions }: QuizPlayerProps) {
 
   // Create attempt on first answer
   const handleSelectOption = async (optionId: string) => {
-    // With immediate feedback the answer is final: changing it after seeing the
-    // result would just be scoring yourself.
+    // Once the result is on screen the answer is final: changing it then would
+    // just be scoring yourself.
     if (showFeedback) return
 
     // Create attempt if not exists
@@ -61,6 +68,10 @@ export function QuizPlayer({ quiz, questions }: QuizPlayerProps) {
     if (!isLastQuestion) {
       setCurrentIndex(prev => prev + 1)
     }
+  }
+
+  const handleCheck = () => {
+    setChecked(prev => ({ ...prev, [currentQuestion.id]: true }))
   }
 
   const handleSubmit = async () => {
@@ -119,7 +130,15 @@ export function QuizPlayer({ quiz, questions }: QuizPlayerProps) {
             Anterior
           </Button>
 
-          {isLastQuestion ? (
+          {awaitingCheck ? (
+            <Button
+              variant="primary"
+              onClick={handleCheck}
+              className="flex-1"
+            >
+              Comprobar
+            </Button>
+          ) : isLastQuestion ? (
             <Button
               variant="primary"
               onClick={handleSubmit}
