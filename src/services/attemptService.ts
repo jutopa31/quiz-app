@@ -74,10 +74,12 @@ export async function createAttempt(quizId: string, userId: string, userEmail?: 
       console.error('Supabase update error', error)
       throw error
     }
-    return data ? normalizeAttempt(data) : null
+    return data ? normalizeAttempt(data) : createLocalAttempt(quizId, userId)
   } catch (error) {
-    console.error('🔴 Error creating attempt:', error)
-    return null
+    // The quiz may not be in the database yet (repo content pending sync), or the
+    // backend may be down. Either way, never lose the attempt: keep it locally.
+    console.error('🔴 Error creating attempt, guardando localmente:', error)
+    return createLocalAttempt(quizId, userId)
   }
 }
 

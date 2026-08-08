@@ -1,38 +1,24 @@
 import type { Question, QuestionOption } from '../types/quiz'
+import { contentHash, buildOptionIds } from './optionIds.js'
 
-/**
- * Stable, content-derived id for an option.
- *
- * Option ids used to be the array index ("0", "1", ...), which meant the stored
- * correct answer pointed at a *position*: reordering or inserting an option
- * silently moved the correct answer to a different text. Deriving the id from the
- * option text makes reordering a no-op.
- */
-export function contentHash(text: string): string {
-  let h = 5381
-  for (let i = 0; i < text.length; i++) {
-    h = ((h << 5) + h + text.charCodeAt(i)) | 0
-  }
-  return (h >>> 0).toString(36)
-}
+export { contentHash }
 
-export function buildOptions(texts: unknown): QuestionOption[] {
+export function buildOptions(texts: unknown, storedIds?: unknown): QuestionOption[] {
   if (!Array.isArray(texts)) return []
 
-  const seen = new Map<string, number>()
-  return texts.map(raw => {
-    const text = String(raw)
-    const base = contentHash(text.trim())
-    // Two options with identical text still need distinct ids.
-    const occurrence = seen.get(base) ?? 0
-    seen.set(base, occurrence + 1)
-    return { id: occurrence === 0 ? base : `${base}-${occurrence}`, text }
-  })
+  // Prefer the ids stored alongside the row; fall back to deriving them, which
+  // yields the same values (both sides use src/lib/optionIds.js).
+  const ids =
+    Array.isArray(storedIds) && storedIds.length === texts.length
+      ? storedIds.map(String)
+      : buildOptionIds(texts)
+
+  return texts.map((raw, index) => ({ id: ids[index], text: String(raw) }))
 }
 
 /** Shared shape normalizer for rows coming from Supabase or the static JSON. */
 export function normalizeQuestion(raw: any): Question {
-  const options = buildOptions(raw.options)
+  const options = buildOptions(raw.options, raw.option_ids)
   const correctIndex =
     typeof raw.correct_option_index === 'number' &&
     raw.correct_option_index >= 0 &&
@@ -47,7 +33,11 @@ export function normalizeQuestion(raw: any): Question {
     question_type: raw.question_type || 'multiple_choice',
     options,
     // The answer travels as the option's own id, not as its position.
-    correct_answer: options[correctIndex]?.id ?? '',
+    correct_answer:
+      (typeof raw.correct_option_id === 'string' &&
+      options.some(option => option.id === raw.correct_option_id)
+        ? raw.correct_option_id
+        : options[correctIndex]?.id) ?? '',
     correct_option_index: correctIndex,
     image_url: raw.image_url ?? null,
     explanation: raw.explanation ?? null,
